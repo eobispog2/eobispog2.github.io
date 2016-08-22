@@ -31,8 +31,8 @@ var geometry4 = new THREE.ConeGeometry( 15, 40, 50 );
 var material4 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var cone1 = new THREE.Mesh(geometry4, material4);
 scene.add(cone1);
-cone.position.x = 40;
-cone.position.y = 13;
+cone1.position.x = 40;
+cone1.position.y = 13;
 
 var geometry5 = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
 var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
