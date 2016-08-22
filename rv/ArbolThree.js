@@ -12,13 +12,13 @@ var geometry = new THREE.CylinderGeometry( 3, 3, 25, 30, 10 );
 var material = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder = new THREE.Mesh( geometry, material );
 scene.add( cylinder );
-cylinder.position.y = 100;
+cylinder.position.y = -13;
 
 var geometry2 = new THREE.SphereGeometry( 8, 50, 50 );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var sphere = new THREE.Mesh( geometry2, material2 );
 scene.add( sphere );
-sphere.position.y = 50;
+sphere.position.y = 5;
 
 var geometry3 = new THREE.CylinderGeometry( 3, 3, 25, 30, 5 );
 var material3 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
