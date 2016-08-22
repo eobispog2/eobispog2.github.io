@@ -39,13 +39,13 @@ var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder3 = new THREE.Mesh(geometry5, material5);
 scene.add(cylinder3);
 cylinder3.position.x = 70;
-cylinder3.position.y = -13;
+cylinder3.position.y = -23;
 
 var geometry6 = new THREE.SphereGeometry( 8, 50, 50 );
 var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var sphere2 = new THREE.Mesh(geometry6, material6);
 scene.add(sphere2);
 sphere2.position.x = 70;
-sphere2.position.y = 0;
+sphere2.position.y = -5;
 
 renderer.render( scene, camera );
