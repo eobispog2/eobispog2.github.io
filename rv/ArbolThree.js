@@ -8,7 +8,7 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth*.95, window.innerHeight*.95 );
 document.body.appendChild( renderer.domElement );
 
-var geometry1 = new THREE.CylinderGeometry( 3, 3, 22, 30, 10 );
+var geometry1 = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
 var material1 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder1 = new THREE.Mesh(geometry1, material1);
 scene.add(cylinder1);
@@ -34,14 +34,14 @@ scene.add(cone1);
 cone1.position.x = 35;
 cone1.position.y = 13;
 
-var geometry5 = new THREE.CylinderGeometry( 2, 2, 15, 30, 10 );
+var geometry5 = new THREE.CylinderGeometry( 3, 3, 15, 30, 10 );
 var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder3 = new THREE.Mesh(geometry5, material5);
 scene.add(cylinder3);
 cylinder3.position.x = 70;
 cylinder3.position.y = -16;
 
-var geometry6 = new THREE.SphereGeometry( 10, 50, 50 );
+var geometry6 = new THREE.SphereGeometry( 9, 50, 50 );
 var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var sphere2 = new THREE.Mesh(geometry6, material6);
 scene.add(sphere2);
