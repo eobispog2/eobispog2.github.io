@@ -2,13 +2,13 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, (window.innerWidth*.95) / (window.innerHeight*.95) );
 
 camera.position.z = 100;
-camera.position.x = 25;
+camera.position.x = 35;
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth*.95, window.innerHeight*.95 );
 document.body.appendChild( renderer.domElement );
 
-var geometry = new THREE.CylinderGeometry( 3, 3, 25, 30, 10 );
+var geometry = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
 var material = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder = new THREE.Mesh( geometry, material );
 scene.add( cylinder );
