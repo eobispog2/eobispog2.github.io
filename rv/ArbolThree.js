@@ -24,28 +24,28 @@ var geometry3 = new THREE.CylinderGeometry( 3, 3, 25, 30, 5 );
 var material3 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder2 = new THREE.Mesh(geometry3, material3);
 scene.add(cylinder2);
-cylinder2.position.x = 40;
+cylinder2.position.x = 35;
 cylinder2.position.y = -13;
 
 var geometry4 = new THREE.ConeGeometry( 15, 40, 50 );
 var material4 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var cone1 = new THREE.Mesh(geometry4, material4);
 scene.add(cone1);
-cone1.position.x = 40;
+cone1.position.x = 35;
 cone1.position.y = 13;
 
-var geometry5 = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
+var geometry5 = new THREE.CylinderGeometry( 2, 2, 15, 30, 10 );
 var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder3 = new THREE.Mesh(geometry5, material5);
 scene.add(cylinder3);
-cylinder3.position.x = 60;
+cylinder3.position.x = 70;
 cylinder3.position.y = -13;
 
 var geometry6 = new THREE.SphereGeometry( 8, 50, 50 );
 var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var sphere2 = new THREE.Mesh(geometry6, material6);
 scene.add(sphere2);
-sphere2.position.x = 60;
-sphere2.position.y = 5;
+sphere2.position.x = 70;
+sphere2.position.y = 0;
 
 renderer.render( scene, camera );
