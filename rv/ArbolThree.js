@@ -8,30 +8,44 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth*.95, window.innerHeight*.95 );
 document.body.appendChild( renderer.domElement );
 
-var geometry = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
-var material = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
-var cylinder = new THREE.Mesh( geometry, material );
-scene.add( cylinder );
-cylinder.position.y = -13;
+var geometry1 = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
+var material1 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
+var cylinder1 = new THREE.Mesh(geometry1, material1);
+scene.add(cylinder1);
+cylinder1.position.y = -13;
 
 var geometry2 = new THREE.SphereGeometry( 8, 50, 50 );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
-var sphere = new THREE.Mesh( geometry2, material2 );
-scene.add( sphere );
-sphere.position.y = 5;
+var sphere1 = new THREE.Mesh(geometry2, material2);
+scene.add(sphere1);
+sphere1.position.y = 5;
 
 var geometry3 = new THREE.CylinderGeometry( 3, 3, 25, 30, 5 );
 var material3 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
-var cylinder2 = new THREE.Mesh( geometry3, material3 );
-scene.add( cylinder2 );
-cylinder2.position.x = 50;
+var cylinder2 = new THREE.Mesh(geometry3, material3);
+scene.add(cylinder2);
+cylinder2.position.x = 40;
 cylinder2.position.y = -13;
 
 var geometry4 = new THREE.ConeGeometry( 15, 40, 50 );
 var material4 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
-var cone = new THREE.Mesh( geometry4, material4 );
-scene.add( cone );
-cone.position.x = 50;
+var cone1 = new THREE.Mesh(geometry4, material4);
+scene.add(cone1);
+cone.position.x = 40;
 cone.position.y = 13;
+
+var geometry5 = new THREE.CylinderGeometry( 2, 2, 22, 30, 10 );
+var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
+var cylinder3 = new THREE.Mesh(geometry5, material5);
+scene.add(cylinder3);
+cylinder3.position.x = 60;
+cylinder3.position.y = -13;
+
+var geometry6 = new THREE.SphereGeometry( 8, 50, 50 );
+var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
+var sphere2 = new THREE.Mesh(geometry6, material6);
+scene.add(sphere2);
+sphere2.position.x = 60;
+sphere2.position.y = 5;
 
 renderer.render( scene, camera );
