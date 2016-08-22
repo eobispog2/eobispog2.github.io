@@ -41,7 +41,7 @@ scene.add(cylinder3);
 cylinder3.position.x = 70;
 cylinder3.position.y = -16;
 
-var geometry6 = new THREE.SphereGeometry( 10, 50, 50 );
+var geometry6 = new THREE.SphereGeometry( 7, 50, 50 );
 var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
 var sphere2 = new THREE.Mesh(geometry6, material6);
 scene.add(sphere2);
