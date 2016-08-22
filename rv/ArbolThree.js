@@ -20,7 +20,7 @@ var sphere1 = new THREE.Mesh(geometry2, material2);
 scene.add(sphere1);
 sphere1.position.y = 5;
 
-var geometry3 = new THREE.CylinderGeometry( 3, 3, 25, 30, 5 );
+var geometry3 = new THREE.CylinderGeometry( 3, 3, 22, 30, 5 );
 var material3 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder2 = new THREE.Mesh(geometry3, material3);
 scene.add(cylinder2);
@@ -39,7 +39,7 @@ var material5 = new THREE.MeshBasicMaterial( { color: 0x7A4B0D } );
 var cylinder3 = new THREE.Mesh(geometry5, material5);
 scene.add(cylinder3);
 cylinder3.position.x = 70;
-cylinder3.position.y = -23;
+cylinder3.position.y = -18;
 
 var geometry6 = new THREE.SphereGeometry( 8, 50, 50 );
 var material6 = new THREE.MeshBasicMaterial( { color: 0x32720D } );
