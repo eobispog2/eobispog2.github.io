@@ -1,16 +1,18 @@
 var forma = new THREE.Geometry();
 
 forma.vertices.push( new THREE.Vector3( 1, 1 , -1 ) );   // Push empuja elementos al arreglo, este es el elemento 0
-forma.vertices.push( new THREE.Vector3( 1, -1 , -1 ) );   // Elemento 1
+forma.vertices.push( new THREE.Vector3( -1, 1 , -1 ) );   // Elemento 1
 forma.vertices.push( new THREE.Vector3( -1, -1 , -1 ) );
-forma.vertices.push( new THREE.Vector3( -1, 1 , -1 ) );
+forma.vertices.push( new THREE.Vector3( 1, -1 , -1 ) );
 forma.vertices.push( new THREE.Vector3( 1, 1 , 1 ) );
-forma.vertices.push( new THREE.Vector3( 1, -1 , 1 ) );
+forma.vertices.push( new THREE.Vector3( -1, 1 , 1 ) );
 forma.vertices.push( new THREE.Vector3( -1, -1 , 1 ) );
-forma.vertices.push( new THREE.Vector3( -1, 1 , 1 ) );   // Elemento 7
+forma.vertices.push( new THREE.Vector3( 1, -1 , 1 ) );   // Elemento 7
 
-forma.faces.push( new THREE.Face3( 4, 5, 6 ) );   // Cara 2
-forma.faces.push( new THREE.Face3( 4, 6, 7 ) );   // Cara 3
+forma.faces.push( new THREE.Face3( 0, 1, 2 ) );   // Cara 0
+forma.faces.push( new THREE.Face3( 0, 2, 3 ) );   // Cara 1
+forma.faces.push( new THREE.Face3( 0, 3, 7 ) );   // Cara 2
+forma.faces.push( new THREE.Face3( 0, 7, 4 ) );   // Cara 3
 
 forma.computeBoundingSphere();
 forma.computeFaceNormals();
