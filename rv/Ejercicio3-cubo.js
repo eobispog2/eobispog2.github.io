@@ -9,7 +9,7 @@ forma.vertices.push( new THREE.Vector3( -1, 1 , 1 ) );
 forma.vertices.push( new THREE.Vector3( -1, -1 , 1 ) );
 forma.vertices.push( new THREE.Vector3( 1, -1 , 1 ) );   // Elemento 7
 
-forma.faces.push( new THREE.Face3( 0, 1, 2 ) );   // Cara 0
+forma.faces.push( new THREE.Face3( 0, 1, 2 ) );   // Cara 0, la orientación sí importa (mano derecha)
 forma.faces.push( new THREE.Face3( 0, 2, 3 ) );   // Cara 1
 forma.faces.push( new THREE.Face3( 0, 3, 7 ) );   // Cara 2
 forma.faces.push( new THREE.Face3( 0, 7, 4 ) );   // Cara 3
