@@ -13,6 +13,10 @@ forma.faces.push( new THREE.Face3( 0, 1, 2 ) );   // Cara 0
 forma.faces.push( new THREE.Face3( 0, 2, 3 ) );   // Cara 1
 forma.faces.push( new THREE.Face3( 0, 3, 7 ) );   // Cara 2
 forma.faces.push( new THREE.Face3( 0, 7, 4 ) );   // Cara 3
+forma.faces.push( new THREE.Face3( 5, 6, 7 ) );   // Cara 4
+forma.faces.push( new THREE.Face3( 5, 7, 4 ) );   // Cara 5
+forma.faces.push( new THREE.Face3( 2, 1, 5 ) );   // Cara 4
+forma.faces.push( new THREE.Face3( 2, 5, 6 ) );   // Cara 5
 
 forma.computeBoundingSphere();
 forma.computeFaceNormals();
