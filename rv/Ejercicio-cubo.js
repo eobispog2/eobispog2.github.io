@@ -1,12 +1,12 @@
 var forma = new THREE.Geometry();
 
-forma.vertices.push( new THREE.Vector3( 1, -1 , 1 ) );   // Push empuja elementos al arreglo, este es el elemento 0
+forma.vertices.push( new THREE.Vector3( -1, -1 , -1 ) );   // Push empuja elementos al arreglo, este es el elemento 0
 forma.vertices.push( new THREE.Vector3( 1, -1 , -1 ) );   // Elemento 1
-forma.vertices.push( new THREE.Vector3( -1, -1 , -1 ) );
-forma.vertices.push( new THREE.Vector3( -1, -1 , 1 ) );
-forma.vertices.push( new THREE.Vector3( 1, 1 , 1 ) );
 forma.vertices.push( new THREE.Vector3( 1, 1 , -1 ) );
-forma.vertices.push( new THREE.Vector3( -1, 1 , -1 ) );
+forma.vertices.push( new THREE.Vector3( -1, 1 , 1 ) );
+forma.vertices.push( new THREE.Vector3( -1, -1 , 1 ) );
+forma.vertices.push( new THREE.Vector3( 1, -1 , 1 ) );
+forma.vertices.push( new THREE.Vector3( 1, 1 , 1 ) );
 forma.vertices.push( new THREE.Vector3( -1, 1 , 1 ) );   // Elemento 7
 
 forma.faces.push( new THREE.Face3( 3, 2, 1 ) );   // Cara 0
