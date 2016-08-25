@@ -30,7 +30,7 @@ var escena = new THREE.Scene();
 escena.add( malla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 6;   // Entre mayor más lejos del objeto
+camara.position.z = 7;   // Entre mayor más lejos del objeto
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
