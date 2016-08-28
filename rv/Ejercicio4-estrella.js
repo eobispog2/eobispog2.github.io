@@ -12,15 +12,15 @@ figura.lineTo(0,50);
 
 var forma = new THREE.ShapeGeometry(figura);
 var material = new THREE.MeshBasicMaterial({color:0x00FF00});
-var malla = new THREE.Mesh(forma, material);
+var malla = new THREE.Mesh(forma);
 
 var escena = new THREE.Scene();
 escena.add(malla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 100;
-camara.position.x = 35;
-camara.position.y = 35;
+camara.position.x = 55;
+camara.position.y = 55;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
