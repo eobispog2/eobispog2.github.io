@@ -18,7 +18,7 @@ var escena = new THREE.Scene();
 escena.add(malla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 100;
+camara.position.z = 80;
 camara.position.x = 15;
 camara.position.y = 50;
 
