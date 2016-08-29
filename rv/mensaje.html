@@ -26,6 +26,16 @@
 	</head>
 	<body>
 
+		<div id="info">
+		<a href="http://threejs.org" target="_blank">three.js</a> - procedural 3D text by <a href="http://www.lab4games.net/zz85/blog" target="_blank">zz85</a> &amp; alteredq
+		<br/>type to enter new text, drag to spin the text
+		<br/><span class="button" id="color">change color</span>,
+			<span class="button" id="font">change font</span>,
+			<span class="button" id="weight">change weight</span>,
+			<span class="button" id="bevel">change bevel</span>
+			<a id="permalink" href="#">permalink</a>
+		</div>
+
 
 		<script src="../build/three.js"></script>
 		<script src="js/utils/GeometryUtils.js"></script>
@@ -47,10 +57,10 @@
 
 			var firstLetter = true;
 
-			var text = "Buenas noches Miri, eres increíble",
+			var text = "three.js",
 
 				height = 20,
-				size = 40,
+				size = 70,
 				hover = 30,
 
 				curveSegments = 4,
