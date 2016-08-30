@@ -8,6 +8,9 @@ puntos.push( new THREE.Vector2( 4, 4 ) );
 puntos.push( new THREE.Vector2( 3, 6 ) );
 puntos.push( new THREE.Vector2( 3, 10 ) );
 puntos.push( new THREE.Vector2( 4, 12 ) );
+puntos.push( new THREE.Vector2( 4, 14 ) );
+puntos.push( new THREE.Vector2( 2, 14 ) );
+puntos.push( new THREE.Vector2( 2, 12 ) );
 puntos.push( new THREE.Vector2( 0, 12 ) );
 
 var torreForma1 = new THREE.LatheGeometry(puntos);
