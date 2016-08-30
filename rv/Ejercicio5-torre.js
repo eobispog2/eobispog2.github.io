@@ -14,12 +14,14 @@ var torreForma1 = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
 
 var torreMalla = new THREE.Mesh(torreForma1, material);
+torreMalla.rotateX( Math.PI/6 );
+torreMalla.rotateY( Math.PI/6 );
 
 var escena = new THREE.Scene();
 escena.add(torreMalla);
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 100;
+camara.position.z = 80;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95);
