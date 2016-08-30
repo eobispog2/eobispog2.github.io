@@ -12,10 +12,11 @@ puntos.push( new THREE.Vector2( 0, 12 ) );
 
 var torreForma1 = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
-var arbolMalla = new THREE.Mesh(torreForma1, material);
+
+var torreMalla = new THREE.Mesh(torreForma1, material);
 
 var escena = new THREE.Scene();
-escena.add(arbolMalla);
+escena.add(torreMalla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 100;
