@@ -11,7 +11,7 @@ puntos.push( new THREE.Vector2( 0, 12 ) );
 var torreForma1 = new THREE.LatheGeometry(puntos);
 var torreMalla1 = new THREE.Mesh(torreForma1);
 
-var torreForma2 = new THREE.BoxGeometry( 6.5, 2, 6.5 );
+var torreForma2 = new THREE.BoxGeometry( 7, 2, 7 );
 torreForma2.translate(0,13,0);
 var torreMalla2 = new THREE.Mesh(torreForma2);
 
@@ -50,7 +50,7 @@ escena.add(torreMalla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 50;
-camara.position.y = 0;
+camara.position.y = 8;
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95);
