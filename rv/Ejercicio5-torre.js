@@ -11,7 +11,7 @@ puntos.push( new THREE.Vector2( 0, 12 ) );
 var torreForma1 = new THREE.LatheGeometry(puntos);
 var torreMalla1 = new THREE.Mesh(torreForma1);
 
-var torreForma2 = new THREE.BoxGeometry( 7.5, 2, 7.5 );
+var torreForma2 = new THREE.BoxGeometry( 6.5, 2, 6.5 );
 torreForma2.translate(0,12,0);
 var torreMalla2 = new THREE.Mesh(torreForma2);
 
