@@ -15,19 +15,19 @@ var torreForma2 = new THREE.BoxGeometry( 6.5, 2, 6.5 );
 torreForma2.translate(0,13,0);
 var torreMalla2 = new THREE.Mesh(torreForma2);
 
-var torreForma3 = new THREE.BoxGeometry( 2, 2, 2 );
+var torreForma3 = new THREE.BoxGeometry( 2.5, 2, 2.5 );
 torreForma3.translate(2,15,2);
 var torreMalla3 = new THREE.Mesh(torreForma3);
 
-var torreForma4 = new THREE.BoxGeometry( 2, 2, 2 );
+var torreForma4 = new THREE.BoxGeometry( 2.5, 2, 2.5 );
 torreForma4.translate(-2,15,2);
 var torreMalla4 = new THREE.Mesh(torreForma4);
 
-var torreForma5 = new THREE.BoxGeometry( 2, 2, 2 );
+var torreForma5 = new THREE.BoxGeometry( 2.5, 2, 2.5 );
 torreForma5.translate(2,15,-2);
 var torreMalla5 = new THREE.Mesh(torreForma5);
 
-var torreForma6 = new THREE.BoxGeometry( 2, 2, 2 );
+var torreForma6 = new THREE.BoxGeometry( 2.5, 2, 2.5 );
 torreForma6.translate(-2,15,-2);
 var torreMalla6 = new THREE.Mesh(torreForma6);
 
