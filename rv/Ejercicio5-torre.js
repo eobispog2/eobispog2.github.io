@@ -32,6 +32,7 @@ torreForma.merge(torreMalla4.geometry, torreMalla4.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var torreMalla = new THREE.Mesh(torreForma, material);
+torreMalla.rotateX(Math.PI/2);
 torreMalla.rotateY(Math.PI/2);
 
 var escena = new THREE.Scene();
