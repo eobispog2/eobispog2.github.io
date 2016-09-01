@@ -20,7 +20,7 @@ torreForma3.translate(3,14,3);
 var torreMalla3 = new THREE.Mesh(torreForma3);
 
 var torreForma4 = new THREE.BoxGeometry( 2, 1, 2 );
-torreForma4.translate(-3,14,3);
+torreForma4.translate(-5,14,5);
 var torreMalla4 = new THREE.Mesh(torreForma4);
 
 var torreForma5 = new THREE.BoxGeometry( 2, 2, 2 );
@@ -28,7 +28,7 @@ torreForma5.translate(3,14,-3);
 var torreMalla5 = new THREE.Mesh(torreForma5);
 
 var torreForma6 = new THREE.BoxGeometry( 2, 1, 2 );
-torreForma6.translate(-3,14,-3);
+torreForma6.translate(-5,14,-5);
 var torreMalla6 = new THREE.Mesh(torreForma6);
 
 //JUNTAR MALLAS:
