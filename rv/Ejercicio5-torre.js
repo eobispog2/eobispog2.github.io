@@ -17,8 +17,8 @@ var torreForma1 = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
 
 var torreMalla = new THREE.Mesh(torreForma1, material);
-torreMalla.rotateX( Math.PI/6 );
-torreMalla.rotateY( Math.PI/6 );
+// torreMalla.rotateX( Math.PI/6 );
+// torreMalla.rotateY( Math.PI/6 );
 
 var escena = new THREE.Scene();
 escena.add(torreMalla);
