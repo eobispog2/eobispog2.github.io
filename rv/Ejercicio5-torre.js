@@ -1,5 +1,4 @@
 var puntos = [];
-
 puntos.push( new THREE.Vector2( 0, 0 ) );
 puntos.push( new THREE.Vector2( 5, 0 ) );
 puntos.push( new THREE.Vector2( 5, 2 ) );
@@ -9,13 +8,20 @@ puntos.push( new THREE.Vector2( 3, 6 ) );
 puntos.push( new THREE.Vector2( 3, 10 ) );
 puntos.push( new THREE.Vector2( 4, 12 ) );
 puntos.push( new THREE.Vector2( 0, 12 ) );
-
 var torreForma1 = new THREE.LatheGeometry(puntos);
-var material = new THREE.MeshNormalMaterial();
+var torreMalla1 = new THREE.Mesh(torreForma1);
 
-var torreMalla = new THREE.Mesh(torreForma1, material);
-// torreMalla.rotateX( Math.PI/6 );
-// torreMalla.rotateY( Math.PI/6 );
+var torreForma2 = new THREE.BoxGeometry( 10, 2, 10 );
+esferaForma.translate(0,12,0);
+var torreMalla2 = new THREE.Mesh(torreForma2);
+
+// JUNTAR MALLAS:
+var torreForma = new THREE.Geometry();
+torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
+torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
+
+var material = new THREE.MeshNormalMaterial();
+var torreMalla = new THREE.Mesh(torreForma, material);
 
 var escena = new THREE.Scene();
 escena.add(torreMalla);
