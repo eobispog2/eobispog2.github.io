@@ -37,6 +37,8 @@ torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
 torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
 torreForma.merge(torreMalla3.geometry, torreMalla3.matrix);
 torreForma.merge(torreMalla4.geometry, torreMalla4.matrix);
+torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
+torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var torreMalla = new THREE.Mesh(torreForma, material);
