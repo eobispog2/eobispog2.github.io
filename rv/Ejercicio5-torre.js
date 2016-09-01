@@ -31,7 +31,7 @@ var torreForma6 = new THREE.BoxGeometry( 2, 1, 2 );
 torreForma6.translate(-3,14,-3);
 var torreMalla6 = new THREE.Mesh(torreForma6);
 
-// JUNTAR MALLAS:
+//JUNTAR MALLAS:
 var torreForma = new THREE.Geometry();
 torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
 torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
