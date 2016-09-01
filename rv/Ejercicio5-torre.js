@@ -19,15 +19,15 @@ var torreForma3 = new THREE.BoxGeometry( 2, 1, 2 );
 torreForma3.translate(3,14,3);
 var torreMalla3 = new THREE.Mesh(torreForma3);
 
-var torreForma4 = new THREE.BoxGeometry( 2, 2, 2 );
+var torreForma4 = new THREE.BoxGeometry( 2, 1, 2 );
 torreForma4.translate(-3,14,3);
 var torreMalla4 = new THREE.Mesh(torreForma4);
 
-var torreForma5 = new THREE.BoxGeometry( 2, 3, 2 );
+var torreForma5 = new THREE.BoxGeometry( 2, 1, 2 );
 torreForma5.translate(3,14,-3);
 var torreMalla5 = new THREE.Mesh(torreForma5);
 
-var torreForma6 = new THREE.BoxGeometry( 2, 4, 2 );
+var torreForma6 = new THREE.BoxGeometry( 2, 1, 2 );
 torreForma6.translate(-3,14,-3);
 var torreMalla6 = new THREE.Mesh(torreForma6);
 
@@ -43,7 +43,7 @@ torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
 var material = new THREE.MeshNormalMaterial();
 var torreMalla = new THREE.Mesh(torreForma, material);
 torreMalla.rotateX(Math.PI/6);
-torreMalla.rotateY(Math.PI/2);
+torreMalla.rotateY(Math.PI/6);
 
 var escena = new THREE.Scene();
 escena.add(torreMalla);
