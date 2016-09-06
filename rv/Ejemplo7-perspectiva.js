@@ -23,8 +23,8 @@ esfera2.position.x = -5;
 esfera2.position.y = -10;
 
 var escena = new THREE.Scene();
-escena.add( esfera 1 );
-escena.add( esfera 2 );
+escena.add( esfera1 );
+escena.add( esfera2 );
 escena.add( cubo );
 
 renderizador = new THREE.WebGLRenderer();
