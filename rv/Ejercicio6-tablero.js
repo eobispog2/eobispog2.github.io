@@ -55,12 +55,13 @@ torre4.position.z=80;
 // Formar tablero:
 var verdeOscuro = new THREE.MeshBasicMaterial( { color: 0x3C9823 } );
 var verdeClaro = new THREE.MeshBasicMaterial( { color: 0xB1FB9C } );
-var counter = 0;
+var cuadros = []; // Create a new empty array.
+var counter = 1;
 for (var i = 0; i < 8; i++) {
-  for (var j = 0; j < 8; i++) {
-    var cuadro[counter] = new THREE.BoxGeometry( 10, 10, 2 );
-    cuadro[counter].translate(j*10,i*10,0);
-    var cuadroMalla[counter] = new THREE.Mesh(cuadro[counter],verdeOscuro);
+  for (var j = 0; j < 8; j++) {
+    var cuadros[counter] = new THREE.BoxGeometry( 10, 10, 2 );
+    cuadros[counter].translate(j*10,i*10,0);
+    var cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeOscuro);
     counter++;
   }
 }
