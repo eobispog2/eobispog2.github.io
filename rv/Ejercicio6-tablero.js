@@ -62,6 +62,7 @@ for (var i = 0; i < 8; i++) {
     cuadro(counter).translate(j*10,i*10,0);
     var cuadroMalla(counter) = new THREE.Mesh(cuadro(counter),verdeOscuro);
     counter++;
+  }
 }
 
 var escena = new THREE.Scene();
