@@ -52,7 +52,6 @@ torre3.position.z=80;
 var torre4 = new THREE.Mesh(torreForma, blanco);
 torre4.position.z=80;
 
-
 var escena = new THREE.Scene();
 escena.add(torre1);
 escena.add(torre2);
@@ -67,6 +66,21 @@ var centro = new THREE.Vector3(40, 0, 40);
 var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
 camara.position.set(40, 80, 200);
 camara.lookAt(centro);
+
+// Luces
+var ambientLight = new THREE.AmbientLight( 0x000000 );
+escena.add( ambientLight );
+
+var lights = [];
+lights[ 0 ] = new THREE.PointLight( 0xffffff, 1, 0 );
+lights[ 1 ] = new THREE.PointLight( 0xffffff, 1, 0 );
+lights[ 2 ] = new THREE.PointLight( 0xffffff, 1, 0 );
+lights[ 0 ].position.set( 0, 200, 0 );
+lights[ 1 ].position.set( 100, 200, 100 );
+lights[ 2 ].position.set( - 100, - 200, - 100 );
+escena.add( lights[ 0 ] );
+escena.add( lights[ 1 ] );
+escena.add( lights[ 2 ] );
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
