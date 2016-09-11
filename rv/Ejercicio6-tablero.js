@@ -52,6 +52,12 @@ torre3.position.z=80;
 var torre4 = new THREE.Mesh(torreForma, blanco);
 torre4.position.z=80;
 
+var escena = new THREE.Scene();
+escena.add(torre1);
+escena.add(torre2);
+escena.add(torre3);
+escena.add(torre4);
+
 // Formar tablero:
 var verdeOscuro = new THREE.MeshBasicMaterial( { color: 0x3C9823 } );
 var verdeClaro = new THREE.MeshBasicMaterial( { color: 0xB1FB9C } );
@@ -63,15 +69,10 @@ for (var i = 0; i < 8; i++) {
     cuadros[counter] = new THREE.BoxGeometry( 10, 10, 2 );
     cuadros[counter].translate(j*10,i*10,0);
     cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeOscuro);
+    escena.add(cuadroMallas[counter]);
     counter++;
   }
 }
-
-var escena = new THREE.Scene();
-escena.add(torre1);
-escena.add(torre2);
-escena.add(torre3);
-escena.add(torre4);
 
 var campoVision = 45; //grados
 var relacionAspecto = window.innerWidth / window.innerHeight;
