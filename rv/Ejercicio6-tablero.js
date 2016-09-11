@@ -59,11 +59,15 @@ var cuadros = []; // Create a new empty array.
 var counter = 1;
 for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; j++) {
-    var cuadros[counter] = new THREE.BoxGeometry( 10, 10, 2 );
+    cuadros[counter] = new THREE.BoxGeometry( 10, 10, 2 );
     cuadros[counter].translate(j*10,i*10,0);
     var cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeOscuro);
     counter++;
   }
+}
+
+for (i = 0; i < cars.length; i++) { 
+    text += cars[i] + "<br>";
 }
 
 var escena = new THREE.Scene();
