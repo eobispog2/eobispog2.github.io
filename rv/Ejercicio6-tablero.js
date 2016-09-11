@@ -72,7 +72,7 @@ for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; j++) {
     cuadros[counter] = new THREE.BoxGeometry( 10, 2, 10 );
     cuadros[counter].translate(j*10,0,i*10);
-    if(i % 2 == 0 && j % 2 == 0) {
+    if(i % 2 == 0 && (j+1) % 2 == 0) {
       cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeOscuro);
     }
     else {
