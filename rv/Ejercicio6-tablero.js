@@ -42,7 +42,7 @@ torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
 torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
 
 var gris = new THREE.MeshBasicMaterial( { color: 0x848484 } );
-var blanco = new THREE.MeshStandardMaterial( { color: 0xFFFFFF, roughness: 0.1, metalness: 1.0 });
+var blanco = new THREE.MeshBasicMaterial( { color: 0xFFFFFF });
 var torre1 = new THREE.Mesh(torreForma, gris);
 var torre2 = new THREE.Mesh(torreForma, gris);
 torre2.position.x=80;
