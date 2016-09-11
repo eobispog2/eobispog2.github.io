@@ -55,7 +55,7 @@ torre4.position.z=80;
 // Formar tablero:
 var verdeOscuro = new THREE.MeshBasicMaterial( { color: 0x3C9823 } );
 var verdeClaro = new THREE.MeshBasicMaterial( { color: 0xB1FB9C } );
-var cuadros = [new THREE.BoxGeometry( 10, 10, 2 );]; // Create a new empty array.
+var cuadros = [new THREE.BoxGeometry( 10, 10, 2 ),new THREE.BoxGeometry( 10, 10, 2 ) ];
 var counter = 1;
 for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; j++) {
