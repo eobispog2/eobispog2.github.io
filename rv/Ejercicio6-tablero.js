@@ -58,9 +58,9 @@ var verdeClaro = new THREE.MeshBasicMaterial( { color: 0xB1FB9C } );
 var counter = 0;
 for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; i++) {
-    var cuadro(counter) = new THREE.BoxGeometry( 10, 10, 2 );
-    cuadro(counter).translate(j*10,i*10,0);
-    var cuadroMalla(counter) = new THREE.Mesh(cuadro(counter),verdeOscuro);
+    var cuadro[counter] = new THREE.BoxGeometry( 10, 10, 2 );
+    cuadro[counter].translate(j*10,i*10,0);
+    var cuadroMalla[counter] = new THREE.Mesh(cuadro[counter],verdeOscuro);
     counter++;
   }
 }
