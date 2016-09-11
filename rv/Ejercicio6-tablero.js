@@ -1,13 +1,13 @@
 // TORRE
 var puntos = [];
 puntos.push( new THREE.Vector2( 0, 0 ) );
-puntos.push( new THREE.Vector2( 4, 0 ) );
-puntos.push( new THREE.Vector2( 4, 2 ) );
-puntos.push( new THREE.Vector2( 3, 2 ) );
-puntos.push( new THREE.Vector2( 3, 4 ) );
-puntos.push( new THREE.Vector2( 2, 6 ) );
-puntos.push( new THREE.Vector2( 2, 10 ) );
-puntos.push( new THREE.Vector2( 3, 12 ) );
+puntos.push( new THREE.Vector2( 4.5, 0 ) );
+puntos.push( new THREE.Vector2( 4.5, 2 ) );
+puntos.push( new THREE.Vector2( 3.5, 2 ) );
+puntos.push( new THREE.Vector2( 3.5, 4 ) );
+puntos.push( new THREE.Vector2( 2.5, 6 ) );
+puntos.push( new THREE.Vector2( 2.5, 10 ) );
+puntos.push( new THREE.Vector2( 3.5, 12 ) );
 puntos.push( new THREE.Vector2( 0, 12 ) );
 var torreForma1 = new THREE.LatheGeometry(puntos);
 var torreMalla1 = new THREE.Mesh(torreForma1);
