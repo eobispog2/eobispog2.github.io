@@ -41,8 +41,8 @@ torreForma.merge(torreMalla4.geometry, torreMalla4.matrix);
 torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
 torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
 
-var gris = new THREE.MeshBasicMaterial( { color: 0x848484 } );
-var blanco = new THREE.MeshBasicMaterial( { color: 0xFFFFFF });
+var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
+var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
 var torre1 = new THREE.Mesh(torreForma, gris);
 torre1.position.y=2;
 var torre2 = new THREE.Mesh(torreForma, gris);
@@ -63,26 +63,55 @@ escena.add(torre3);
 escena.add(torre4);
 
 // Formar tablero:
-var verdeOscuro = new THREE.MeshBasicMaterial( { color: 0x3C9823 } );
-var verdeClaro = new THREE.MeshBasicMaterial( { color: 0xB1FB9C } );
+//var verdeOscuro = new THREE.MeshLambertMaterial( { color: 0x3C9823 } );
+//var verdeClaro = new THREE.MeshLambertMaterial( { color: 0xB1FB9C } );
 var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
-var cuadroMallas = [new THREE.Mesh(cuadros[0],verdeOscuro)];
+var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
 var counter = 0;
 for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; j++) {
     cuadros[counter] = new THREE.BoxGeometry( 10, 2, 10 );
     cuadros[counter].translate(j*10,0,i*10);
     if((counter+i) % 2 == 0){
-      cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeOscuro);
+      cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],gris);
     }
     else {
-      cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],verdeClaro);
+      cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],blanco);
     }
     escena.add(cuadroMallas[counter]);
     counter++;
   }
 }
 
+//Marco Tablero
+
+var marco1 = new THREE.BoxGeometry( 80, 5, 5);
+var marco2 = new THREE.BoxGeometry( 80, 5, 5);
+var marco3 = new THREE.BoxGeometry( 5, 5, 90);
+var marco4 = new THREE.BoxGeometry( 5, 5, 90);
+var cafe = new THREE.MeshLambertMaterial( { color: 0x653909 } );
+var marcomalla1 = new THREE.Mesh(marco1, cafe);
+marcomalla1.position.x=35;
+marcomalla1.position.y=3;
+marcomalla1.position.z=80;
+escena.add(marcomalla1);
+var marcomalla2 = new THREE.Mesh(marco2, cafe);
+marcomalla2.position.x=35;
+marcomalla2.position.y=3;
+marcomalla2.position.z=-5;
+escena.add(marcomalla2);
+var marcomalla3 = new THREE.Mesh(marco3, cafe);
+marcomalla3.position.x=-7;
+marcomalla3.position.y=3;
+marcomalla3.position.z=37.5;
+escena.add(marcomalla3);
+var marcomalla4 = new THREE.Mesh(marco4, cafe);
+marcomalla4.position.x=77;
+marcomalla4.position.y=3;
+marcomalla4.position.z=37.5;
+escena.add(marcomalla4);
+
+//Camara
 var campoVision = 45; //grados
 var relacionAspecto = window.innerWidth / window.innerHeight;
 var planoCercano = 1;
@@ -93,8 +122,21 @@ camara.position.set(40, 80, 150);
 camara.lookAt(centro);
 
 // Luces
-var ambientLight = new THREE.AmbientLight( 0xffffff );
-escena.add( ambientLight );
+var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
+luz.position.set(35, 70, 35);
+escena.add( luz );
+var l1 = new THREE.DirectionalLight( 0xffffff, 0.45 );
+l1.position.set( -10, 25, -10 )
+var l2 = new THREE.DirectionalLight( 0xffffff, 0.45 );
+l2.position.set( 90, 25, -10 )
+var l3 = new THREE.DirectionalLight( 0xffffff, 0.45 );
+l3.position.set( -10, 25, 90 )
+var l4 = new THREE.DirectionalLight( 0xffffff, 0.45 );
+l4.position.set( 90, 25, 90 )
+escena.add( l1 );
+escena.add( l2 );
+escena.add( l3 );
+escena.add( l4 );
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
