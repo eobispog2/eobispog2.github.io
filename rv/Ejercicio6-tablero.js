@@ -129,9 +129,15 @@ camara.lookAt(centro);
 //var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
 //luz.position.set(35, 70, 35);
 //escena.add( luz );
-var l1 = new THREE.PointLight( 0xffffff, 1 );
-l1.position.set( 100, 35, 100 )
+var l1 = new THREE.PointLight( 0x00fcff, 1 );
+l1.position.set( -20, 50, -20 )
 escena.add( l1 );
+var l2 = new THREE.PointLight( 0xffff00, 1 );
+l2.position.set( 100, 50, -20 )
+escena.add( l2 );
+var l3 = new THREE.PointLight( 0xfc00ff, 1 );
+l3.position.set( 100, 50, 100 )
+escena.add( l3 );
 
 
 renderizador = new THREE.WebGLRenderer();
@@ -155,6 +161,8 @@ marcomalla2.receiveShadow = true;
 marcomalla3.receiveShadow = true;
 marcomalla4.receiveShadow = true;
 l1.castShadow = true;
+l2.castShadow = true;
+l3.castShadow = true;
 
 document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
