@@ -131,11 +131,8 @@ camara.lookAt(centro);
 //escena.add( luz );
 var l1 = new THREE.PointLight( 0xffffff, 0.45 );
 l1.position.set( -10, 25, -10 )
-
 escena.add( l1 );
-escena.add( l2 );
-escena.add( l3 );
-escena.add( l4 );
+
 
 renderizador = new THREE.WebGLRenderer();
 renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
@@ -148,9 +145,6 @@ torre3.castShadow = true;
 torre4.castShadow = true;
 cuadroMallas.receiveShadow = true;
 l1.castShadow = true;
-l2.castShadow = true;
-l3.castShadow = true;
-l4.castShadow = true;
 
 document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
