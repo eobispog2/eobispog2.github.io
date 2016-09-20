@@ -126,9 +126,9 @@ camara.position.set(40, 80, 150);
 camara.lookAt(centro);
 
 // Luces
-var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
-luz.position.set(35, 70, 35);
-escena.add( luz );
+//var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
+//luz.position.set(35, 70, 35);
+//escena.add( luz );
 var l1 = new THREE.DirectionalLight( 0xffffff, 0.45 );
 l1.position.set( -10, 25, -10 )
 var l2 = new THREE.DirectionalLight( 0xffffff, 0.45 );
