@@ -143,7 +143,12 @@ torre1.castShadow = true;
 torre2.castShadow = true;
 torre3.castShadow = true;
 torre4.castShadow = true;
-cuadroMallas[].receiveShadow = true;
+for (var i = 0; i < 8; i++) {
+  for (var j = 0; j < 8; j++) {
+    cuadroMallas[counter].receiveShadow = true;
+    counter++;
+  }
+}
 marcomalla1.receiveShadow = true;
 marcomalla2.receiveShadow = true;
 marcomalla3.receiveShadow = true;
