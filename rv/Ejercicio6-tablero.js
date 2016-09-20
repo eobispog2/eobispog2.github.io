@@ -143,6 +143,7 @@ torre1.castShadow = true;
 torre2.castShadow = true;
 torre3.castShadow = true;
 torre4.castShadow = true;
+counter = 0;
 for (var i = 0; i < 8; i++) {
   for (var j = 0; j < 8; j++) {
     cuadroMallas[counter].receiveShadow = true;
