@@ -129,8 +129,8 @@ camara.lookAt(centro);
 //var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
 //luz.position.set(35, 70, 35);
 //escena.add( luz );
-var l1 = new THREE.PointLight( 0xffffff, 0.45 );
-l1.position.set( -10, 25, -10 )
+var l1 = new THREE.PointLight( 0xffffff, 1 );
+l1.position.set( -10, 35, -10 )
 escena.add( l1 );
 
 
