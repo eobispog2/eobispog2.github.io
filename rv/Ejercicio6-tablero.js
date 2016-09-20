@@ -144,6 +144,10 @@ torre2.castShadow = true;
 torre3.castShadow = true;
 torre4.castShadow = true;
 cuadroMallas.receiveShadow = true;
+marcomalla1.receiveShadow = true;
+marcomalla2.receiveShadow = true;
+marcomalla3.receiveShadow = true;
+marcomalla4.receiveShadow = true;
 l1.castShadow = true;
 
 document.body.appendChild( renderizador.domElement );
