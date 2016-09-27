@@ -1,4 +1,4 @@
-var VENTANA new Object();
+var VENTANA = new Object();
 
 VENTANA.listener = function() {
   VENTANA.camara.aspect = window.innerWidth / window.innerHeight;
