@@ -6,7 +6,7 @@ VENTANA.listener = function() {
   VENTANA.renderizador.setSize( window.innerWidth, window.innerHeight );
 }
 
-VENTANA.setup = funtion() {
+VENTANA.setup = function() {
   var tipo_evento = 'resize';
   var capturarp = false;
   window.addEventListener( tipo_evento, VENTANA.listener, capturarp );
