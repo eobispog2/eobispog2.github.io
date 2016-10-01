@@ -159,6 +159,6 @@ function loop(){
   }
 }
 
-  var escena, camara, renderizador, bandera;
-  setup();
-  loop();
+var escena, camara, renderizador, bandera;
+setup();
+loop();
