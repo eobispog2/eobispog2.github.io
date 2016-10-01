@@ -1,3 +1,10 @@
+var TEXTURA1 = new Object();
+TEXTURA1.retrollamada = function( textura ) {
+  var material1 = new THREE.MeshBasicMaterial( {map: textura} );
+  TEXTURA1.malla = new THREE.Mesh( torreForma, material1 );
+}
+
+
 function setup() {
   // TORRE
   var puntos = [];
@@ -41,16 +48,16 @@ function setup() {
   torreForma.merge(torreMalla4.geometry, torreMalla4.matrix);
   torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
   torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
+  
+  var escena = new THREE.Scene();
+  
+  var cargador = new THREE.TextureLoader();
+  cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
+  TEXTURA1.malla.position.y=2;
+  escena.add(TEXTURA1.malla);
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
-
-  THREE.ImageUtils.crossOrigin='';
-  var textura1 = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
-  var marmolBlanco = new THREE.MeshPhongMaterial({map: textura1 });
-  var torre1 = new THREE.Mesh(torreForma, marmolBlanco);
-  torre1.position.y=2;
-
   var torre2 = new THREE.Mesh(torreForma, gris);
   torre2.position.x=70;
   torre2.position.y=2;
@@ -61,7 +68,6 @@ function setup() {
   var torre4 = new THREE.Mesh(torreForma, blanco);
   torre4.position.y=2;
   torre4.position.z=70;
-  var escena = new THREE.Scene();
   escena.add(torre2);
   escena.add(torre3);
   escena.add(torre4);
