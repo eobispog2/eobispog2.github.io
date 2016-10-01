@@ -4,7 +4,6 @@ TEXTURA1.retrollamada = function( textura ) {
   TEXTURA1.malla = new THREE.Mesh( setup.torreForma, material1 );
 }
 
-
 function setup() {
   // TORRE
   var puntos = [];
@@ -147,10 +146,10 @@ function setup() {
   escena.add( l2 );
   escena.add( l3 );
   escena.add( l4 );
-
-  renderizador = new THREE.WebGLRenderer();
-  renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
-  document.body.appendChild( renderizador.domElement );
+  
+  var lienzo = document.getElementById("./Ejercicio8-tableroTextura");
+  TEXTURA.renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
+  TEXTURA.renderizador.setSize( 600, 600 );
 }
 
 function loop(){
