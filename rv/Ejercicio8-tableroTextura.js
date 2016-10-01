@@ -54,6 +54,7 @@ function setup() {
   var cargador = new THREE.TextureLoader();
   cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
   escena.add(TEXTURA1.malla);
+  var bandera = TRUE;
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
@@ -153,10 +154,12 @@ function setup() {
 }
 
 function loop(){
-  requestAnimationFrame(loop);
-  renderizador.render(escena, camara );
+  if (bandera == TRUE) {
+    requestAnimationFrame(loop);
+    renderizador.render(escena, camara );
+  }
 }
 
-  var escena, camara, renderizador;
+  var escena, camara, renderizador, bandera;
   setup();
   loop();
