@@ -147,9 +147,9 @@ function setup() {
   escena.add( l3 );
   escena.add( l4 );
   
-  var lienzo = document.getElementById("./Ejercicio8-tableroTextura");
-  renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
-  renderizador.setSize( 600, 600 );
+  renderizador = new THREE.WebGLRenderer();
+  renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
+  document.body.appendChild( renderizador.domElement );
 }
 
 function loop(){
