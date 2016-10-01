@@ -24,11 +24,7 @@ TEXTURA.setup = function() {
 
 TEXTURA.loop = function() {
   requestAnimationFrame( TEXTURA.loop);
-  if ( TEXTURA.malla !== undefined ) {
-    TEXTURA.malla.rotateX( 0.01);
-    TEXTURA.malla.rotateY( 0.01);
-  }
-    TEXTURA.renderizador.render( TEXTURA.escena, TEXTURA.camara );
+  TEXTURA.renderizador.render( TEXTURA.escena, TEXTURA.camara );
 }
 
 TEXTURA.setup();
