@@ -148,10 +148,10 @@ function setup() {
 }
 
 function loop(){
-  requestAnimationFrame( loop);
-  renderizador.render( escena, camara );
+  requestAnimationFrame(loop);
+  renderizador.render(escena, camara );
 }
 
-  var escena, camara, renderizador
+  var escena, camara, renderizador;
   setup();
   loop();
