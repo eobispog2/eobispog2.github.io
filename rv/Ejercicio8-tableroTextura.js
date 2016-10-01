@@ -1,7 +1,7 @@
 var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
   var material1 = new THREE.MeshBasicMaterial( {map: textura} );
-  TEXTURA1.malla = new THREE.Mesh( torreForma, material1 );
+  TEXTURA1.malla = new THREE.Mesh( setup.torreForma, material1 );
 }
 
 
@@ -53,7 +53,6 @@ function setup() {
   
   var cargador = new THREE.TextureLoader();
   cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
-  TEXTURA1.malla.position.y=2;
   escena.add(TEXTURA1.malla);
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
