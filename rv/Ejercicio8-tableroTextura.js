@@ -72,8 +72,6 @@ function setup() {
   escena.add(torre4);
 
   // Formar tablero:
-  //var verdeOscuro = new THREE.MeshLambertMaterial( { color: 0x3C9823 } );
-  //var verdeClaro = new THREE.MeshLambertMaterial( { color: 0xB1FB9C } );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
   var counter = 0;
