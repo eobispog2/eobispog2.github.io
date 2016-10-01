@@ -46,7 +46,7 @@ function setup() {
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
 
   THREE.ImageUtils.crossOrigin='';
-  var textura1 = THREE.ImageUtils.loadTexture('marmol_blanco.jpg');
+  var textura1 = THREE.ImageUtils.loadTexture('http://akata93.github.io/r2d2.jpg');
   var marmolBlanco = new THREE.MeshPhongMaterial({map: textura1 });
   var torre1 = new THREE.Mesh(torreForma, marmolBlanco);
   torre1.position.y=2;
