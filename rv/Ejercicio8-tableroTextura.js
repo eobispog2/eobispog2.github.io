@@ -148,7 +148,7 @@ function setup() {
 }
 
 function loop(){
-  requestAnimationFrame( TEXTURA.loop);
+  requestAnimationFrame( loop);
   renderizador.render( escena, camara );
 }
 
