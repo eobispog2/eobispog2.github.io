@@ -55,7 +55,7 @@ function setup() {
   escena.add(TEXTURA1.malla);
   var bandera = 1;
   
-  TEXTURA1.malla
+  TEXTURA1.escena   escena global
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
