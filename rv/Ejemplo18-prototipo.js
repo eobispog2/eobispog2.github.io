@@ -14,7 +14,7 @@ PROTOTIPO.ArbolGeometry = function(){
   this.merge(esferaMalla.geometry, esferaMalla.matrix);
 }
 
-PROTOTIPO.ArbolGeometry.prototype = new THREE.Geometry():
+PROTOTIPO.ArbolGeometry.prototype = new THREE.Geometry();
 
 PROTOTIPO.setup = function() {
   var arbol1 = new THREE.Mesh(new PROTOTIPO.ArbolGeometry(), new THREE.MeshNormalMaterial());
