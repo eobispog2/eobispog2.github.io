@@ -54,6 +54,8 @@ function setup() {
   cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
   escena.add(TEXTURA1.malla);
   var bandera = 1;
+  
+  TEXTURA1.malla
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
