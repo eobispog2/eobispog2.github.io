@@ -150,15 +150,23 @@ function setup() {
   renderizador = new THREE.WebGLRenderer();
   renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
   document.body.appendChild( renderizador.domElement );
+  
+  setupDone = true;
 }
 
 function loop(){
-  if (bandera == 1) {
-    requestAnimationFrame(loop);
-    renderizador.render(escena, camara );
+  requestAnimationFrame(loop);
+  if (textura1 != undefined && textura2 != undefined && !setupDone){
+    setup();
   }
+  renderizador.render(escena, camara );
 }
 
+function setup2(){
+  
+}
+
+var setupDone = false;
 var escena, camara, renderizador, bandera;
 setup();
 loop();
