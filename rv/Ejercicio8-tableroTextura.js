@@ -1,10 +1,15 @@
 var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
-  var material1 = new THREE.MeshBasicMaterial( {map: textura} );
-  TEXTURA1.malla = new THREE.Mesh( setup.torreForma, material1 );
+  var TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
 
-function setup() {
+function setup1() {
+  var escena = new THREE.Scene();
+  var cargador = new THREE.TextureLoader();
+  cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
+}
+  
+function setup2() {
   // TORRE
   var puntos = [];
   puntos.push( new THREE.Vector2( 0, 0 ) );
@@ -48,14 +53,8 @@ function setup() {
   torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
   torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
   
-  var escena = new THREE.Scene();
-  
-  var cargador = new THREE.TextureLoader();
-  cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
-  escena.add(TEXTURA1.malla);
-  var bandera = 1;
-  
-  TEXTURA1.escena   escena global
+  var torre1 = new THREE.Mesh( torreForma, TEXTURA1.material );
+  escena.add(torre1);
 
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
@@ -157,12 +156,12 @@ function setup() {
 function loop(){
   requestAnimationFrame(loop);
   if (textura1 != undefined && textura2 != undefined && !setupDone){
-    setup();
+    setup2();
   }
-  renderizador.render(escena, camara );
+  renderizador.render(escena, camara);
 }
 
 var setupDone = false;
-var escena, camara, renderizador, bandera;
-setup();
+var escena, camara, renderizador;
+setup1();
 loop();
