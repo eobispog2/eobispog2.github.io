@@ -4,7 +4,7 @@ TEXTURA1.retrollamada = function( textura ) {
 }
 
 function setup1() {
-  var escena = new THREE.Scene();
+  escena = new THREE.Scene();
   var cargador = new THREE.TextureLoader();
   cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
 }
