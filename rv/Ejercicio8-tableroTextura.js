@@ -162,10 +162,6 @@ function loop(){
   renderizador.render(escena, camara );
 }
 
-function setup2(){
-  
-}
-
 var setupDone = false;
 var escena, camara, renderizador, bandera;
 setup();
