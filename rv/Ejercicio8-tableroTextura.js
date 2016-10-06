@@ -155,7 +155,7 @@ function setup2() {
 
 function loop(){
   requestAnimationFrame(loop);
-  if (TEXTURA1 != undefined && !setupDone){
+  if (TEXTURA1.material !== undefined && !setupDone){
     setup2();
   }
   renderizador.render(escena, camara);
