@@ -125,7 +125,7 @@ function setup2() {
   var planoCercano = 1;
   var planoLejano = 1000;
   var centro = new THREE.Vector3(40, 0, 40);
-  var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
+  camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
   camara.position.set(40, 80, 150);
   camara.lookAt(centro);
 
@@ -158,7 +158,7 @@ function loop(){
   if (TEXTURA1 != undefined && !setupDone){
     setup2();
   }
-  //renderizador.render(escena, camara);
+  renderizador.render(escena, camara);
 }
 
 var setupDone = false;
