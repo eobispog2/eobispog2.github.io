@@ -6,7 +6,7 @@ TEXTURA1.retrollamada = function( textura ) {
 function setup1() {
   escena = new THREE.Scene();
   var cargador = new THREE.TextureLoader();
-  cargador.load("earth_atmos_2048.jpg", TEXTURA1.retrollamada);
+  cargador.load("marmol_negro.jpg", TEXTURA1.retrollamada);
 }
   
 function setup2() {
