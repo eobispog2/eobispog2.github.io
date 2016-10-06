@@ -149,6 +149,7 @@ function setup2() {
   renderizador = new THREE.WebGLRenderer();
   renderizador.setSize(  window.innerWidth*.95, window.innerHeight*.95 );
   document.body.appendChild( renderizador.domElement );
+  renderizador.render(escena, camara);
   
   setupDone = true;
 }
@@ -158,7 +159,6 @@ function loop(){
   if (TEXTURA1.material !== undefined && !setupDone){
     setup2();
   }
-  renderizador.render(escena, camara);
 }
 
 var setupDone = false;
