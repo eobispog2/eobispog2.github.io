@@ -1,6 +1,6 @@
 var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
-  var TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
+  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
 
 function setup1() {
