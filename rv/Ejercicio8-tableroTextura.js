@@ -158,7 +158,7 @@ function loop(){
   if (TEXTURA1 != undefined && !setupDone){
     setup2();
   }
-  renderizador.render(escena, camara);
+  //renderizador.render(escena, camara);
 }
 
 var setupDone = false;
