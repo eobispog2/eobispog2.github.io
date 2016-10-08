@@ -92,6 +92,8 @@ function setup2() {
   escena.add(torre4);
 
   // Formar tablero:
+  var gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
+  var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
   var counter = 0;
@@ -111,7 +113,6 @@ function setup2() {
   }
 
   //Marco Tablero
-
   var marco1 = new THREE.BoxGeometry( 80, 5, 5);
   var marco2 = new THREE.BoxGeometry( 80, 5, 5);
   var marco3 = new THREE.BoxGeometry( 5, 5, 90);
