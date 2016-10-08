@@ -3,10 +3,28 @@ TEXTURA1.retrollamada = function( textura ) {
   TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
 
+var TEXTURA2 = new Object();
+TEXTURA2.retrollamada = function( textura ) {
+  TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+
+var TEXTURA3 = new Object();
+TEXTURA3.retrollamada = function( textura ) {
+  TEXTURA3.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+
+var TEXTURA4 = new Object();
+TEXTURA4.retrollamada = function( textura ) {
+  TEXTURA4.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+
 function setup1() {
   escena = new THREE.Scene();
   var cargador = new THREE.TextureLoader();
   cargador.load("marmol_blanco.jpg", TEXTURA1.retrollamada);
+  cargador.load("madera_blanca.jpg", TEXTURA2.retrollamada);
+  cargador.load("marmol_negro.jpg", TEXTURA3.retrollamada);
+  cargador.load("madera_negra.jpg", TEXTURA4.retrollamada);
 }
   
 function setup2() {
@@ -53,23 +71,24 @@ function setup2() {
   torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
   torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
   
+  // CREAR TORRES:
   var torre1 = new THREE.Mesh( torreForma, TEXTURA1.material );
   escena.add(torre1);
-
-  var gris = new THREE.MeshLambertMaterial( { color: 0x151515 } );
-  var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
-  var torre2 = new THREE.Mesh(torreForma, gris);
+  
+  var torre2 = new THREE.Mesh( torreForma, TEXTURA2.material );
   torre2.position.x=70;
   torre2.position.y=2;
-  var torre3 = new THREE.Mesh(torreForma, blanco);
+  escena.add(torre2);
+  
+  var torre3 = new THREE.Mesh( torreForma, TEXTURA3.material );
   torre3.position.x=70;
   torre3.position.y=2;
   torre3.position.z=70;
-  var torre4 = new THREE.Mesh(torreForma, blanco);
+  escena.add(torre3);
+  
+  var torre4 = new THREE.Mesh( torreForma, TEXTURA4.material );
   torre4.position.y=2;
   torre4.position.z=70;
-  escena.add(torre2);
-  escena.add(torre3);
   escena.add(torre4);
 
   // Formar tablero:
