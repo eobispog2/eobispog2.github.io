@@ -176,7 +176,7 @@ function setup2() {
 
 function loop(){
   requestAnimationFrame(loop);
-  if (TEXTURA1.material !== undefined && !setupDone){
+  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined  && TEXTURA3.material !== undefined  && TEXTURA4.material !== undefined && !setupDone){
     setup2();
   }
 }
