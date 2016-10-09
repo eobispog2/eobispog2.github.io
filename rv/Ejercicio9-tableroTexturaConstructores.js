@@ -62,7 +62,7 @@ function setup2() {
   torreForma6.translate(-2.75,14.5,-2.75);
   var torreMalla6 = new THREE.Mesh(torreForma6);
 
-  //JUNTAR MALLAS:
+  // Juntar mallas de torre:
   var torreForma = new THREE.Geometry();
   torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
   torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
@@ -71,8 +71,9 @@ function setup2() {
   torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
   torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
   
-  // CREAR TORRES:
+  // Crear torres:
   var torre1 = new THREE.Mesh( torreForma, TEXTURA1.material );
+  torre1.position.y=2;
   escena.add(torre1);
   
   var torre2 = new THREE.Mesh( torreForma, TEXTURA2.material );
@@ -90,8 +91,41 @@ function setup2() {
   torre4.position.y=2;
   torre4.position.z=70;
   escena.add(torre4);
+  
+  // PEÓN
+  var puntosPeon = [];
+  puntosPeon.push( new THREE.Vector2( 0, 0 ) );
+  puntosPeon.push( new THREE.Vector2( 4.5, 0 ) );
+  puntosPeon.push( new THREE.Vector2( 4.5, 1.5 ) );
+  puntosPeon.push( new THREE.Vector2( 4, 1.5 ) );
+  puntosPeon.push( new THREE.Vector2( 4, 3.5 ) );
+  puntosPeon.push( new THREE.Vector2( 3, 4.5 ) );
+  puntosPeon.push( new THREE.Vector2( 2, 8 ) );
+  puntosPeon.push( new THREE.Vector2( 2.5, 8 ) );
+  puntosPeon.push( new THREE.Vector2( 2.5, 9.5 ) );
+  puntosPeon.push( new THREE.Vector2( 2, 9.5 ) );
+  puntosPeon.push( new THREE.Vector2( 2, 11 ) );
+  puntosPeon.push( new THREE.Vector2( 0, 11 ) );
+  var peonForma1 = new THREE.LatheGeometry(puntosPeon);
+  var peonMalla1 = new THREE.Mesh(peonForma1);
+  
+  var peonForma2 = new THREE.SphereGeometry( 3 );
+  peonForma2.translate(0,12.5,0);
+  var peonMalla2 = new THREE.Mesh(peonForma2);
 
-  // Formar tablero:
+  // Juntar mallas de peon:
+  var peonForma = new THREE.Geometry();
+  peonForma.merge(peonMalla1.geometry, peonMalla1.matrix);
+  peonForma.merge(peonMalla2.geometry, peonMalla2.matrix);
+  
+  // Crear peón:
+  var peon1 = new THREE.Mesh( peonForma, TEXTURA1.material );
+  peon1.position.x=20;
+  peon1.position.y=2;
+  peon1.position.z=10;
+  escena.add(peon1);
+
+  // TABLERO:
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
@@ -112,7 +146,7 @@ function setup2() {
     }
   }
 
-  //Marco Tablero
+  // MARCO DE TABLERO
   var marco1 = new THREE.BoxGeometry( 80, 5, 5);
   var marco2 = new THREE.BoxGeometry( 80, 5, 5);
   var marco3 = new THREE.BoxGeometry( 5, 5, 90);
@@ -139,7 +173,7 @@ function setup2() {
   marcomalla4.position.z=37.5;
   escena.add(marcomalla4);
 
-  //Camara
+  // CÁMARA
   var campoVision = 45; //grados
   var relacionAspecto = window.innerWidth / window.innerHeight;
   var planoCercano = 1;
@@ -149,7 +183,7 @@ function setup2() {
   camara.position.set(40, 80, 150);
   camara.lookAt(centro);
 
-  // Luces
+  // LUCES
   var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
   luz.position.set(35, 70, 35);
   escena.add( luz );
