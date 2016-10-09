@@ -178,7 +178,7 @@ function setup2() {
   var relacionAspecto = window.innerWidth / window.innerHeight;
   var planoCercano = 1;
   var planoLejano = 1000;
-  var centro = new THREE.Vector3(40, 0, 40);
+  var centro = new THREE.Vector3(45, 0, 45);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
   camara.position.set(45, 80, 150);
   camara.lookAt(centro);
