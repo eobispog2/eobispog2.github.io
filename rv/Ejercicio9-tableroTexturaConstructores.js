@@ -110,7 +110,7 @@ function setup2() {
   var peonMalla1 = new THREE.Mesh(peonForma1);
   
   var peonForma2 = new THREE.SphereGeometry( 3 );
-  peonForma2.translate(0,12.5,0);
+  peonForma2.translate(0,12,0);
   var peonMalla2 = new THREE.Mesh(peonForma2);
 
   // Juntar mallas de peon:
@@ -180,7 +180,7 @@ function setup2() {
   var planoLejano = 1000;
   var centro = new THREE.Vector3(40, 0, 40);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(40, 80, 150);
+  camara.position.set(45, 80, 150);
   camara.lookAt(centro);
 
   // LUCES
