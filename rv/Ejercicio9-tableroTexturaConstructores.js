@@ -146,7 +146,7 @@ function setup2() {
   var alfilMalla1 = new THREE.Mesh(alfilForma1);
   
   var alfilForma2 = new THREE.ConeGeometry( 2.5, 4 );
-  alfilForma2.translate(0,15,0);
+  alfilForma2.translate(0,18,0);
   var alfilMalla2 = new THREE.Mesh(alfilForma2);
   
   var alfilForma3= new THREE.SphereGeometry( 1 );
@@ -221,7 +221,7 @@ function setup2() {
   var planoLejano = 1000;
   var centro = new THREE.Vector3(35, 0, 45);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(35, 80, 130);
+  camara.position.set(35, 70, 130);
   camara.lookAt(centro);
 
   // LUCES
