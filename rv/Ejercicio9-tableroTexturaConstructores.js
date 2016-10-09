@@ -146,7 +146,7 @@ function setup2() {
   var alfilMalla1 = new THREE.Mesh(alfilForma1);
   
   var alfilForma2 = new THREE.ConeGeometry( 2.5, 4 );
-  alfilForma2.translate(0,18,0);
+  alfilForma2.translate(0,17,0);
   var alfilMalla2 = new THREE.Mesh(alfilForma2);
   
   var alfilForma3= new THREE.SphereGeometry( 1 );
