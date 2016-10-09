@@ -160,7 +160,7 @@ function setup2() {
   alfilForma.merge(alfilMalla3.geometry, alfilMalla3.matrix);
   
   // Crear alfil:
-  var alfil3 = new THREE.Mesh( alfilForma, TEXTURA3.material );
+  var alfil3 = new THREE.Mesh( alfilForma, TEXTURA4.material );
   alfil3.position.x=50;
   alfil3.position.y=2;
   alfil3.position.z=70;
