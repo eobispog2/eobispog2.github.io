@@ -110,7 +110,7 @@ function setup2() {
   var peonMalla1 = new THREE.Mesh(peonForma1);
   
   var peonForma2 = new THREE.SphereGeometry( 3 );
-  peonForma2.translate(0,12,0);
+  peonForma2.translate(0,12.5,0);
   var peonMalla2 = new THREE.Mesh(peonForma2);
 
   // Juntar mallas de peon:
