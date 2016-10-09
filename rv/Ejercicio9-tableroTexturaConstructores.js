@@ -126,7 +126,7 @@ function setup2() {
   escena.add(peon14);
   
   // ALFIL
-  var puntosalfil = [];
+  var puntosAlfil = [];
   puntosAlfil.push( new THREE.Vector2( 0, 0 ) );
   puntosAlfil.push( new THREE.Vector2( 4.5, 0 ) );
   puntosAlfil.push( new THREE.Vector2( 4.5, 1.5 ) );
