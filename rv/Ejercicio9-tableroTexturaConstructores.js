@@ -119,7 +119,8 @@ function setup2() {
   peonForma.merge(peonMalla2.geometry, peonMalla2.matrix);
   
   // Crear peones:
-  var peon14 = new THREE.Mesh( peonForma, TEXTURA4.material );
+  var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF });
+  var peon14 = new THREE.Mesh( peonForma, blanco );
   peon14.position.x=20;
   peon14.position.y=2;
   peon14.position.z=60;
@@ -159,7 +160,7 @@ function setup2() {
   alfilForma.merge(alfilMalla3.geometry, alfilMalla3.matrix);
   
   // Crear alfil:
-  var alfil3 = new THREE.Mesh( alfilForma, TEXTURA3.material );
+  var alfil3 = new THREE.Mesh( alfilForma, blanco );
   alfil3.position.x=50;
   alfil3.position.y=2;
   alfil3.position.z=70;
@@ -218,7 +219,7 @@ function setup2() {
   var relacionAspecto = window.innerWidth / window.innerHeight;
   var planoCercano = 1;
   var planoLejano = 1000;
-  var centro = new THREE.Vector3(35, 0, 35);
+  var centro = new THREE.Vector3(35, 0, 45);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
   camara.position.set(35, 80, 130);
   camara.lookAt(centro);
