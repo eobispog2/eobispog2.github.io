@@ -62,7 +62,7 @@ function setup2() {
   torreForma6.translate(-2.75,14.5,-2.75);
   var torreMalla6 = new THREE.Mesh(torreForma6);
 
-  //JUNTAR MALLAS:
+  // Juntar mallas:
   var torreForma = new THREE.Geometry();
   torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
   torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
@@ -71,7 +71,7 @@ function setup2() {
   torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
   torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
   
-  // CREAR TORRES:
+  // Crear torres:
   var torre1 = new THREE.Mesh( torreForma, TEXTURA1.material );
   escena.add(torre1);
   
@@ -91,7 +91,7 @@ function setup2() {
   torre4.position.z=70;
   escena.add(torre4);
 
-  // Formar tablero:
+  // TABLERO:
   var gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
   var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
@@ -112,7 +112,7 @@ function setup2() {
     }
   }
 
-  //Marco Tablero
+  // MARCO DE TABLERO
   var marco1 = new THREE.BoxGeometry( 80, 5, 5);
   var marco2 = new THREE.BoxGeometry( 80, 5, 5);
   var marco3 = new THREE.BoxGeometry( 5, 5, 90);
@@ -139,17 +139,17 @@ function setup2() {
   marcomalla4.position.z=37.5;
   escena.add(marcomalla4);
 
-  //Camara
+  // CÁMARA
   var campoVision = 45; //grados
   var relacionAspecto = window.innerWidth / window.innerHeight;
   var planoCercano = 1;
   var planoLejano = 1000;
-  var centro = new THREE.Vector3(40, 0, 40);
+  var centro = new THREE.Vector3(35, 0, 45);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(40, 80, 150);
+  camara.position.set(35, 70, 130);
   camara.lookAt(centro);
 
-  // Luces
+  // LUCES
   var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
   luz.position.set(35, 70, 35);
   escena.add( luz );
