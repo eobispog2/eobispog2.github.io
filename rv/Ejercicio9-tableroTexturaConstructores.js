@@ -341,7 +341,7 @@ function setup(){
   escena.add(alfil3);
   escena.add(alfil4);
 
-  var lienzo = document.getElementById("Tablero-Constructores");
+  var lienzo = document.getElementById("Ejercicio9-tableroTexturaConstructores");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
