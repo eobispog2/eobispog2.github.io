@@ -115,14 +115,14 @@ marcomalla4.position.y=3;
 marcomalla4.position.z=37.5;
 escena.add(marcomalla4);
 
-//Camara
+// CÁMARA
 var campoVision = 45; //grados
 var relacionAspecto = window.innerWidth / window.innerHeight;
 var planoCercano = 1;
 var planoLejano = 1000;
-var centro = new THREE.Vector3(40, 0, 40);
-var camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-camara.position.set(40, 80, 150);
+var centro = new THREE.Vector3(35, 0, 45);
+camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
+camara.position.set(35, 70, 130);
 camara.lookAt(centro);
 
 // Luces
