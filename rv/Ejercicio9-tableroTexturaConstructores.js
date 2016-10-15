@@ -310,14 +310,9 @@ function setup(){
   escena.add( l3 );
   escena.add( l4 );
   
-  // CÁMARA
-  var campoVision = 45; //grados
-  var relacionAspecto = window.innerWidth / window.innerHeight;
-  var planoCercano = 1;
-  var planoLejano = 1000;
-  var centro = new THREE.Vector3(35, 0, 45);
-  camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(35, 70, 130);
+  var centro = new THREE.Vector3(40, 0, 40);
+  camara = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000);
+  camara.position.set(40, 80, 150);
   camara.lookAt(centro);
 
   //escena = new THREE.Scene();
