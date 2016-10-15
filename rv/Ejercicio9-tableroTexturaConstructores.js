@@ -11,9 +11,9 @@ TEXTURA2.retrollamada = function( textura ) {
 function setup1() {
   escena = new THREE.Scene();
   var cargador = new THREE.TextureLoader();
-  cargador.load("marmoln.jpg", TEXTURA1.retrollamada);
+  cargador.load("marmol_negro.jpg", TEXTURA1.retrollamada);
   var cargador2 = new THREE.TextureLoader();
-  cargador2.load("marmolb.jpg", TEXTURA2.retrollamada);
+  cargador2.load("marmol_blanco.jpg", TEXTURA2.retrollamada);
 }
 
 TORRE = new Object();
