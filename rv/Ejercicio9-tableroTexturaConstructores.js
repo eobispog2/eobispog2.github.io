@@ -1,20 +1,20 @@
-var TEXTURA1 = new Object();
-TEXTURA1.retrollamada = function( textura ) {
-  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
-}
+//var TEXTURA1 = new Object();
+//TEXTURA1.retrollamada = function( textura ) {
+//  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
+//}
 
-var TEXTURA2 = new Object();
-TEXTURA2.retrollamada = function( textura ) {
-  TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
-}
+//var TEXTURA2 = new Object();
+//TEXTURA2.retrollamada = function( textura ) {
+//  TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
+//}
 
-function setup1() {
-  escena = new THREE.Scene();
-  var cargador = new THREE.TextureLoader();
-  cargador.load("marmol_negro.jpg", TEXTURA1.retrollamada);
-  var cargador2 = new THREE.TextureLoader();
-  cargador2.load("marmol_blanco.jpg", TEXTURA2.retrollamada);
-}
+//function setup1() {
+//  escena = new THREE.Scene();
+//  var cargador = new THREE.TextureLoader();
+//  cargador.load("marmoln.jpg", TEXTURA1.retrollamada);
+//  var cargador2 = new THREE.TextureLoader();
+//  cargador2.load("marmolb.jpg", TEXTURA2.retrollamada);
+//}
 
 TORRE = new Object();
 
@@ -67,10 +67,10 @@ TORRE.TorreGeometry = function(){
   TORRE.TorreGeometry.prototype = new THREE.Geometry();
   
   TORRE.setup = function(){
-     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.Material);
-     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.Material);
-     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.Material);
-     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.Material);
+     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), blanco);
+     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), blanco);
+     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), gris);
+     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), gris);
     
     torre2.position.x=70;
     torre2.position.y=2;
@@ -116,22 +116,22 @@ PEON.PeonGeometry = function(){
 PEON.PeonGeometry.prototype = new THREE.Geometry();
 
 PEON.setup = function(){
-  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
-  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.Material);
+  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
+  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
   
   peon1.position.x=0;
   peon1.position.y=2;
@@ -224,10 +224,10 @@ ALFIL.AlfilGeometry = function(){
 ALFIL.AlfilGeometry.prototype = new THREE.Geometry();
 
 ALFIL.setup = function(){
-  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.Material);
-  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.Material);
-  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.Material);
-  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.Material);
+  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), gris);
+  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), gris);
+  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), blanco);
+  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), blanco);
   
   alfil1.position.x=50;
   alfil1.position.y=2;
@@ -244,10 +244,10 @@ ALFIL.setup = function(){
 }
   
 function setup(){
-  
+  escena = new THREE.Scene();
   // TABLERO:
-  var gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
-  var blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
+  gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
+  blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
   var counter = 0;
@@ -351,24 +351,24 @@ function setup(){
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
 
-  setupDone = true;
+  //setupDone = true;
 }
 
 loop = function(){
   requestAnimationFrame(loop);
-  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && !setupDone){
+  //if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && !setupDone){
   ALFIL.setup();
   PEON.setup();
   TORRE.setup();
   setup();
-  }
+ // }
 }
 
-var setupDone = false;
-var escena, camara, renderizador;
+//var setupDone = false;
+var escena, camara, renderizador, gris, blanco;
 var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
 var alfil1, alfil2, alfil3, alfil4;
 
-setup1();
+//setup1();
 loop();
