@@ -33,6 +33,6 @@ var loop = function(){
   renderizador.render( escena, camara );
 }
 
-var renderizador, escena;
+var renderizador, escena, camara;
 setup();
 loop();
