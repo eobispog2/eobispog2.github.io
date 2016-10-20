@@ -29,8 +29,8 @@ var setup = function() {
 
 var loop = function(){
   requestAnimationFrame(loop);
-  pieza.rotateY(0.01);
-  pieza.piernaIzq.rotateZ(0.01);
+  pieza.rotateY(0.025);
+  pieza.piernaIzq.rotateZ(0.025);
   renderizador.render( escena, camara );
 }
 
