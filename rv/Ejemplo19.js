@@ -16,7 +16,7 @@ var pieza;
 
 var setup = function() {
   pieza = new Pieza();
-  var camara = new THREE.PerspectiveCamera();
+  camara = new THREE.PerspectiveCamera();
   camara.position.z = 20;
   
   var lienzo = document.getElementById("Ejemplo19");
