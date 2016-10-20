@@ -2,7 +2,7 @@ function Pieza(){
   THREE.Object3D.call(this);
   this.piernaIzq = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));  // público
   this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));  // público
-  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(2,10,2));  // privado
+  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));  // privado
   this.add(this.piernaIzq, this.piernaDer, cuerpo);
   this.piernaIzq.position.z = -2;
   this.piernaIzq.position.y = -2.5;
@@ -21,7 +21,7 @@ var setup = function() {
   
   var lienzo = document.getElementById("Ejemplo19");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
+  renderizador.setSize( 600, 600);
   
   escena = new THREE.Scene();
   escena.add(pieza);
