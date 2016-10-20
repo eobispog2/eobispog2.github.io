@@ -8,7 +8,7 @@ function Pieza(){
   this.piernaIzq.position.y = -2.5;
   this.piernaDer.position.z = 2;
   this.piernaDer.position.y = -2.5;
-  cuerpo.position.z = 2.5;
+  cuerpo.position.z = 0;
 }
 
 Pieza.prototype = new THREE.Object3D();
@@ -29,8 +29,8 @@ var setup = function() {
 
 var loop = function(){
   requestAnimationFrame(loop);
-  pieza.rotateY(0.05);
-  pieza.piernaIzq.rotateZ(0.05);
+  //pieza.rotateY(0.05);
+  //pieza.piernaIzq.rotateZ(0.05);
   renderizador.render( escena, camara );
 }
 
