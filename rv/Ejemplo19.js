@@ -2,7 +2,7 @@ function Pieza(){
   THREE.Object3D.call(this);
   this.piernaIzq = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));  // público
   this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));  // público
-  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));  // privado
+  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(4,10,4));  // privado
   this.add(this.piernaIzq, this.piernaDer, cuerpo);
   this.piernaIzq.position.z = -2;
   this.piernaIzq.position.y = -2.5;
