@@ -20,15 +20,15 @@ var setup = function() {
   camara.position.z = 20;
   
   var lienzo = document.getElementById("Ejemplo19");
-  renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
-  renderizador.setSize( 600, 600 );
+  renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
+  renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   
   escena = new THREE.Scene();
   escena.add(pieza);
 }
 
 var loop = function(){
-  requestAnimationFrame(Pieza.loop);
+  requestAnimationFrame(loop);
   pieza.rotateY(0.1);
   renderizador.render( escena, camara );
 }
