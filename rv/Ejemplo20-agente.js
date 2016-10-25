@@ -95,7 +95,7 @@ function setup() {
   entorno.add( new Pelota(0.5) );
   entorno.add( camara );
     
-  render = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerHeight*.95, window.innerHeight*.95 );
   document.body.appendChild( renderer.domElement );
 }
