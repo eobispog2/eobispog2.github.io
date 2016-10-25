@@ -49,7 +49,7 @@ function Pelota(r, x=0, y=0) {
 
 Pelota.prototype = new Agent();
 
-Pelota.protoype.sense = function(environment) {
+Pelota.prototype.sense = function(environment) {
   this.sensor.set( this.position, new THREE.Vector3( 1,0,0) );
   var obstaculo1 = this.sensor.intersectObjects(environment.children, true);
   
