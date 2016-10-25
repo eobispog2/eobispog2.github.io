@@ -50,10 +50,10 @@ function Pelota(r, x=0, y=0) {
 Pelota.prototype = new Agent();
 
 Pelota.protoype.sense = function(environment) {
-  this.sensor.set( this position, new THREE.Vector3( 1,0,0) );
+  this.sensor.set( this.position, new THREE.Vector3( 1,0,0) );
   var obstaculo1 = this.sensor.intersectObjects(environment.children, true);
   
-  this.sensor.set( this position, new THREE.Vector3( -1,0,0) );
+  this.sensor.set( this.position, new THREE.Vector3( -1,0,0) );
   var obstaculo2 = this.sensor.intersectObjects(environment.children, true);
   
   if ((obstaculo1.length > 0 && (obstaculo1[0].distance <= this.radius)) || 
