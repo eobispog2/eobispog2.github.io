@@ -65,7 +65,7 @@ function Sensor(position, direction) {
 }
 Sensor.prototype = new THREE.Raycaster();
 
-function Robo(size,x,y) {
+function Robot(size,x,y) {
   Agent.call(this, x, y);
   
   this.sensor = new Sensor();
