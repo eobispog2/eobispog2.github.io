@@ -377,7 +377,7 @@ CABALLO.CaballoGeometry = function(){
   caballoFigura.lineTo(0, 18);
   caballoFigura.lineTo(0, 4.5);
   caballoFigura.lineTo(3.5, 4.5);
-  var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 2} );
+  var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 1} );
   var caballoMalla2 = new THREE.Mesh(caballoForma2);
 
   // Juntar mallas de la caballo:
