@@ -390,14 +390,22 @@ CABALLO.CaballoGeometry.prototype = new THREE.Geometry();
 
 CABALLO.setup = function(){
   caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
-  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
+  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
+  caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
+  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
   
-  caballo1.position.x=60;
+  caballo1.position.x=10;
   caballo1.position.y=2;
   caballo1.position.z=70;
   caballo2.position.x=60;
   caballo2.position.y=2;
-  caballo2.position.z=0;
+  caballo2.position.z=70;
+  caballo3.position.x=10;
+  caballo3.position.y=2;
+  caballo3.position.z=0;
+  caballo4.position.x=60;
+  caballo4.position.y=2;
+  caballo4.position.z=0;
 }
 
 
@@ -507,6 +515,10 @@ function setup(){
   escena.add(reina2);
   escena.add(rey1);
   escena.add(rey2);
+  escena.add(caballo1);
+  escena.add(caballo2);
+  escena.add(caballo3);
+  escena.add(caballo4);
 
   var lienzo = document.getElementById("Ejercicio10");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
@@ -524,6 +536,7 @@ loop = function(){
   TORRE.setup();
   REINA.setup();
   REY.setup();
+  CABALLO.setup();
   setup();
  // }
 }
@@ -535,6 +548,7 @@ var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon1
 var alfil1, alfil2, alfil3, alfil4;
 var reina1, reina2;
 var rey1, rey2;
+var caballo1, caballo2, caballo3, caballo4;
 
 //setup1();
 loop();
