@@ -251,16 +251,27 @@ REINA.ReinaGeometry = function(){
 
   var puntosReina = [];
   puntosReina.push( new THREE.Vector2( 0, 0 ) );
-  
+  puntosReina.push( new THREE.Vector2( 4.5, 0 ) );
+  puntosReina.push( new THREE.Vector2( 4.5, 1.5 ) );
+  puntosReina.push( new THREE.Vector2( 4, 1.5 ) );
+  puntosReina.push( new THREE.Vector2( 4, 3.5 ) );
+  puntosReina.push( new THREE.Vector2( 3, 4.5 ) );
+  puntosReina.push( new THREE.Vector2( 2, 12 ) );
+  puntosReina.push( new THREE.Vector2( 2.5, 12 ) );
+  puntosReina.push( new THREE.Vector2( 2.5, 14 ) );
+  puntosReina.push( new THREE.Vector2( 2, 14 ) );
+  puntosReina.push( new THREE.Vector2( 3.5, 18 ) );
+  puntosReina.push( new THREE.Vector2( 1.5, 16 ) );
+  puntosReina.push( new THREE.Vector2( 0, 16 ) );  
   var reinaForma1 = new THREE.LatheGeometry(puntosReina);
   var reinaMalla1 = new THREE.Mesh(reinaForma1);
   
-  var reinaForma2 = new THREE.SpehreGeometry( 2.5, 4 );
-  reinaForma2.translate(0,17,0);
+  var reinaForma2 = new THREE.SphereGeometry( 2 );
+  reinaForma2.translate(0,16,0);
   var reinaMalla2 = new THREE.Mesh(reinaForma2);
   
   var reinaForma3= new THREE.SphereGeometry( 1 );
-  reinaForma3.translate(0,18.75,0);
+  reinaForma3.translate(0,17,0);
   var reinaMalla3 = new THREE.Mesh(reinaForma3);
 
   // Juntar mallas de la reina:
@@ -272,12 +283,23 @@ REINA.ReinaGeometry = function(){
 
 REINA.ReinaGeometry.prototype = new THREE.Geometry();
 
+REINA.setup = function(){
+  reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), gris);
+  reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), blanco);
+  
+  reina1.position.x=40;
+  reina1.position.y=2;
+  reina1.position.z=0;
+  reina2.position.x=50;
+  reina2.position.y=2;
+  reina2.position.z=70;
+}
 
 
 function setup(){
   escena = new THREE.Scene();
   // TABLERO:
-  gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
+  gris = new THREE.MeshLambertMaterial( { color: 0x585858} );
   blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
