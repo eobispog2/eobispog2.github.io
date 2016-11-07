@@ -271,7 +271,7 @@ REINA.ReinaGeometry = function(){
   var reinaMalla2 = new THREE.Mesh(reinaForma2);
   
   var reinaForma3= new THREE.SphereGeometry( 1 );
-  reinaForma3.translate(0,17,0);
+  reinaForma3.translate(0,18,0);
   var reinaMalla3 = new THREE.Mesh(reinaForma3);
 
   // Juntar mallas de la reina:
