@@ -260,7 +260,7 @@ REINA.ReinaGeometry = function(){
   puntosReina.push( new THREE.Vector2( 2.5, 12 ) );
   puntosReina.push( new THREE.Vector2( 2.5, 14 ) );
   puntosReina.push( new THREE.Vector2( 2, 14 ) );
-  puntosReina.push( new THREE.Vector2( 3.5, 18 ) );
+  puntosReina.push( new THREE.Vector2( 3.5, 16.5 ) );
   puntosReina.push( new THREE.Vector2( 1.5, 16 ) );
   puntosReina.push( new THREE.Vector2( 0, 16 ) );  
   var reinaForma1 = new THREE.LatheGeometry(puntosReina);
@@ -287,12 +287,12 @@ REINA.setup = function(){
   reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), gris);
   reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), blanco);
   
-  reina1.position.x=40;
+  reina1.position.x=50;
   reina1.position.y=2;
-  reina1.position.z=0;
-  reina2.position.x=50;
+  reina1.position.z=70;
+  reina2.position.x=40;
   reina2.position.y=2;
-  reina2.position.z=70;
+  reina2.position.z=0;
 }
 
 
