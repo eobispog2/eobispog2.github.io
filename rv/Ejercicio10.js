@@ -287,10 +287,10 @@ REINA.setup = function(){
   reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), gris);
   reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), blanco);
   
-  reina1.position.x=50;
+  reina1.position.x=40;
   reina1.position.y=2;
   reina1.position.z=70;
-  reina2.position.x=40;
+  reina2.position.x=50;
   reina2.position.y=2;
   reina2.position.z=0;
 }
