@@ -404,9 +404,9 @@ CABALLO.setup = function(){
   caballo3.position.x=10;
   caballo3.position.y=2;
   caballo3.position.z=0;
-  caballo4.position.x=60;
-  caballo4.position.y=2;
-  caballo4.position.z=0;
+  caballo4.position.x=35;
+  caballo4.position.y=20;
+  caballo4.position.z=60;
 }
 
 
