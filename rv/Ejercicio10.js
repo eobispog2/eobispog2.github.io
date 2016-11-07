@@ -366,17 +366,30 @@ CABALLO.CaballoGeometry = function(){
   puntosCaballo.push( new THREE.Vector2( 4.5, 1.5 ) );
   puntosCaballo.push( new THREE.Vector2( 4, 1.5 ) );
   puntosCaballo.push( new THREE.Vector2( 4, 3.5 ) );
-  puntosCaballo.push( new THREE.Vector2( 3.75, 4.5 ) );
-  puntosCaballo.push( new THREE.Vector2( 0, 4.5 ) );
+  puntosCaballo.push( new THREE.Vector2( 3.75, 5 ) );
+  puntosCaballo.push( new THREE.Vector2( 0, 5 ) );
   var caballoForma1 = new THREE.LatheGeometry(puntosCaballo);
   var caballoMalla1 = new THREE.Mesh(caballoForma1);
   
   var caballoFigura = new THREE.Shape();
-  caballoFigura.moveTo(3.5, 4.5);
-  caballoFigura.lineTo(3.5, 15);
-  caballoFigura.lineTo(0, 15);
-  caballoFigura.moveTo(0, 4.5);
-  caballoFigura.moveTo(3.5, 4.5);
+  caballoFigura.moveTo(3, 5);
+  caballoFigura.lineTo(3.75, 7);
+  caballoFigura.lineTo(4.25, 10);
+  caballoFigura.lineTo(3.5, 13);
+  caballoFigura.lineTo(2, 16);
+  caballoFigura.lineTo(0, 17.5);
+  caballoFigura.lineTo(0, 16);
+  caballoFigura.lineTo(-2, 15);
+  caballoFigura.lineTo(-2.5, 13.5);
+  caballoFigura.lineTo(-4.25, 10);
+  caballoFigura.lineTo(-3.25, 9.5);
+  caballoFigura.lineTo(-2.5, 10);
+  caballoFigura.lineTo(-1, 10.75);
+  caballoFigura.lineTo(0, 11);
+  caballoFigura.lineTo(-0.25, 10.5);
+  caballoFigura.lineTo(-2.75, 6.5);
+  caballoFigura.lineTo(-3, 5);
+  caballoFigura.moveTo(3, 5);
   
   var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 3, bevelEnabled: false} );
   caballoForma2.translate(0,0,-1.5);
