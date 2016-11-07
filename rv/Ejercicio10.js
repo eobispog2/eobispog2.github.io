@@ -372,11 +372,10 @@ CABALLO.CaballoGeometry = function(){
   var caballoMalla1 = new THREE.Mesh(caballoForma1);
   
   var caballoFigura = new THREE.Shape();
-  caballoFigura.moveTo(3.5, 4.5);   // Salta
-  caballoFigura.lineTo(3.5, 18);   // Hace línea
-  caballoFigura.lineTo(0, 18);
-  caballoFigura.lineTo(0, 4.5);
-  caballoFigura.lineTo(3.5, 4.5);
+  caballoFigura.moveTo(0, 10);
+  caballoFigura.lineTo(0, 20);
+  caballoFigura.lineTo(10, 20);
+  caballoFigura.moveTo(0, 10);
   var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 1} );
   var caballoMalla2 = new THREE.Mesh(caballoForma2);
 
