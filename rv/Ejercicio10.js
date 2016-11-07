@@ -376,7 +376,19 @@ CABALLO.CaballoGeometry = function(){
   caballoFigura.lineTo(0, 20);
   caballoFigura.lineTo(10, 20);
   caballoFigura.moveTo(0, 10);
-  var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 1} );
+  
+  var extrudeSettings = {
+    amount			: 5,
+    steps			: 1,
+    material		: 1,
+    extrudeMaterial : 0,
+    bevelEnabled	: true,
+    bevelThickness  : 2,
+    bevelSize       : 4,
+    bevelSegments   : 1,
+  };
+  
+  var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, extrudeSettings );
   var caballoMalla2 = new THREE.Mesh(caballoForma2);
 
   // Juntar mallas de la caballo:
