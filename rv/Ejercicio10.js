@@ -103,7 +103,7 @@ PEON.PeonGeometry = function(){
   var peonForma1 = new THREE.LatheGeometry(puntosPeon);
   var peonMalla1 = new THREE.Mesh(peonForma1);
   
-  var peonForma2 = new THREE.SphereGeometry( 3 ); 
+  var peonForma2 = new THREE.SphereGeometry( 2.75 ); 
   peonForma2.translate(0,12.5,0);
   var peonMalla2 = new THREE.Mesh(peonForma2);
 
