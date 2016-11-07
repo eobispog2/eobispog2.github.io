@@ -378,14 +378,14 @@ CABALLO.CaballoGeometry = function(){
   caballoFigura.moveTo(0, 10);
   
   var extrudeSettings = {
-    amount			: 5,
-    steps			: 1,
-    material		: 1,
-    extrudeMaterial : 0,
-    bevelEnabled	: true,
-    bevelThickness  : 2,
-    bevelSize       : 4,
-    bevelSegments   : 1,
+    amount: 3,
+    steps: 1,
+    material: 1,
+    extrudeMaterial: 0,
+    bevelEnabled: true,
+    bevelThickness: 3,
+    bevelSize: 3,
+    bevelSegments: 1,
   };
   
   var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, extrudeSettings );
