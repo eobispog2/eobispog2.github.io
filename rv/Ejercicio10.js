@@ -260,6 +260,7 @@ REINA.ReinaGeometry = function(){
   puntosReina.push( new THREE.Vector2( 2.5, 12 ) );
   puntosReina.push( new THREE.Vector2( 2.5, 14 ) );
   puntosReina.push( new THREE.Vector2( 2, 14 ) );
+  puntosReina.push( new THREE.Vector2( 2, 15 ) );
   puntosReina.push( new THREE.Vector2( 3.5, 16.5 ) );
   puntosReina.push( new THREE.Vector2( 1.5, 16 ) );
   puntosReina.push( new THREE.Vector2( 0, 16 ) );  
@@ -267,11 +268,11 @@ REINA.ReinaGeometry = function(){
   var reinaMalla1 = new THREE.Mesh(reinaForma1);
   
   var reinaForma2 = new THREE.SphereGeometry( 2 );
-  reinaForma2.translate(0,16,0);
+  reinaForma2.translate(0,17,0);
   var reinaMalla2 = new THREE.Mesh(reinaForma2);
   
   var reinaForma3= new THREE.SphereGeometry( 1 );
-  reinaForma3.translate(0,18,0);
+  reinaForma3.translate(0,19,0);
   var reinaMalla3 = new THREE.Mesh(reinaForma3);
 
   // Juntar mallas de la reina:
