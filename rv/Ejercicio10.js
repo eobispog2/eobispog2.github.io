@@ -326,12 +326,18 @@ REY.ReyGeometry = function(){
   var reyForma3= new THREE.CylinderGeometry( 0.4, 0.4, 2.5 );
   reyForma3.translate(0,20.5,0);
   var reyMalla3 = new THREE.Mesh(reyForma3);
+  
+  var reyForma4= new THREE.CylinderGeometry( 0.4, 0.4, 2.5 );
+  reyForma4.translate(0,22,0);
+  reyForma4.rotate(0,0,Math.PI/2);
+  var reyMalla4 = new THREE.Mesh(reyForma4);
 
   // Juntar mallas de la rey:
   var reyForma = new THREE.Geometry();
   this.merge(reyMalla1.geometry, reyMalla1.matrix);
   this.merge(reyMalla2.geometry, reyMalla2.matrix);
   this.merge(reyMalla3.geometry, reyMalla3.matrix);
+  this.merge(reyMalla4.geometry, reyMalla4.matrix);
 }
 
 REY.ReyGeometry.prototype = new THREE.Geometry();
