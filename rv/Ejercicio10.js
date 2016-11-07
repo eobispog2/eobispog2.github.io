@@ -315,7 +315,7 @@ REY.ReyGeometry = function(){
   puntosRey.push( new THREE.Vector2( 2, 14 ) );
   puntosRey.push( new THREE.Vector2( 2, 15 ) );
   puntosRey.push( new THREE.Vector2( 3.5, 17.5 ) );
-  puntosRey.push( new THREE.Vector2( 0, 18 ) );
+  puntosRey.push( new THREE.Vector2( 0, 18.5 ) );
   var reyForma1 = new THREE.LatheGeometry(puntosRey);
   var reyMalla1 = new THREE.Mesh(reyForma1);
   
@@ -323,7 +323,7 @@ REY.ReyGeometry = function(){
   reyForma2.translate(0,19,0);
   var reyMalla2 = new THREE.Mesh(reyForma2);
   
-  var reyForma3= new THREE.CylinderGeometry( 0.4, 0.4, 3 );
+  var reyForma3= new THREE.CylinderGeometry( 0.4, 0.4, 2.5 );
   reyForma3.translate(0,21.5,0);
   var reyMalla3 = new THREE.Mesh(reyForma3);
 
