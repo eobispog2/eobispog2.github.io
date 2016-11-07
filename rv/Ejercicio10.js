@@ -378,7 +378,7 @@ CABALLO.CaballoGeometry = function(){
   caballoFigura.moveTo(0, 10);
   
   var extrudeSettings = {
-    amount: 1,
+    amount: 0.2,
     steps: 1,
     material: 1,
     extrudeMaterial: 0,
