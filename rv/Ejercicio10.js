@@ -261,9 +261,9 @@ REINA.ReinaGeometry = function(){
   puntosReina.push( new THREE.Vector2( 2.5, 14 ) );
   puntosReina.push( new THREE.Vector2( 2, 14 ) );
   puntosReina.push( new THREE.Vector2( 2, 15 ) );
-  puntosReina.push( new THREE.Vector2( 3.5, 16.5 ) );
-  puntosReina.push( new THREE.Vector2( 1.5, 16 ) );
-  puntosReina.push( new THREE.Vector2( 0, 16 ) );  
+  puntosReina.push( new THREE.Vector2( 3.5, 17.5 ) );
+  puntosReina.push( new THREE.Vector2( 1.5, 17 ) );
+  puntosReina.push( new THREE.Vector2( 0, 17 ) );  
   var reinaForma1 = new THREE.LatheGeometry(puntosReina);
   var reinaMalla1 = new THREE.Mesh(reinaForma1);
   
