@@ -290,7 +290,7 @@ REINA.setup = function(){
   reina1.position.x=30;
   reina1.position.y=2;
   reina1.position.z=70;
-  reina2.position.x=70;
+  reina2.position.x=30;
   reina2.position.y=2;
   reina2.position.z=0;
 }
