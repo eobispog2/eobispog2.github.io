@@ -297,10 +297,63 @@ REINA.setup = function(){
 }
 
 
+REY = new Object();
+
+REY.ReyGeometry = function(){
+  THREE.Geometry.call(this);
+
+  var puntosRey = [];
+  puntosRey.push( new THREE.Vector2( 0, 0 ) );
+  puntosRey.push( new THREE.Vector2( 4.5, 0 ) );
+  puntosRey.push( new THREE.Vector2( 4.5, 1.5 ) );
+  puntosRey.push( new THREE.Vector2( 4, 1.5 ) );
+  puntosRey.push( new THREE.Vector2( 4, 3.5 ) );
+  puntosRey.push( new THREE.Vector2( 3, 4.5 ) );
+  puntosRey.push( new THREE.Vector2( 2, 12 ) );
+  puntosRey.push( new THREE.Vector2( 2.5, 12 ) );
+  puntosRey.push( new THREE.Vector2( 2.5, 14 ) );
+  puntosRey.push( new THREE.Vector2( 2, 14 ) );
+  puntosRey.push( new THREE.Vector2( 2, 15 ) );
+  puntosRey.push( new THREE.Vector2( 3.5, 17.5 ) );
+  puntosRey.push( new THREE.Vector2( 0, 18 ) );
+  var reyForma1 = new THREE.LatheGeometry(puntosRey);
+  var reyMalla1 = new THREE.Mesh(reyForma1);
+  
+  var reyForma2 = new THREE.SphereGeometry( 1 );
+  reyForma2.translate(0,19,0);
+  var reyMalla2 = new THREE.Mesh(reyForma2);
+  
+  var reyForma3= new THREE.CylinderGeometry( 1, 1, 3 );
+  reyForma3.translate(0,20,0);
+  var reyMalla3 = new THREE.Mesh(reyForma3);
+
+  // Juntar mallas de la rey:
+  var reyForma = new THREE.Geometry();
+  this.merge(reyMalla1.geometry, reyMalla1.matrix);
+  this.merge(reyMalla2.geometry, reyMalla2.matrix);
+  this.merge(reyMalla3.geometry, reyMalla3.matrix);
+}
+
+REY.ReyGeometry.prototype = new THREE.Geometry();
+
+REY.setup = function(){
+  rey1 = new THREE.Mesh(new REY.ReyGeometry(), gris);
+  rey2 = new THREE.Mesh(new REY.ReyGeometry(), blanco);
+  
+  rey1.position.x=40;
+  rey1.position.y=2;
+  rey1.position.z=70;
+  rey2.position.x=40;
+  rey2.position.y=2;
+  rey2.position.z=0;
+}
+
+
+
 function setup(){
   escena = new THREE.Scene();
   // TABLERO:
-  gris = new THREE.MeshLambertMaterial( { color: 0x585858} );
+  gris = new THREE.MeshLambertMaterial( { color: 0x424242} );
   blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
@@ -401,6 +454,8 @@ function setup(){
   escena.add(alfil4);
   escena.add(reina1);
   escena.add(reina2);
+  escena.add(rey1);
+  escena.add(rey2);
 
   var lienzo = document.getElementById("Ejercicio10");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
@@ -417,6 +472,7 @@ loop = function(){
   PEON.setup();
   TORRE.setup();
   REINA.setup();
+  REY.setup();
   setup();
  // }
 }
@@ -427,6 +483,7 @@ var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
 var alfil1, alfil2, alfil3, alfil4;
 var reina1, reina2;
+var rey1, rey2;
 
 //setup1();
 loop();
