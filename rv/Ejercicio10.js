@@ -355,6 +355,51 @@ REY.setup = function(){
 }
 
 
+CABALLO = new Object();
+
+CABALLO.CaballoGeometry = function(){
+  THREE.Geometry.call(this);
+
+  var puntosCaballo = [];
+  puntosCaballo.push( new THREE.Vector2( 0, 0 ) );
+  puntosCaballo.push( new THREE.Vector2( 4.5, 0 ) );
+  puntosCaballo.push( new THREE.Vector2( 4.5, 1.5 ) );
+  puntosCaballo.push( new THREE.Vector2( 4, 1.5 ) );
+  puntosCaballo.push( new THREE.Vector2( 4, 3.5 ) );
+  puntosCaballo.push( new THREE.Vector2( 3.75, 4.5 ) );
+  puntosCaballo.push( new THREE.Vector2( 0, 4.5 ) );
+  var caballoForma1 = new THREE.LatheGeometry(puntosCaballo);
+  var caballoMalla1 = new THREE.Mesh(caballoForma1);
+  
+  var caballoFigura = new THREE.Shape();
+  caballoFigura.moveTo(3.5, 4.5);   // Salta
+  caballoFigura.lineTo(3.5, 18);   // Hace línea
+  caballoFigura.lineTo(0, 18);
+  caballoFigura.lineTo(0, 4.5);
+  caballoFigura.lineTo(3.5, 4.5);
+  var caballoForma2 = new THREE.ExtrudeGeometry( caballoFigura, {amount: 2} );
+  var caballoMalla2 = new THREE.Mesh(caballoForma2);
+
+  // Juntar mallas de la caballo:
+  var caballoForma = new THREE.Geometry();
+  this.merge(caballoMalla1.geometry, caballoMalla1.matrix);
+  this.merge(caballoMalla2.geometry, caballoMalla2.matrix);
+}
+
+CABALLO.CaballoGeometry.prototype = new THREE.Geometry();
+
+CABALLO.setup = function(){
+  caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
+  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
+  
+  caballo1.position.x=60;
+  caballo1.position.y=2;
+  caballo1.position.z=70;
+  caballo2.position.x=60;
+  caballo2.position.y=2;
+  caballo2.position.z=0;
+}
+
 
 function setup(){
   escena = new THREE.Scene();
