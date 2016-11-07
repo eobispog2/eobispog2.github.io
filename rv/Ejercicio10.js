@@ -323,8 +323,8 @@ REY.ReyGeometry = function(){
   reyForma2.translate(0,19,0);
   var reyMalla2 = new THREE.Mesh(reyForma2);
   
-  var reyForma3= new THREE.CylinderGeometry( 1, 1, 3 );
-  reyForma3.translate(0,20,0);
+  var reyForma3= new THREE.CylinderGeometry( 0.4, 0.4, 3 );
+  reyForma3.translate(0,21.5,0);
   var reyMalla3 = new THREE.Mesh(reyForma3);
 
   // Juntar mallas de la rey:
