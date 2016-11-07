@@ -328,7 +328,7 @@ REY.ReyGeometry = function(){
   var reyMalla3 = new THREE.Mesh(reyForma3);
   
   var reyForma4= new THREE.CylinderGeometry( 0.4, 0.4, 2.25 );
-  reyForma4.translate(20.5,0,0);
+  reyForma4.translate(21,0,0);
   reyForma4.rotateZ(Math.PI/2);
   var reyMalla4 = new THREE.Mesh(reyForma4);
 
