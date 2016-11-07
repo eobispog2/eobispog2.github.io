@@ -398,8 +398,10 @@ function setup(){
   escena.add(alfil2);
   escena.add(alfil3);
   escena.add(alfil4);
+  escena.add(reina1);
+  escena.add(reina2);
 
-  var lienzo = document.getElementById("Ejercicio9-tableroTexturaConstructores");
+  var lienzo = document.getElementById("Ejercicio10");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
@@ -413,6 +415,7 @@ loop = function(){
   ALFIL.setup();
   PEON.setup();
   TORRE.setup();
+  REINA.setup();
   setup();
  // }
 }
@@ -422,6 +425,7 @@ var escena, camara, renderizador, gris, blanco;
 var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
 var alfil1, alfil2, alfil3, alfil4;
+var reina1, reina2;
 
 //setup1();
 loop();
