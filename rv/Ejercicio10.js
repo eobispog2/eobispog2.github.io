@@ -373,10 +373,8 @@ CABALLO.CaballoGeometry = function(){
   
   var caballoFigura = new THREE.Shape();
   caballoFigura.moveTo(3.5, 4.5);
-  caballoFigura.lineTo(4, 7);
-  caballoFigura.lineTo(4, 10);
-  caballoFigura.moveTo(3, 12);
-  caballoFigura.moveTo(0, 15);
+  caballoFigura.lineTo(3.5, 15);
+  caballoFigura.lineTo(0, 15);
   caballoFigura.moveTo(0, 4.5);
   caballoFigura.moveTo(3.5, 4.5);
   
