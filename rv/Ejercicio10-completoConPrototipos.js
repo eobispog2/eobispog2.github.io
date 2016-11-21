@@ -1,20 +1,27 @@
-//var TEXTURA1 = new Object();
-//TEXTURA1.retrollamada = function( textura ) {
-//  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
-//}
+var TEXTURA1 = new Object();
+TEXTURA1.retrollamada = function( textura ) {
+  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
 
-//var TEXTURA2 = new Object();
-//TEXTURA2.retrollamada = function( textura ) {
-//  TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
-//}
+var TEXTURA2 = new Object();
+TEXTURA2.retrollamada = function( textura ) {
+  TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
 
-//function setup1() {
-//  escena = new THREE.Scene();
-//  var cargador = new THREE.TextureLoader();
-//  cargador.load("marmoln.jpg", TEXTURA1.retrollamada);
-//  var cargador2 = new THREE.TextureLoader();
-//  cargador2.load("marmolb.jpg", TEXTURA2.retrollamada);
-//}
+var TEXTURA3 = new Object();
+TEXTURA3.retrollamada = function( textura ) {
+  TEXTURA3.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+
+function setup1() {
+  escena = new THREE.Scene();
+  var cargador = new THREE.TextureLoader();
+  cargador.load("marmoln.jpg", TEXTURA1.retrollamada);
+  var cargador2 = new THREE.TextureLoader();
+  cargador2.load("marmolb.jpg", TEXTURA2.retrollamada);
+  var cargador3 = new THREE.TextureLoader();
+  cargador3.load("madera.jpg", TEXTURA3.retrollamada);
+}
 
 TORRE = new Object();
 
@@ -67,10 +74,10 @@ TORRE.TorreGeometry = function(){
   TORRE.TorreGeometry.prototype = new THREE.Geometry();
   
   TORRE.setup = function(){
-     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), blanco);
-     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), blanco);
-     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), gris);
-     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), gris);
+     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
+     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
+     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
+     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
     
     torre2.position.x=70;
     torre2.position.y=2;
@@ -103,7 +110,7 @@ PEON.PeonGeometry = function(){
   var peonForma1 = new THREE.LatheGeometry(puntosPeon);
   var peonMalla1 = new THREE.Mesh(peonForma1);
   
-  var peonForma2 = new THREE.SphereGeometry( 2.75 ); 
+  var peonForma2 = new THREE.SphereGeometry( 3 ); 
   peonForma2.translate(0,12.5,0);
   var peonMalla2 = new THREE.Mesh(peonForma2);
 
@@ -116,22 +123,22 @@ PEON.PeonGeometry = function(){
 PEON.PeonGeometry.prototype = new THREE.Geometry();
 
 PEON.setup = function(){
-  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), gris);
-  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
-  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), blanco);
+  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
+  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
   
   peon1.position.x=0;
   peon1.position.y=2;
@@ -224,10 +231,10 @@ ALFIL.AlfilGeometry = function(){
 ALFIL.AlfilGeometry.prototype = new THREE.Geometry();
 
 ALFIL.setup = function(){
-  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), gris);
-  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), gris);
-  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), blanco);
-  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), blanco);
+  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA2.material);
+  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA2.material);
+  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.material);
+  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.material);
   
   alfil1.position.x=50;
   alfil1.position.y=2;
@@ -242,7 +249,6 @@ ALFIL.setup = function(){
   alfil4.position.y=2;
   alfil4.position.z=0;
 }
-
 
 REINA = new Object();
 
@@ -285,8 +291,8 @@ REINA.ReinaGeometry = function(){
 REINA.ReinaGeometry.prototype = new THREE.Geometry();
 
 REINA.setup = function(){
-  reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), gris);
-  reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), blanco);
+  reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA2.material);
+  reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA1.material);
   
   reina1.position.x=30;
   reina1.position.y=2;
@@ -343,8 +349,8 @@ REY.ReyGeometry = function(){
 REY.ReyGeometry.prototype = new THREE.Geometry();
 
 REY.setup = function(){
-  rey1 = new THREE.Mesh(new REY.ReyGeometry(), gris);
-  rey2 = new THREE.Mesh(new REY.ReyGeometry(), blanco);
+  rey1 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA2.material);
+  rey2 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA1.material);
   
   rey1.position.x=40;
   rey1.position.y=2;
@@ -405,10 +411,10 @@ CABALLO.CaballoGeometry = function(){
 CABALLO.CaballoGeometry.prototype = new THREE.Geometry();
 
 CABALLO.setup = function(){
-  caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
-  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
-  caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
-  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), blanco);
+  caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
+  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
+  caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
+  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
   
   caballo1.position.x=10;
   caballo1.position.y=2;
@@ -425,12 +431,11 @@ CABALLO.setup = function(){
   caballo4.position.z=0;
   caballo4.rotateY(Math.PI);
 }
-
-
+  
 function setup(){
   escena = new THREE.Scene();
   // TABLERO:
-  gris = new THREE.MeshLambertMaterial( { color: 0x424242} );
+  gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
   blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
   var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
   var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
@@ -440,10 +445,10 @@ function setup(){
       cuadros[counter] = new THREE.BoxGeometry( 10, 2, 10 );
       cuadros[counter].translate(j*10,0,i*10);
       if((counter+i) % 2 == 0){
-        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],gris);
+        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],TEXTURA2.material);
       }
       else {
-        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],blanco);
+        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],TEXTURA1.material);
       }
       escena.add(cuadroMallas[counter]);
       counter++;
@@ -538,7 +543,7 @@ function setup(){
   escena.add(caballo3);
   escena.add(caballo4);
 
-  var lienzo = document.getElementById("Ejercicio10");
+  var lienzo = document.getElementById("Ejercicio10-completoConPrototipos");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
