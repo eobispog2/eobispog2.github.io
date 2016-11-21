@@ -460,23 +460,22 @@ function setup(){
   var marco2 = new THREE.BoxGeometry( 80, 5, 5);
   var marco3 = new THREE.BoxGeometry( 5, 5, 90);
   var marco4 = new THREE.BoxGeometry( 5, 5, 90);
-  var cafe = new THREE.MeshLambertMaterial( { color: 0x653909 } );
-  var marcomalla1 = new THREE.Mesh(marco1, cafe);
+  var marcomalla1 = new THREE.Mesh(marco1, TEXTURA3.material);
   marcomalla1.position.x=35;
   marcomalla1.position.y=3;
   marcomalla1.position.z=80;
   escena.add(marcomalla1);
-  var marcomalla2 = new THREE.Mesh(marco2, cafe);
+  var marcomalla2 = new THREE.Mesh(marco2, TEXTURA3.material);
   marcomalla2.position.x=35;
   marcomalla2.position.y=3;
   marcomalla2.position.z=-5;
   escena.add(marcomalla2);
-  var marcomalla3 = new THREE.Mesh(marco3, cafe);
+  var marcomalla3 = new THREE.Mesh(marco3, TEXTURA3.material);
   marcomalla3.position.x=-7;
   marcomalla3.position.y=3;
   marcomalla3.position.z=37.5;
   escena.add(marcomalla3);
-  var marcomalla4 = new THREE.Mesh(marco4, cafe);
+  var marcomalla4 = new THREE.Mesh(marco4, TEXTURA3.material);
   marcomalla4.position.x=77;
   marcomalla4.position.y=3;
   marcomalla4.position.z=37.5;
@@ -508,8 +507,7 @@ function setup(){
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
   camara.position.set(35, 70, 130);
   camara.lookAt(centro);
-
-  //escena = new THREE.Scene();
+   
   escena.add(torre1);
   escena.add(torre2);
   escena.add(torre3);
@@ -548,12 +546,12 @@ function setup(){
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
 
-  //setupDone = true;
+  setupDone = true;
 }
 
 loop = function(){
   requestAnimationFrame(loop);
-  //if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && !setupDone){
+  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined && !setupDone){
   ALFIL.setup();
   PEON.setup();
   TORRE.setup();
@@ -561,10 +559,10 @@ loop = function(){
   REY.setup();
   CABALLO.setup();
   setup();
- // }
+  }
 }
 
-//var setupDone = false;
+var setupDone = false;
 var escena, camara, renderizador, gris, blanco;
 var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
@@ -573,5 +571,5 @@ var reina1, reina2;
 var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
-//setup1();
-loop();
+setup1();
+loop(); 
