@@ -549,9 +549,6 @@ function setup(){
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
-  
-  // AGREGAR CONTROL PARA GIRAR CÁMARA
-  controls = new THREE.OrbitControls( camara, renderizador.domElement );
 
   setupDone = true;
 }
@@ -567,6 +564,9 @@ loop = function(){
   CABALLO.setup();
   setup();
   }
+  
+  // AGREGAR CONTROL PARA GIRAR CÁMARA
+  controls = new THREE.OrbitControls( camara, renderizador.domElement );
 }
 
 var setupDone = false;
