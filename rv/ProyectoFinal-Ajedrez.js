@@ -585,9 +585,8 @@ loop = function(){
     REY.setup();
     CABALLO.setup();
     setup();
-    
-    checkRotation();
   }
+  checkRotation();
   
 }
 
