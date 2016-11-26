@@ -553,6 +553,25 @@ function setup(){
   setupDone = true;
 }
 
+
+function checkRotation(){
+
+  var x = camara.position.x,
+    y = camara.position.y,
+    z = camara.position.z;
+
+  if (keyboard.pressed("left")){
+    camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
+    camara.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed);
+  } else if (keyboard.pressed("right")){
+    camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed);
+    camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
+  }
+
+  camara.lookAt(35, 0, 45);
+}
+
+
 loop = function(){
   requestAnimationFrame(loop);
   if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined && !setupDone){
@@ -564,10 +583,7 @@ loop = function(){
     CABALLO.setup();
     setup();
     
-    // AGREGAR CONTROL PARA GIRAR CÁMARA
-    controls = new THREE.OrbitControls( camara );
-    
-    controls.update();
+    checkRotation();
   }
   
 }
@@ -581,7 +597,8 @@ var reina1, reina2;
 var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
-var controls;
+var rotSpeed = .02
+var keyboard = new THREEx.KeyboardState();
 
 setup1();
 loop();
