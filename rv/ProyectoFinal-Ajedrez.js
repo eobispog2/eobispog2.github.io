@@ -594,9 +594,9 @@ loop = function(){
     REY.setup();
     CABALLO.setup();
     setup();
-    
-    checkRotation();
   }
+  renderizador.render( escena, camara );
+  checkRotation();
 }
 
 setup1();
