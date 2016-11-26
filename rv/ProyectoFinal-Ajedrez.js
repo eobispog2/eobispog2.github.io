@@ -1,17 +1,3 @@
-var keyboard = new THREEx.KeyboardState();
-
-var setupDone = false;
-var escena, camara, renderizador, gris, blanco;
-var torre1, torre2, torre3, torre4;
-var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
-var alfil1, alfil2, alfil3, alfil4;
-var reina1, reina2;
-var rey1, rey2;
-var caballo1, caballo2, caballo3, caballo4;
-
-var rotSpeed = .02;
-
-
 var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
   TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
@@ -562,7 +548,6 @@ function setup(){
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
-  renderizador.render( escena, camara );
 
   setupDone = true;
 }
@@ -598,6 +583,21 @@ loop = function(){
   renderizador.render( escena, camara );
   checkRotation();
 }
+
+
+var keyboard = new THREEx.KeyboardState();
+
+var setupDone = false;
+var escena, camara, renderizador, gris, blanco;
+var torre1, torre2, torre3, torre4;
+var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
+var alfil1, alfil2, alfil3, alfil4;
+var reina1, reina2;
+var rey1, rey2;
+var caballo1, caballo2, caballo3, caballo4;
+
+var rotSpeed = .02;
+
 
 setup1();
 loop();
