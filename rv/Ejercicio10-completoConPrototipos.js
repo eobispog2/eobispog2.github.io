@@ -79,11 +79,15 @@ TORRE.TorreGeometry = function(){
      torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
      torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
     
+    torre1.position.y=2;
+    
     torre2.position.x=70;
     torre2.position.y=2;
+    
     torre3.position.x=70;
     torre3.position.y=2;
     torre3.position.z=70;
+    
     torre4.position.y=2;
     torre4.position.z=70;
   }
