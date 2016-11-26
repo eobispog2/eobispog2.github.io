@@ -566,7 +566,7 @@ loop = function(){
   }
   
   // AGREGAR CONTROL PARA GIRAR CÁMARA
-  controls = new THREE.OrbitControls( camara, renderer.domElement );
+  controls = new THREE.OrbitControls( camara, renderizador.domElement );
 }
 
 var setupDone = false;
