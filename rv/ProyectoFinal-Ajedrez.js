@@ -9,10 +9,7 @@ var reina1, reina2;
 var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
-var rotSpeed = .02
-
-setup1();
-loop();
+var rotSpeed = .02;
 
 
 var TEXTURA1 = new Object();
@@ -603,3 +600,6 @@ loop = function(){
   checkRotation();
   
 }
+
+setup1();
+loop();
