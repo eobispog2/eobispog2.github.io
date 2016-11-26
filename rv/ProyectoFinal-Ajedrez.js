@@ -580,8 +580,10 @@ loop = function(){
     CABALLO.setup();
     setup();
   }
-  renderizador.render( escena, camara );
-  checkRotation();
+  if (setupDone){
+    renderizador.render( escena, camara );
+    checkRotation();
+  }
 }
 
 
