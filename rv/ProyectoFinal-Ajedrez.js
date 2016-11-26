@@ -552,7 +552,6 @@ function setup(){
   
   // AGREGAR CONTROL PARA GIRAR CÁMARA
   controls = new THREE.OrbitControls( camara );
-  controls.addEventListener( 'change', renderizador );
 
   setupDone = true;
 }
