@@ -1,3 +1,6 @@
+var keyboard = new THREEx.KeyboardState();
+
+
 var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
   TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
@@ -598,7 +601,6 @@ var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
 var rotSpeed = .02
-var keyboard = new THREEx.KeyboardState();
 
 setup1();
 loop();
