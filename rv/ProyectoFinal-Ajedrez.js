@@ -549,6 +549,10 @@ function setup(){
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
+  
+  // AGREGAR CONTROL PARA GIRAR CÁMARA
+  controls = new THREE.OrbitControls( camara );
+  controls.addEventListener( 'change', renderizador );
 
   setupDone = true;
 }
@@ -556,17 +560,17 @@ function setup(){
 loop = function(){
   requestAnimationFrame(loop);
   if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined && !setupDone){
-  ALFIL.setup();
-  PEON.setup();
-  TORRE.setup();
-  REINA.setup();
-  REY.setup();
-  CABALLO.setup();
-  setup();
+    ALFIL.setup();
+    PEON.setup();
+    TORRE.setup();
+    REINA.setup();
+    REY.setup();
+    CABALLO.setup();
+    setup();
+    
+    controls.update();
   }
   
-  // AGREGAR CONTROL PARA GIRAR CÁMARA
-  controls = new THREE.OrbitControls( camara, renderizador );
 }
 
 var setupDone = false;
@@ -578,5 +582,7 @@ var reina1, reina2;
 var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
+var controls;
+
 setup1();
-loop(); 
+loop();
