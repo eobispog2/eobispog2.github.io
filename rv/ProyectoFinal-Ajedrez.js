@@ -569,10 +569,9 @@ function setup(){
 
 
 function checkRotation(){
-
-  var x = camara.position.x,
-    y = camara.position.y,
-    z = camara.position.z;
+  var x = camara.position.x;
+  var y = camara.position.y;
+  var z = camara.position.z;
 
   if (keyboard.pressed("left")){
     camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
@@ -581,7 +580,6 @@ function checkRotation(){
     camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed);
     camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
   }
-
   camara.lookAt(35, 0, 45);
 }
 
