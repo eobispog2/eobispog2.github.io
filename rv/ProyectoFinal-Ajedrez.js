@@ -583,7 +583,7 @@ loop = function(){
   }
   if (setupDone){
     renderizador.render( escena, camara );
-    //checkRotation();
+    checkRotation();
   }
 }
 
