@@ -578,10 +578,6 @@ function checkRotation(){
 function onDocumentMouseDown( event ) {  
   mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
   mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
-}
-
-
-function render() {
   // update the picking ray with the camera and mouse position
   raycaster.setFromCamera( mouse, camera );	
 
@@ -591,6 +587,10 @@ function render() {
   if ( intersects.length > 0 ) {
 	  intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
   }
+}
+
+
+function render() {
   renderer.render( scene, camera );
 }
 
