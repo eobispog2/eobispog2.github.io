@@ -580,12 +580,9 @@ function checkRotation(){
 
 function onDocumentMouseDown( event ) {                
   var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
-                                  -( event.clientY / window.innerHeight ) * 2 + 1,  //y
-                                  0.5 );                                            //z
-  projector.unprojectVector( mouse3D, camara );   
-  mouse3D.sub( camara.position );                
-  mouse3D.normalize();
-  var raycaster = new THREE.Raycaster( camara.position, mouse3D );
+                                        -( event.clientY / window.innerHeight ) * 2 + 1,  //y
+                                        0.5 );                                            //z
+  var raycaster = projector.pickingRay( mouse3D.clone(), camara );
   var intersects = raycaster.intersectObjects( objects );
   // Change color if hit block
   if ( intersects.length > 0 ) {
