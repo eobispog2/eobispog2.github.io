@@ -458,7 +458,7 @@ function setup(){
       counter++;
     }
   }
-  
+	
    // MARCO DE TABLERO
   var marco1 = new THREE.BoxGeometry( 80, 5, 5);
   var marco2 = new THREE.BoxGeometry( 80, 5, 5);
@@ -546,7 +546,7 @@ function setup(){
   scene.add(caballo4);
   
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
-  renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
+  renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderer.setSize( window.innerWidth*.975, window.innerHeight*.975);
   
   setupDone = true;
