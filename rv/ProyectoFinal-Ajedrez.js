@@ -584,7 +584,7 @@ function onDocumentMouseDown( event ) {
 
   // calculate objects intersecting the picking ray
   var intersects = raycaster.intersectObjects( scene.children );
-	
+  
   if ( intersects.length > 0 ) {
 	  intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
   }
