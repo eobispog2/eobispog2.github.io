@@ -546,11 +546,9 @@ function setup(){
   scene.add(caballo4);
   
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
-  renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
+  renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
   renderer.setSize( window.innerWidth*.975, window.innerHeight*.975);
   
-  document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-
   setupDone = true;
 }
 
@@ -609,6 +607,7 @@ loop = function(){
     setup();
   }
   if (setupDone){
+    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     render();
     checkRotation();
   }
