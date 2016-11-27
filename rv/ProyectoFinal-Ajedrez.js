@@ -548,6 +548,9 @@ function setup(){
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.975, window.innerHeight*.975);
+  
+  projector = new THREE.Projector();
+  document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
   setupDone = true;
 }
@@ -572,9 +575,24 @@ function checkRotation(){
   }
   var centro = new THREE.Vector3(35, 2, 35);
   camara.lookAt(centro);
-  //camara.lookAt(escena.position);
-
 }
+
+
+function onDocumentMouseDown( event ) {                
+  var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
+                                  -( event.clientY / window.innerHeight ) * 2 + 1,  //y
+                                  0.5 );                                            //z
+  projector.unprojectVector( mouse3D, camara );   
+  mouse3D.sub( camara.position );                
+  mouse3D.normalize();
+  var raycaster = new THREE.Raycaster( camara.position, mouse3D );
+  var intersects = raycaster.intersectObjects( objects );
+  // Change color if hit block
+  if ( intersects.length > 0 ) {
+      intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
+  }
+}
+
 
 
 loop = function(){
@@ -607,6 +625,7 @@ var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
 var rotSpeed = .02;
+var projector;
 
 
 setup1();
