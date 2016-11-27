@@ -472,7 +472,7 @@ function setup(){
   var marcomalla2 = new THREE.Mesh(marco2, TEXTURA3.material);
   marcomalla2.position.x=35;
   marcomalla2.position.y=3;
-  marcomalla2.position.z=-10;
+  marcomalla2.position.z=-7.5;
   escena.add(marcomalla2);
   var marcomalla3 = new THREE.Mesh(marco3, TEXTURA3.material);
   marcomalla3.position.x=-7;
