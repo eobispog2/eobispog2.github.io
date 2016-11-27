@@ -578,6 +578,7 @@ function checkRotation(){
 function onDocumentMouseDown( event ) {  
   mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
   mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
+	mouse.z = 0.5;
   // update the picking ray with the camera and mouse position
   raycaster.setFromCamera( mouse, camera );	
 
