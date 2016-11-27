@@ -580,17 +580,20 @@ function checkRotation(){
 function onDocumentMouseDown( event ) {  
   mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
   mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
-  raycaster.setFromCamera( mouse, camera );
-  var intersects = raycaster.intersectObjects( objects, recursiveFlag );
-  // Change color if hit block
-  if ( intersects.length > 0 ) {
-      intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
-  }
-  render();
 }
 
 
 function render() {
+	// update the picking ray with the camera and mouse position	
+	raycaster.setFromCamera( mouse, camera );	
+
+	// calculate objects intersecting the picking ray
+	var intersects = raycaster.intersectObjects( scene.children );
+
+	for ( var i = 0; i < intersects.length; i++ ) {
+
+		intersects[ i ].object.material.color.set( 0xff0000 );
+	}
   renderer.render( scene, camera );
 }
 
@@ -607,7 +610,7 @@ loop = function(){
     setup();
   }
   if (setupDone){
-    renderer.render( scene, camera );
+    render();
     checkRotation();
   }
 }
