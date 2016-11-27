@@ -587,8 +587,13 @@ function onDocumentMouseDown( event ) {
   if ( intersects.length > 0 ) {
       intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
   }
+  render();
 }
 
+
+function render() {
+  renderer.render( scene, camera );
+}
 
 
 loop = function(){
