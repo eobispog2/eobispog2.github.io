@@ -580,12 +580,11 @@ function checkRotation(){
 }
 
 
-function onDocumentMouseDown( event ) {                
-  var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
-                                        -( event.clientY / window.innerHeight ) * 2 + 1,  //y
-                                        0.5 );                                            //z
-  var raycaster = projector.pickingRay( mouse3D.clone(), camera );
-  var intersects = raycaster.intersectObjects( objects );
+function onDocumentMouseDown( event ) {  
+  mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
+  mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
+  raycaster.setFromCamera( mouse, camera );
+  var intersects = raycaster.intersectObjects( objects, recursiveFlag );
   // Change color if hit block
   if ( intersects.length > 0 ) {
       intersects[ 0 ].object.material.color.setHex( Math.random() * 0xffffff );
@@ -628,7 +627,8 @@ var rotSpeed = .02;
 
 // Para seleeción de pieza
 var objects = [];
-var projector;
+var raycaster = new THREE.Raycaster(); // create once
+var mouse = new THREE.Vector2(); // create once
 
 
 setup1();
