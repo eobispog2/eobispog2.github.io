@@ -554,7 +554,7 @@ function setup(){
 
 
 function checkRotation(){
-  var x = camara.position.x+1;
+  var x = camara.position.x+2;
   var y = camara.position.y;
   var z = camara.position.z;
 
