@@ -818,7 +818,8 @@ function render() {
 
 loop = function(){
   requestAnimationFrame(loop);
-  if ( TEXTURA34.material !== undefined && TEXTURA35.material !== undefined && !setupDone){
+  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined &&
+      TEXTURA34.material !== undefined && TEXTURA35.material !== undefined && !setupDone){
     ALFIL.setup();
     PEON.setup();
     TORRE.setup();
