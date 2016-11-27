@@ -15,12 +15,17 @@ TEXTURA3.retrollamada = function( textura ) {
 
 function setup1() {
   scene = new THREE.Scene();
-  var cargador = new THREE.TextureLoader();
-  cargador.load("marmol_negro.jpg", TEXTURA1.retrollamada);
+  var cargador1 = new THREE.TextureLoader();
+  cargador1.load("marmol_negro.jpg", TEXTURA1.retrollamada);
   var cargador2 = new THREE.TextureLoader();
   cargador2.load("marmol_blanco.jpg", TEXTURA2.retrollamada);
   var cargador3 = new THREE.TextureLoader();
   cargador3.load("madera.jpg", TEXTURA3.retrollamada);
+  
+  var cargador4 = new THREE.TextureLoader();
+  cargador4.load("marmol_negro.jpg", TEXTURA4.retrollamada);
+  var cargador5 = new THREE.TextureLoader();
+  cargador5.load("marmol_negro.jpg", TEXTURA5.retrollamada);
 }
 
 TORRE = new Object();
@@ -76,8 +81,8 @@ TORRE.TorreGeometry = function(){
   TORRE.setup = function(){
      torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
      torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
-     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
-     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA2.material);
+     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA4.material);
+     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA5.material);
     
     torre1.position.y=2;
     
