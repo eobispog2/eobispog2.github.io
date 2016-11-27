@@ -406,7 +406,7 @@ CABALLO.CaballoGeometry = function(){
   caballoForma2.rotateY(Math.PI*3/2);
   var caballoMalla2 = new THREE.Mesh(caballoForma2);
 
-  // Juntar mallas de la caballo:
+  // Juntar mallas del caballo:
   var caballoForma = new THREE.Geometry();
   this.merge(caballoMalla1.geometry, caballoMalla1.matrix);
   this.merge(caballoMalla2.geometry, caballoMalla2.matrix);
@@ -566,7 +566,7 @@ function checkRotation(){
     camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
   }
   var centro = new THREE.Vector3(35, 2, 35);
-  camara.lookAt(centro);
+  camara.lookAt(0,0,0);
 }
 
 
