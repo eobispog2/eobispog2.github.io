@@ -23,9 +23,9 @@ function setup1() {
   cargador3.load("madera.jpg", TEXTURA3.retrollamada);
   
   var cargador4 = new THREE.TextureLoader();
-  cargador4.load("marmol_negro.jpg", TEXTURA4.retrollamada);
+  cargador4.load("marmol_negro.jpg", TEXTURA1.retrollamada);
   var cargador5 = new THREE.TextureLoader();
-  cargador5.load("marmol_negro.jpg", TEXTURA5.retrollamada);
+  cargador5.load("marmol_negro.jpg", TEXTURA2.retrollamada);
 }
 
 TORRE = new Object();
