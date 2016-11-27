@@ -546,8 +546,8 @@ function setup(){
   scene.add(caballo4);
   
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
-  renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderizador.setSize( window.innerWidth*.975, window.innerHeight*.975);
+  renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
+  renderer.setSize( window.innerWidth*.975, window.innerHeight*.975);
   
   projector = new THREE.Projector();
   document.addEventListener( 'mousedown', onDocumentMouseDown, false );
@@ -603,7 +603,7 @@ loop = function(){
     setup();
   }
   if (setupDone){
-    renderizador.render( scene, camera );
+    renderer.render( scene, camera );
     checkRotation();
   }
 }
@@ -612,7 +612,7 @@ loop = function(){
 var keyboard = new THREEx.KeyboardState();
 
 var setupDone = false;
-var scene, camera, renderizador, gris, blanco;
+var scene, camera, renderer, gris, blanco;
 var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
 var alfil1, alfil2, alfil3, alfil4;
