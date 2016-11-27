@@ -545,8 +545,6 @@ function setup(){
   scene.add(caballo3);
   scene.add(caballo4);
   
-  THREE.Object3D._threexDomEvent.camera(camera);
-  
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.975, window.innerHeight*.975);
