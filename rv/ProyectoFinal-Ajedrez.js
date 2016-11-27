@@ -14,7 +14,7 @@ TEXTURA3.retrollamada = function( textura ) {
 }
 
 function setup1() {
-  escena = new THREE.Scene();
+  scene = new THREE.Scene();
   var cargador = new THREE.TextureLoader();
   cargador.load("marmol_negro.jpg", TEXTURA1.retrollamada);
   var cargador2 = new THREE.TextureLoader();
@@ -437,7 +437,7 @@ CABALLO.setup = function(){
 }
   
 function setup(){
-  escena = new THREE.Scene();
+  scene = new THREE.Scene();
   // TABLERO:
   gris = new THREE.MeshLambertMaterial( { color: 0x151515} );
   blanco = new THREE.MeshLambertMaterial( { color: 0xFFFFFF} );
@@ -454,7 +454,7 @@ function setup(){
       else {
         cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],TEXTURA1.material);
       }
-      escena.add(cuadroMallas[counter]);
+      scene.add(cuadroMallas[counter]);
       counter++;
     }
   }
@@ -468,27 +468,27 @@ function setup(){
   marcomalla1.position.x=35;
   marcomalla1.position.y=3;
   marcomalla1.position.z=77.5;
-  escena.add(marcomalla1);
+  scene.add(marcomalla1);
   var marcomalla2 = new THREE.Mesh(marco2, TEXTURA3.material);
   marcomalla2.position.x=35;
   marcomalla2.position.y=3;
   marcomalla2.position.z=-7.5;
-  escena.add(marcomalla2);
+  scene.add(marcomalla2);
   var marcomalla3 = new THREE.Mesh(marco3, TEXTURA3.material);
   marcomalla3.position.x=-7;
   marcomalla3.position.y=3;
   marcomalla3.position.z=35;
-  escena.add(marcomalla3);
+  scene.add(marcomalla3);
   var marcomalla4 = new THREE.Mesh(marco4, TEXTURA3.material);
   marcomalla4.position.x=77;
   marcomalla4.position.y=3;
   marcomalla4.position.z=35;
-  escena.add(marcomalla4);
+  scene.add(marcomalla4);
   
    // LUCES
   var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
   luz.position.set(35, 70, 35);
-  escena.add( luz );
+  scene.add( luz );
   var l1 = new THREE.DirectionalLight( 0xffffff, 0.45 );
   l1.position.set( -10, 25, -10 )
   var l2 = new THREE.DirectionalLight( 0xffffff, 0.45 );
@@ -497,10 +497,10 @@ function setup(){
   l3.position.set( -10, 25, 90 )
   var l4 = new THREE.DirectionalLight( 0xffffff, 0.45 );
   l4.position.set( 90, 25, 90 )
-  escena.add( l1 );
-  escena.add( l2 );
-  escena.add( l3 );
-  escena.add( l4 );
+  scene.add( l1 );
+  scene.add( l2 );
+  scene.add( l3 );
+  scene.add( l4 );
   
   // CÁMARA
   var campoVision = 45; //grados
@@ -508,42 +508,42 @@ function setup(){
   var planoCercano = 1;
   var planoLejano = 1000;
   var centro = new THREE.Vector3(35, 2, 35);
-  camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(35, 80, 140);
-  camara.lookAt(centro);
+  camera = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
+  camera.position.set(35, 80, 140);
+  camera.lookAt(centro);
    
-  escena.add(torre1);
-  escena.add(torre2);
-  escena.add(torre3);
-  escena.add(torre4);
-  escena.add(peon1);
-  escena.add(peon2);
-  escena.add(peon3);
-  escena.add(peon4);
-  escena.add(peon5);
-  escena.add(peon6);
-  escena.add(peon7);
-  escena.add(peon8);
-  escena.add(peon9);
-  escena.add(peon10);
-  escena.add(peon11);
-  escena.add(peon12);
-  escena.add(peon13);
-  escena.add(peon14);
-  escena.add(peon15);
-  escena.add(peon16);
-  escena.add(alfil1);
-  escena.add(alfil2);
-  escena.add(alfil3);
-  escena.add(alfil4);
-  escena.add(reina1);
-  escena.add(reina2);
-  escena.add(rey1);
-  escena.add(rey2);
-  escena.add(caballo1);
-  escena.add(caballo2);
-  escena.add(caballo3);
-  escena.add(caballo4);
+  scene.add(torre1);
+  scene.add(torre2);
+  scene.add(torre3);
+  scene.add(torre4);
+  scene.add(peon1);
+  scene.add(peon2);
+  scene.add(peon3);
+  scene.add(peon4);
+  scene.add(peon5);
+  scene.add(peon6);
+  scene.add(peon7);
+  scene.add(peon8);
+  scene.add(peon9);
+  scene.add(peon10);
+  scene.add(peon11);
+  scene.add(peon12);
+  scene.add(peon13);
+  scene.add(peon14);
+  scene.add(peon15);
+  scene.add(peon16);
+  scene.add(alfil1);
+  scene.add(alfil2);
+  scene.add(alfil3);
+  scene.add(alfil4);
+  scene.add(reina1);
+  scene.add(reina2);
+  scene.add(rey1);
+  scene.add(rey2);
+  scene.add(caballo1);
+  scene.add(caballo2);
+  scene.add(caballo3);
+  scene.add(caballo4);
 
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
@@ -557,24 +557,24 @@ function setup(){
 
 
 function checkRotation(){
-  var x = camara.position.x-35;
-  var y = camara.position.y;
-  var z = camara.position.z-35;
+  var x = camera.position.x-35;
+  var y = camera.position.y;
+  var z = camera.position.z-35;
 
   if (keyboard.pressed("left")){
-    camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed) + 35;
-    camara.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed) + 35;
+    camera.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed) + 35;
+    camera.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed) + 35;
   } else if (keyboard.pressed("right")){
-    camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed) + 35;
-    camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed) + 35;
+    camera.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed) + 35;
+    camera.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed) + 35;
   }
   if (keyboard.pressed("up")){
-    camara.position.y = y + 1;
+    camera.position.y = y + 1;
   } else if (keyboard.pressed("down")){
-    camara.position.y = y - 1;
+    camera.position.y = y - 1;
   }
   var centro = new THREE.Vector3(35, 2, 35);
-  camara.lookAt(centro);
+  camera.lookAt(centro);
 }
 
 
@@ -582,7 +582,7 @@ function onDocumentMouseDown( event ) {
   var mouse3D = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1,   //x
                                         -( event.clientY / window.innerHeight ) * 2 + 1,  //y
                                         0.5 );                                            //z
-  var raycaster = projector.pickingRay( mouse3D.clone(), camara );
+  var raycaster = projector.pickingRay( mouse3D.clone(), camera );
   var intersects = raycaster.intersectObjects( objects );
   // Change color if hit block
   if ( intersects.length > 0 ) {
@@ -604,7 +604,7 @@ loop = function(){
     setup();
   }
   if (setupDone){
-    renderizador.render( escena, camara );
+    renderizador.render( scene, camera );
     checkRotation();
   }
 }
@@ -613,7 +613,7 @@ loop = function(){
 var keyboard = new THREEx.KeyboardState();
 
 var setupDone = false;
-var escena, camara, renderizador, gris, blanco;
+var scene, camera, renderizador, gris, blanco;
 var torre1, torre2, torre3, torre4;
 var peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, peon9, peon10, peon11, peon12, peon13, peon14, peon15, peon16;
 var alfil1, alfil2, alfil3, alfil4;
