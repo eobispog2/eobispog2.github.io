@@ -547,7 +547,7 @@ function setup(){
 
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderizador.setSize( window.innerWidth, window.innerHeight);
+  renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
 
   setupDone = true;
 }
