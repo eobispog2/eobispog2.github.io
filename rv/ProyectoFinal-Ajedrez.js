@@ -624,7 +624,11 @@ var reina1, reina2;
 var rey1, rey2;
 var caballo1, caballo2, caballo3, caballo4;
 
+// Para rotación de cámara:
 var rotSpeed = .02;
+
+// Para seleeción de pieza
+var objects = [];
 var projector;
 
 
