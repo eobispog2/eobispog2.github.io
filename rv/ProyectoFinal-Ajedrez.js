@@ -554,9 +554,9 @@ function setup(){
 
 
 function checkRotation(){
-  var x = camara.position.x;
-  var y = camara.position.y;
-  var z = camara.position.z;
+  var x = camara.position.x-35;
+  var y = camara.position.y-2;
+  var z = camara.position.z-35;
 
   if (keyboard.pressed("left")){
     camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
@@ -566,8 +566,8 @@ function checkRotation(){
     camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
   }
   var centro = new THREE.Vector3(35, 2, 35);
-  //camara.lookAt(centro);
-  camara.lookAt(escena.position);
+  camara.lookAt(centro);
+  //camara.lookAt(escena.position);
 
 }
 
