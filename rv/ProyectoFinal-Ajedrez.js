@@ -818,7 +818,8 @@ function render() {
 
 loop = function(){
   requestAnimationFrame(loop);
-  if (TEXTURA22.material !== undefined && TEXTURA23.material !== undefined && TEXTURA24.material !== undefined &&
+  if (TEXTURA19.material !== undefined && TEXTURA20.material !== undefined && TEXTURA21.material !== undefined &&
+      TEXTURA22.material !== undefined && TEXTURA23.material !== undefined && TEXTURA24.material !== undefined &&
       TEXTURA25.material !== undefined && TEXTURA26.material !== undefined && TEXTURA27.material !== undefined &&
       TEXTURA28.material !== undefined && TEXTURA29.material !== undefined && TEXTURA30.material !== undefined &&
       TEXTURA31.material !== undefined && TEXTURA32.material !== undefined && TEXTURA33.material !== undefined &&
