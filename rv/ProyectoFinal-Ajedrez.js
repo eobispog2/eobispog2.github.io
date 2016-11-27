@@ -554,16 +554,16 @@ function setup(){
 
 
 function checkRotation(){
-  var x = camara.position.x+2;
+  var x = camara.position.x-35;
   var y = camara.position.y;
-  var z = camara.position.z;
+  var z = camara.position.z-35;
 
   if (keyboard.pressed("left")){
-    camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
-    camara.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed);
+    camara.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed) + 35;
+    camara.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed) + 35;
   } else if (keyboard.pressed("right")){
-    camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed);
-    camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
+    camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed) + 35;
+    camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed) + 35;
   }
   var centro = new THREE.Vector3(35, 2, 35);
   camara.lookAt(centro);
