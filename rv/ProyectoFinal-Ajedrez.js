@@ -823,6 +823,8 @@ loop = function(){
       TEXTURA7.material !== undefined && TEXTURA8.material !== undefined && TEXTURA9.material !== undefined &&
       TEXTURA10.material !== undefined && TEXTURA11.material !== undefined && TEXTURA12.material !== undefined &&
       TEXTURA13.material !== undefined && TEXTURA14.material !== undefined && TEXTURA15.material !== undefined &&
+      TEXTURA16.material !== undefined && TEXTURA17.material !== undefined && TEXTURA17.material !== undefined &&
+      TEXTURA19.material !== undefined && TEXTURA20.material !== undefined && TEXTURA21.material !== undefined &&
       TEXTURA22.material !== undefined && TEXTURA23.material !== undefined && TEXTURA24.material !== undefined &&
       TEXTURA25.material !== undefined && TEXTURA26.material !== undefined && TEXTURA27.material !== undefined &&
       TEXTURA28.material !== undefined && TEXTURA29.material !== undefined && TEXTURA30.material !== undefined &&
