@@ -818,13 +818,14 @@ function render() {
 
 loop = function(){
   requestAnimationFrame(loop);
-  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined &&
-      TEXTURA4.material !== undefined && TEXTURA5.material !== undefined && TEXTURA6.material !== undefined &&
-      TEXTURA7.material !== undefined && TEXTURA8.material !== undefined && TEXTURA9.material !== undefined &&
-      TEXTURA10.material !== undefined && TEXTURA11.material !== undefined && TEXTURA12.material !== undefined &&
+  if (TEXTURA10.material !== undefined && TEXTURA11.material !== undefined && TEXTURA12.material !== undefined &&
       TEXTURA13.material !== undefined && TEXTURA14.material !== undefined && TEXTURA15.material !== undefined &&
       TEXTURA16.material !== undefined && TEXTURA17.material !== undefined && TEXTURA17.material !== undefined &&
       TEXTURA19.material !== undefined && TEXTURA20.material !== undefined && TEXTURA21.material !== undefined &&
+      TEXTURA22.material !== undefined && TEXTURA23.material !== undefined && TEXTURA24.material !== undefined &&
+      TEXTURA25.material !== undefined && TEXTURA26.material !== undefined && TEXTURA27.material !== undefined &&
+      TEXTURA28.material !== undefined && TEXTURA29.material !== undefined && TEXTURA30.material !== undefined &&
+      TEXTURA31.material !== undefined && TEXTURA32.material !== undefined && TEXTURA33.material !== undefined &&
       TEXTURA34.material !== undefined && TEXTURA35.material !== undefined && !setupDone){
     ALFIL.setup();
     PEON.setup();
