@@ -547,7 +547,7 @@ function setup(){
   
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderer.setSize( window.innerWidth*.975, window.innerHeight*.975);
+  renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
   
   setupDone = true;
 }
@@ -575,10 +575,10 @@ function checkRotation(){
 }
 
 
-function onDocumentMouseDown( event ) {  
-  mouse.x = ( event.clientX / window.innerWidth*.975 ) * 2 - 1;
-  mouse.y = - ( event.clientY / window.innerHeight*.975 ) * 2 + 1;
-  mouse.z = 0.5;
+function onDocumentMouseDown( event ) { 
+  mouse.x = ( event.clientX / renderer.domElement.width ) * 2 - 1;
+  mouse.y = - ( event.clientY / renderer.domElement.height ) * 2 + 1;
+  mouse.z = 0;
 	
   // update the picking ray with the camera and mouse position
   raycaster.setFromCamera( mouse, camera );	
