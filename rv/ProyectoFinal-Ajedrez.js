@@ -567,7 +567,7 @@ function checkRotation(){
   }
   var centro = new THREE.Vector3(45, 0, 45);
   //camara.lookAt(centro);
-  camera.lookAt(scene.position);
+  camara.lookAt(escena.position);
 }
 
 
