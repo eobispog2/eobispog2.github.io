@@ -418,7 +418,7 @@ CABALLO.setup = function(){
   caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
   caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
   caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
-  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
+  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), gris);
   
   caballo1.position.x=10;
   caballo1.position.y=2;
