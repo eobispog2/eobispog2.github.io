@@ -661,6 +661,7 @@ var objects = [];
 var recursiveFlag;
 var raycaster = new THREE.Raycaster(); // create once
 var mouse = new THREE.Vector2(); // create once
+var INTERSECTED;
 
 setup1();
 loop();
