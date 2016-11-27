@@ -551,6 +551,7 @@ function setup(){
   
   projector = new THREE.Projector();
   document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+  THREE.Object3D._threexDomEvent.camera(camera);
 
   setupDone = true;
 }
