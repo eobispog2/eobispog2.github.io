@@ -2,15 +2,21 @@ var TEXTURA1 = new Object();
 TEXTURA1.retrollamada = function( textura ) {
   TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
-
 var TEXTURA2 = new Object();
 TEXTURA2.retrollamada = function( textura ) {
   TEXTURA2.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
-
 var TEXTURA3 = new Object();
 TEXTURA3.retrollamada = function( textura ) {
   TEXTURA3.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA4 = new Object();
+TEXTURA4.retrollamada = function( textura ) {
+  TEXTURA4.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA5 = new Object();
+TEXTURA5.retrollamada = function( textura ) {
+  TEXTURA5.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
 
 function setup1() {
@@ -23,9 +29,9 @@ function setup1() {
   cargador3.load("madera.jpg", TEXTURA3.retrollamada);
   
   var cargador4 = new THREE.TextureLoader();
-  cargador4.load("marmol_negro.jpg", TEXTURA1.retrollamada);
+  cargador4.load("marmol_negro.jpg", TEXTURA4.retrollamada);
   var cargador5 = new THREE.TextureLoader();
-  cargador5.load("marmol_negro.jpg", TEXTURA2.retrollamada);
+  cargador5.load("marmol_negro.jpg", TEXTURA5.retrollamada);
 }
 
 TORRE = new Object();
