@@ -565,6 +565,11 @@ function checkRotation(){
     camara.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed) + 35;
     camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed) + 35;
   }
+  if (keyboard.pressed("up")){
+    camara.position.y = y + 1;
+  } else if (keyboard.pressed("down")){
+    camara.position.y = y - 1;
+  }
   var centro = new THREE.Vector3(35, 2, 35);
   camara.lookAt(centro);
   //camara.lookAt(escena.position);
