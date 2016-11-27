@@ -18,6 +18,127 @@ var TEXTURA5 = new Object();
 TEXTURA5.retrollamada = function( textura ) {
   TEXTURA5.material = new THREE.MeshBasicMaterial( {map: textura} );
 }
+var TEXTURA6 = new Object();
+TEXTURA6.retrollamada = function( textura ) {
+  TEXTURA6.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA7 = new Object();
+TEXTURA7.retrollamada = function( textura ) {
+  TEXTURA7.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA8 = new Object();
+TEXTURA8.retrollamada = function( textura ) {
+  TEXTURA8.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA9 = new Object();
+TEXTURA9.retrollamada = function( textura ) {
+  TEXTURA9.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA10 = new Object();
+TEXTURA10.retrollamada = function( textura ) {
+  TEXTURA10.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA11 = new Object();
+TEXTURA11.retrollamada = function( textura ) {
+  TEXTURA1.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA12 = new Object();
+TEXTURA12.retrollamada = function( textura ) {
+  TEXTURA12.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA13 = new Object();
+TEXTURA13.retrollamada = function( textura ) {
+  TEXTURA13.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA14 = new Object();
+TEXTURA14.retrollamada = function( textura ) {
+  TEXTURA14.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA15 = new Object();
+TEXTURA15.retrollamada = function( textura ) {
+  TEXTURA15.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA16 = new Object();
+TEXTURA16.retrollamada = function( textura ) {
+  TEXTURA16.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA17 = new Object();
+TEXTURA17.retrollamada = function( textura ) {
+  TEXTURA17.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA18 = new Object();
+TEXTURA18.retrollamada = function( textura ) {
+  TEXTURA18.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA19 = new Object();
+TEXTURA19.retrollamada = function( textura ) {
+  TEXTURA19.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA20 = new Object();
+TEXTURA20.retrollamada = function( textura ) {
+  TEXTURA20.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA21 = new Object();
+TEXTURA21.retrollamada = function( textura ) {
+  TEXTURA21.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA22 = new Object();
+TEXTURA22.retrollamada = function( textura ) {
+  TEXTURA22.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA23 = new Object();
+TEXTURA23.retrollamada = function( textura ) {
+  TEXTURA23.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA24 = new Object();
+TEXTURA24.retrollamada = function( textura ) {
+  TEXTURA24.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA25 = new Object();
+TEXTURA25.retrollamada = function( textura ) {
+  TEXTURA25.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA26 = new Object();
+TEXTURA26.retrollamada = function( textura ) {
+  TEXTURA26.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA27 = new Object();
+TEXTURA27.retrollamada = function( textura ) {
+  TEXTURA27.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA28 = new Object();
+TEXTURA28.retrollamada = function( textura ) {
+  TEXTURA28.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA29 = new Object();
+TEXTURA29.retrollamada = function( textura ) {
+  TEXTURA29.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA30 = new Object();
+TEXTURA30.retrollamada = function( textura ) {
+  TEXTURA30.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA31 = new Object();
+TEXTURA31.retrollamada = function( textura ) {
+  TEXTURA31.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA32 = new Object();
+TEXTURA32.retrollamada = function( textura ) {
+  TEXTURA32.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA33 = new Object();
+TEXTURA33.retrollamada = function( textura ) {
+  TEXTURA33.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA34 = new Object();
+TEXTURA34.retrollamada = function( textura ) {
+  TEXTURA34.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+var TEXTURA35 = new Object();
+TEXTURA35.retrollamada = function( textura ) {
+  TEXTURA35.material = new THREE.MeshBasicMaterial( {map: textura} );
+}
+
 
 function setup1() {
   scene = new THREE.Scene();
@@ -32,6 +153,67 @@ function setup1() {
   cargador4.load("marmol_negro.jpg", TEXTURA4.retrollamada);
   var cargador5 = new THREE.TextureLoader();
   cargador5.load("marmol_negro.jpg", TEXTURA5.retrollamada);
+  var cargador6 = new THREE.TextureLoader();
+  cargador6.load("marmol_negro.jpg", TEXTURA6.retrollamada);
+  var cargador7 = new THREE.TextureLoader();
+  cargador7.load("marmol_negro.jpg", TEXTURA7.retrollamada);
+  var cargador8 = new THREE.TextureLoader();
+  cargador8.load("marmol_negro.jpg", TEXTURA8.retrollamada);
+  var cargador9 = new THREE.TextureLoader();
+  cargador9.load("marmol_negro.jpg", TEXTURA9.retrollamada);
+  var cargador10 = new THREE.TextureLoader();
+  cargador10.load("marmol_negro.jpg", TEXTURA10.retrollamada);
+  var cargador11 = new THREE.TextureLoader();
+  cargador11.load("marmol_negro.jpg", TEXTURA11.retrollamada);
+  var cargador12 = new THREE.TextureLoader();
+  cargador12.load("marmol_negro.jpg", TEXTURA12.retrollamada);
+  var cargador13 = new THREE.TextureLoader();
+  cargador13.load("marmol_negro.jpg", TEXTURA13.retrollamada);
+  var cargador14 = new THREE.TextureLoader();
+  cargador14.load("marmol_negro.jpg", TEXTURA14.retrollamada);
+  var cargador15 = new THREE.TextureLoader();
+  cargador15.load("marmol_negro.jpg", TEXTURA15.retrollamada);
+  var cargador16 = new THREE.TextureLoader();
+  cargador16.load("marmol_negro.jpg", TEXTURA16.retrollamada);
+  var cargador17 = new THREE.TextureLoader();
+  cargador17.load("marmol_negro.jpg", TEXTURA17.retrollamada);
+  var cargador18 = new THREE.TextureLoader();
+  cargador18.load("marmol_negro.jpg", TEXTURA18.retrollamada);
+  var cargador19 = new THREE.TextureLoader();
+  cargador19.load("marmol_negro.jpg", TEXTURA19.retrollamada);
+  
+  var cargador20 = new THREE.TextureLoader();
+  cargador20.load("marmol_blanco.jpg", TEXTURA20.retrollamada);
+  var cargador21 = new THREE.TextureLoader();
+  cargador21.load("marmol_blanco.jpg", TEXTURA21.retrollamada);
+  var cargador22 = new THREE.TextureLoader();
+  cargador22.load("marmol_blanco.jpg", TEXTURA22.retrollamada);
+  var cargador23 = new THREE.TextureLoader();
+  cargador23.load("marmol_blanco.jpg", TEXTURA23.retrollamada);
+  var cargador24 = new THREE.TextureLoader();
+  cargador24.load("marmol_blanco.jpg", TEXTURA24.retrollamada);
+  var cargador25 = new THREE.TextureLoader();
+  cargador25.load("marmol_blanco.jpg", TEXTURA25.retrollamada);
+  var cargador26 = new THREE.TextureLoader();
+  cargador26.load("marmol_blanco.jpg", TEXTURA26.retrollamada);
+  var cargador27 = new THREE.TextureLoader();
+  cargador27.load("marmol_blanco.jpg", TEXTURA27.retrollamada);
+  var cargador28 = new THREE.TextureLoader();
+  cargador28.load("marmol_blanco.jpg", TEXTURA28.retrollamada);
+  var cargador29 = new THREE.TextureLoader();
+  cargador29.load("marmol_blanco.jpg", TEXTURA29.retrollamada);
+  var cargador30 = new THREE.TextureLoader();
+  cargador30.load("marmol_blanco.jpg", TEXTURA30.retrollamada);
+  var cargador31 = new THREE.TextureLoader();
+  cargador31.load("marmol_blanco.jpg", TEXTURA31.retrollamada);
+  var cargador32 = new THREE.TextureLoader();
+  cargador32.load("marmol_blanco.jpg", TEXTURA32.retrollamada);
+  var cargador33 = new THREE.TextureLoader();
+  cargador33.load("marmol_blanco.jpg", TEXTURA33.retrollamada);
+  var cargador34 = new THREE.TextureLoader();
+  cargador34.load("marmol_blanco.jpg", TEXTURA34.retrollamada);
+  var cargador35 = new THREE.TextureLoader();
+  cargador35.load("marmol_blanco.jpg", TEXTURA35.retrollamada);
 }
 
 TORRE = new Object();
@@ -85,10 +267,10 @@ TORRE.TorreGeometry = function(){
   TORRE.TorreGeometry.prototype = new THREE.Geometry();
   
   TORRE.setup = function(){
-     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
-     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA1.material);
-     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA4.material);
-     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA5.material);
+     torre1 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA4.material);
+     torre2 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA5.material);
+     torre3 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA20.material);
+     torre4 = new THREE.Mesh(new TORRE.TorreGeometry(), TEXTURA21.material);
     
     torre1.position.y=2;
     
@@ -138,22 +320,22 @@ PEON.PeonGeometry = function(){
 PEON.PeonGeometry.prototype = new THREE.Geometry();
 
 PEON.setup = function(){
-  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA2.material);
-  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
-  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA1.material);
+  peon1 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA22.material);
+  peon2 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA23.material);
+  peon3 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA24.material);
+  peon4 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA25.material);
+  peon5 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA26.material);
+  peon6 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA27.material);
+  peon7 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA28.material);
+  peon8 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA29.material);
+  peon9 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA6.material);
+  peon10 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA7.material);
+  peon11 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA8.material);
+  peon12 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA9.material);
+  peon13 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA10.material);
+  peon14 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA11.material);
+  peon15 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA12.material);
+  peon16 = new THREE.Mesh(new PEON.PeonGeometry(), TEXTURA13.material);
   
   peon1.position.x=0;
   peon1.position.y=2;
@@ -246,10 +428,10 @@ ALFIL.AlfilGeometry = function(){
 ALFIL.AlfilGeometry.prototype = new THREE.Geometry();
 
 ALFIL.setup = function(){
-  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA2.material);
-  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA2.material);
-  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.material);
-  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA1.material);
+  alfil1 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA30.material);
+  alfil2 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA31.material);
+  alfil3 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA14.material);
+  alfil4 = new THREE.Mesh(new ALFIL.AlfilGeometry(), TEXTURA15.material);
   
   alfil1.position.x=50;
   alfil1.position.y=2;
@@ -306,8 +488,8 @@ REINA.ReinaGeometry = function(){
 REINA.ReinaGeometry.prototype = new THREE.Geometry();
 
 REINA.setup = function(){
-  reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA2.material);
-  reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA1.material);
+  reina1 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA32.material);
+  reina2 = new THREE.Mesh(new REINA.ReinaGeometry(), TEXTURA16.material);
   
   reina1.position.x=30;
   reina1.position.y=2;
@@ -364,8 +546,8 @@ REY.ReyGeometry = function(){
 REY.ReyGeometry.prototype = new THREE.Geometry();
 
 REY.setup = function(){
-  rey1 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA2.material);
-  rey2 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA1.material);
+  rey1 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA33.material);
+  rey2 = new THREE.Mesh(new REY.ReyGeometry(), TEXTURA17.material);
   
   rey1.position.x=40;
   rey1.position.y=2;
@@ -426,10 +608,10 @@ CABALLO.CaballoGeometry = function(){
 CABALLO.CaballoGeometry.prototype = new THREE.Geometry();
 
 CABALLO.setup = function(){
-  caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
-  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA2.material);
-  caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
-  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA1.material);
+  caballo1 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA34.material);
+  caballo2 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA35.material);
+  caballo3 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA18.material);
+  caballo4 = new THREE.Mesh(new CABALLO.CaballoGeometry(), TEXTURA19.material);
   
   caballo1.position.x=10;
   caballo1.position.y=2;
