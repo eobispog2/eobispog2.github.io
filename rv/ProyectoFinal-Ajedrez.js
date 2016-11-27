@@ -509,7 +509,7 @@ function setup(){
   var planoLejano = 1000;
   var centro = new THREE.Vector3(35, 2, 35);
   camara = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camara.position.set(35, 80, 130);
+  camara.position.set(35, 80, 35);
   camara.lookAt(centro);
    
   escena.add(torre1);
@@ -566,7 +566,7 @@ function checkRotation(){
     camara.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
   }
   var centro = new THREE.Vector3(35, 2, 35);
-  camara.lookAt(0,0,0);
+  camara.lookAt(centro);
 }
 
 
