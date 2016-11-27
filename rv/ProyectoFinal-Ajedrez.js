@@ -548,9 +548,6 @@ function setup(){
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderer.setSize( window.innerWidth*.975, window.innerHeight*.975);
-  
-  projector = new THREE.Projector();
-  document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 
   setupDone = true;
 }
@@ -610,6 +607,7 @@ loop = function(){
   if (setupDone){
     renderer.render( scene, camera );
     checkRotation();
+    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
   }
 }
 
