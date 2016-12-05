@@ -32,10 +32,10 @@ CuadroBlanco.prototype= new THREE.Mesh();
 
 Environment.prototype.setMap= function(map){
   var _offset= Math.floor(map.length/2);
-  for(var j=0; j<86; j++)
-  for(var i=0; i<16; i++){
+  for(var j=0; j<87; j++)
+  for(var i=0; i<19; i++){
     if (map[i][j]==="x")
-      this.add(new Marco(5,j-_offset,(i-_offset)));
+      this.add(new Marco(4,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
       this.add(new CuadroNegro(10,j-_offset,(i-_offset)));
     else if (map[i][j]==="b")
@@ -46,22 +46,25 @@ Environment.prototype.setMap= function(map){
 function setup(){
   THREE.ImageUtils.crossOrigin='';
   var mapa=new Array();
-  mapa[0] ="x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x     ";
-  mapa[1] ="                                                                                           ";
-  mapa[2] ="                                                                                           ";
-  mapa[3] ="                                                                                           ";
-  mapa[4] ="                                                                                           ";
-  mapa[5] ="x       b         n         b         n         b         n         b         n         x  ";
-  mapa[6] ="                                                                                           ";
-  mapa[7] ="                                                                                           ";
-  mapa[8] ="                                                                                           ";
-  mapa[9] ="                                                                                           ";
-  mapa[10]="                                                                                           ";
-  mapa[11]="                                                                                           ";
-  mapa[12]="                                                                                           ";
-  mapa[13]="                                                                                           ";
-  mapa[14]="                                                                                           ";
-  mapa[15]="x         n         b         n         b         n         b         n         b         x";
+  mapa[0] ="x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x   ";
+  mapa[1] ="                                                                                         ";
+  mapa[2] ="                                                                                         ";
+  mapa[3] ="                                                                                         ";
+  mapa[4] ="                                                                                         ";
+  mapa[5] ="                                                                                         ";
+  mapa[6] ="                                                                                         ";
+  mapa[7] ="                                                                                         ";
+  mapa[8] ="x       b         n         b         n         b         n         b         n         x";
+  mapa[9] ="                                                                                         ";
+  mapa[10]="                                                                                         ";
+  mapa[11]="                                                                                         ";
+  mapa[12]="                                                                                         ";
+  mapa[13]="                                                                                         ";
+  mapa[14]="                                                                                         ";
+  mapa[15]="                                                                                         ";
+  mapa[16]="                                                                                         ";
+  mapa[17]="                                                                                         ";
+  mapa[18]="x       n         b         n         b         n         b         n         b         x";
   
   environment = new Environment();
   environment.setMap(mapa);
