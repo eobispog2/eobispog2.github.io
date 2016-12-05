@@ -1,7 +1,9 @@
+var cargador = new THREE.TextureLoader();
 
 // MARCO
 function Marco(size,x,y){
   var madera = THREE.ImageUtils.loadTexture('madera.jpg');
+  var madera = cargador.load('madera.jpg');
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/2,size), new THREE.MeshPhongMaterial({map: madera}));
   this.size=size;
   this.position.x=x;
