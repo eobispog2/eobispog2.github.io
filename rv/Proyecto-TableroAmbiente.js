@@ -32,8 +32,8 @@ CuadroBlanco.prototype= new THREE.Mesh();
 
 Environment.prototype.setMap= function(map){
   var _offset= Math.floor(map.length/2);
-  for(var i=0; i<10; i++)
-  for(var j=0; j<36; j++){
+  for(var j=0; j<11; j++)
+  for(var i=0; i<85; i++){
     if (map[i][j]==="x")
       this.add(new Marco(5,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
@@ -46,17 +46,17 @@ Environment.prototype.setMap= function(map){
 function setup(){
   THREE.ImageUtils.crossOrigin='';
   var mapa=new Array();
-  mapa[0] ="x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x";
-  mapa[1] ="                                                                                      ";
-  mapa[2] ="                                                                                      ";
-  mapa[3] ="                                                                                      ";
-  mapa[4] ="                                                                                      ";
-  mapa[5] ="x       b       n         b         n         b         n         b         n         x";
-  mapa[6] ="                                                                                      ";
-  mapa[7] ="                                                                                      ";
-  mapa[8] ="                                                                                      ";
-  mapa[9] ="                                                                                      ";
-  mapa[10]="x    n         b         n         b         n         b         n         b         x";
+  mapa[0] ="x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x    x     ";
+  mapa[1] ="                                                                                           ";
+  mapa[2] ="                                                                                           ";
+  mapa[3] ="                                                                                           ";
+  mapa[4] ="                                                                                           ";
+  mapa[5] ="x         b         n         b         n         b         n         b         n         x";
+  mapa[6] ="                                                                                           ";
+  mapa[7] ="                                                                                           ";
+  mapa[8] ="                                                                                           ";
+  mapa[9] ="                                                                                           ";
+  mapa[10]="x       n         b         n         b         n         b         n         b         x  ";
   
   environment = new Environment();
   environment.setMap(mapa);
