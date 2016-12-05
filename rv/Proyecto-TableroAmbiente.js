@@ -32,8 +32,8 @@ CuadroBlanco.prototype= new THREE.Mesh();
 
 Environment.prototype.setMap= function(map){
   var _offset= Math.floor(map.length/2);
-  for(var j=0; j<10; j++)
-  for(var i=0; i<85; i++){
+  for(var j=0; j<11; j++)
+  for(var i=0; i<84; i++){
     if (map[i][j]==="x")
       this.add(new Marco(5,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
