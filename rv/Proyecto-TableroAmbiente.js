@@ -37,9 +37,9 @@ Environment.prototype.setMap= function(map){
     if (map[i][j]==="x")
       this.add(new Marco(5,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
-      this.add(new CuadroNegro(1,j-_offset,(i-_offset)));
+      this.add(new CuadroNegro(10,j-_offset,(i-_offset)));
     else if (map[i][j]==="b")
-      this.add(new CuadroBlanco(1,j-_offset,(i-_offset)));
+      this.add(new CuadroBlanco(10,j-_offset,(i-_offset)));
   }
 }
 
