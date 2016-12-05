@@ -2,7 +2,7 @@
 // MARCO
 function Marco(size,x,y){
   var madera = THREE.ImageUtils.loadTexture('madera.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial({map: madera}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size*5,size), new THREE.MeshPhongMaterial({map: madera}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -100,30 +100,15 @@ function setup(){
   environment = new Environment();
   environment.setMap(mapa);
   
-  
-  // TABLERO:
-  var cargador1 = new THREE.TextureLoader();
-  cargador1.load("marmol_negro.jpg", TEXTURA1.retrollamada);
-  var cargador2 = new THREE.TextureLoader();
-  cargador2.load("marmol_blanco.jpg", TEXTURA2.retrollamada);
-  
-  var cuadros = [new THREE.BoxGeometry( 10, 2, 10 ) ];
-  var cuadroMallas = [new THREE.Mesh(cuadros[0],gris)];
-  var counter = 0;
-  for (var i = 0; i < 8; i++) {
-    for (var j = 0; j < 8; j++) {
-      cuadros[counter] = new THREE.BoxGeometry( 10, 2, 10 );
-      cuadros[counter].translate(j*10,0,i*10);
-      if((counter+i) % 2 == 0){
-        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],TEXTURA2.material);
-      }
-      else {
-        cuadroMallas[counter] = new THREE.Mesh(cuadros[counter],TEXTURA1.material);
-      }
-      scene.add(cuadroMallas[counter]);
-      counter++;
-    }
-  }
+  // CÁMARA
+  var campoVision = 45; //grados
+  var relacionAspecto = window.innerWidth / window.innerHeight;
+  var planoCercano = 1;
+  var planoLejano = 1000;
+  var centro = new THREE.Vector3(35, 2, 35);
+  camera = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
+  camera.position.set(35, 80, 140);
+  camera.lookAt(centro);
   
    // LUCES
   var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
@@ -137,24 +122,16 @@ function setup(){
   l3.position.set( -10, 25, 90 )
   var l4 = new THREE.DirectionalLight( 0xffffff, 0.45 );
   l4.position.set( 90, 25, 90 )
-  scene.add( l1 );
-  scene.add( l2 );
-  scene.add( l3 );
-  scene.add( l4 );
+  environment.add( l1 );
+  environment.add( l2 );
+  environment.add( l3 );
+  environment.add( l4 );
   
-  // CÁMARA
-  var campoVision = 45; //grados
-  var relacionAspecto = window.innerWidth / window.innerHeight;
-  var planoCercano = 1;
-  var planoLejano = 1000;
-  var centro = new THREE.Vector3(35, 2, 35);
-  camera = new THREE.PerspectiveCamera( campoVision, relacionAspecto, planoCercano, planoLejano);
-  camera.position.set(35, 80, 140);
-  camera.lookAt(centro);
-  
+  // RENDERIZADOR
   var lienzo = document.getElementById("Proyecto-Ajedrez2");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
+  environment.add(camera);
   
   setupDone = true;
 }
@@ -191,7 +168,7 @@ function onDocumentMouseDown( event ) {
   raycaster.setFromCamera( mouse, camera );	
 
   // calculate objects intersecting the picking ray
-  var intersects = raycaster.intersectObjects( scene.children );
+  var intersects = raycaster.intersectObjects( environment.children );
   
   // INTERSECTED = the object in the scene currently closest to the camera 
   //      and intersected by the Ray projected from the mouse position    
@@ -225,34 +202,17 @@ function onDocumentMouseDown( event ) {
 }
 
 
-
 function render() {
-  renderer.render( scene, camera );
+  renderer.render( environment, camera );
 }
 
 
 loop = function(){
   requestAnimationFrame(loop);
-  if (TEXTURA1.material !== undefined && TEXTURA2.material !== undefined && TEXTURA3.material !== undefined &&
-      TEXTURA4.material !== undefined && TEXTURA5.material !== undefined && TEXTURA6.material !== undefined &&
-      TEXTURA7.material !== undefined && TEXTURA8.material !== undefined && TEXTURA9.material !== undefined &&
-      TEXTURA10.material !== undefined && TEXTURA11.material !== undefined && TEXTURA12.material !== undefined &&
-      TEXTURA13.material !== undefined && TEXTURA14.material !== undefined && TEXTURA15.material !== undefined &&
-      TEXTURA16.material !== undefined && TEXTURA17.material !== undefined && TEXTURA18.material !== undefined &&
-      TEXTURA19.material !== undefined && TEXTURA20.material !== undefined && TEXTURA21.material !== undefined &&
-      TEXTURA22.material !== undefined && TEXTURA23.material !== undefined && TEXTURA24.material !== undefined &&
-      TEXTURA25.material !== undefined && TEXTURA26.material !== undefined && TEXTURA27.material !== undefined &&
-      TEXTURA28.material !== undefined && TEXTURA29.material !== undefined && TEXTURA30.material !== undefined &&
-      TEXTURA31.material !== undefined && TEXTURA32.material !== undefined && TEXTURA33.material !== undefined &&
-      TEXTURA34.material !== undefined && TEXTURA35.material !== undefined && !setupDone){
-    ALFIL.setup();
-    PEON.setup();
-    TORRE.setup();
-    REINA.setup();
-    REY.setup();
-    CABALLO.setup();
-    setup();
-  }
+  environment.sense();
+  environment.plan();
+  environment.act();
+  
   if (setupDone){
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     render();
@@ -264,7 +224,7 @@ loop = function(){
 var keyboard = new THREEx.KeyboardState();
 
 var setupDone = false;
-var scene, camera, renderer, gris, blanco;
+var environment, camera, renderer;
 
 // Para rotación de cámara:
 var rotSpeed = .02;
@@ -276,5 +236,5 @@ var raycaster = new THREE.Raycaster(); // create once
 var mouse = new THREE.Vector2(); // create once
 var INTERSECTED;
 
-setup1();
+setup();
 loop();
