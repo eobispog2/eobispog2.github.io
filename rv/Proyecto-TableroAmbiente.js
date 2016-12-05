@@ -47,7 +47,7 @@ function setup(){
   THREE.ImageUtils.crossOrigin='';
   var mapa=new Array();
   mapa[0] ="x     x     x     x     x     x     x     x     x     x";
-	mapa[1] ="                                                      ";
+  mapa[1] ="                                                      ";
   mapa[2] ="                                                      ";
   mapa[3] ="                                                      ";
   mapa[4] ="                                                      ";
