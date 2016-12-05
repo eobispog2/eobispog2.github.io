@@ -13,7 +13,7 @@ Marco.prototype= new THREE.Mesh();
 // TABLERO
 function CuadroNegro(size,x,y){
   var marmol_negro = THREE.ImageUtils.loadTexture('marmol_negro.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/10,size), new THREE.MeshPhongMaterial({map: marmol_negro}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/5,size), new THREE.MeshPhongMaterial({map: marmol_negro}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -22,7 +22,7 @@ CuadroNegro.prototype= new THREE.Mesh();
 
 function CuadroBlanco(size,x,y){
   var marmol_blanco = THREE.ImageUtils.loadTexture('marmol_blanco.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/10,size), new THREE.MeshPhongMaterial({map: marmol_blanco}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/5,size), new THREE.MeshPhongMaterial({map: marmol_blanco}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -32,8 +32,8 @@ CuadroBlanco.prototype= new THREE.Mesh();
 
 Environment.prototype.setMap= function(map){
   var _offset= Math.floor(map.length/2);
-  for(var j=0; j<90; j++)
-  for(var i=0; i<19; i++){
+  for(var j=0; j<91; j++)
+  for(var i=0; i<91; i++){
     if (map[i][j]==="x")
       this.add(new Marco(10,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
