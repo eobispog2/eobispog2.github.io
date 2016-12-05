@@ -2,7 +2,7 @@
 // MARCO
 function Marco(size,x,y){
   var madera = THREE.ImageUtils.loadTexture('madera.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size*5,size), new THREE.MeshPhongMaterial({map: madera}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial({map: madera}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -13,7 +13,7 @@ Marco.prototype= new THREE.Mesh();
 // TABLERO
 function CuadroNegro(size,x,y){
   var marmol_negro = THREE.ImageUtils.loadTexture('marmol_negro.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial({map: marmol_negro}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/10,size), new THREE.MeshPhongMaterial({map: marmol_negro}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -22,7 +22,7 @@ CuadroNegro.prototype= new THREE.Mesh();
 
 function CuadroBlanco(size,x,y){
   var marmol_blanco = THREE.ImageUtils.loadTexture('marmol_blanco.jpg');
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size,size), new THREE.MeshPhongMaterial({map: marmol_blanco}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/10,size), new THREE.MeshPhongMaterial({map: marmol_blanco}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
@@ -35,7 +35,7 @@ Environment.prototype.setMap= function(map){
   for(var i=0; i< map.length; i++)
   for(var j=0; j< map.length; j++){
     if (map[i][j]==="x")
-      this.add(new Marco(1,j-_offset,(i-_offset)));
+      this.add(new Marco(5,j-_offset,(i-_offset)));
     else if (map[i][j]==="n")
       this.add(new CuadroNegro(1,j-_offset,(i-_offset)));
     else if (map[i][j]==="b")
@@ -46,9 +46,8 @@ Environment.prototype.setMap= function(map){
 function setup(){
   THREE.ImageUtils.crossOrigin='';
   var mapa=new Array();
-  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-  mapa[1] ="xxxxxbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnxxxxx";
-  mapa[2] ="xxxxxbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnbbbbbbbbbbnnnnnnnnnnxxxxx";
+  mapa[0] ="xxxxxxxxxx";
+  mapa[1] ="xbnbnbnbnx";
   
   environment = new Environment();
   environment.setMap(mapa);
