@@ -182,16 +182,16 @@ function setup(){
 
 
 function checkRotation(){
-  var x = camera.position.x-35;
+  var x = camera.position.x;
   var y = camera.position.y;
-  var z = camera.position.z-35;
+  var z = camera.position.z;
 
   if (keyboard.pressed("left")){
-    camera.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed) + 35;
-    camera.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed) + 35;
+    camera.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
+    camera.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed);
   } else if (keyboard.pressed("right")){
-    camera.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed) + 35;
-    camera.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed) + 35;
+    camera.position.x = x * Math.cos(rotSpeed) - z * Math.sin(rotSpeed);
+    camera.position.z = z * Math.cos(rotSpeed) + x * Math.sin(rotSpeed);
   }
   if (keyboard.pressed("up")){
     camera.position.y = y + 1;
