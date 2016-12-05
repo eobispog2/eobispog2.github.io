@@ -2,7 +2,7 @@ var cargador = new THREE.TextureLoader();
 
 // MARCO
 function Marco(size,x,y){
-  var madera = THREE.ImageUtils.loadTexture('madera.jpg');
+  //var madera = THREE.ImageUtils.loadTexture('madera.jpg');
   var madera = cargador.load('madera.jpg');
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/2,size), new THREE.MeshPhongMaterial({map: madera}));
   this.size=size;
@@ -14,7 +14,8 @@ Marco.prototype= new THREE.Mesh();
 
 // TABLERO
 function CuadroNegro(size,x,y){
-  var marmol_negro = THREE.ImageUtils.loadTexture('marmol_negro.jpg');
+  //var marmol_negro = THREE.ImageUtils.loadTexture('marmol_negro.jpg');
+  var marmol_negro = cargador.load('marmol_negro.jpg');
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/5,size), new THREE.MeshPhongMaterial({map: marmol_negro}));
   this.size=size;
   this.position.x=x;
@@ -23,7 +24,8 @@ function CuadroNegro(size,x,y){
 CuadroNegro.prototype= new THREE.Mesh();
 
 function CuadroBlanco(size,x,y){
-  var marmol_blanco = THREE.ImageUtils.loadTexture('marmol_blanco.jpg');
+  //var marmol_blanco = THREE.ImageUtils.loadTexture('marmol_blanco.jpg');
+  var marmol_blanco = cargador.load('marmol_blanco.jpg');
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/5,size), new THREE.MeshPhongMaterial({map: marmol_blanco}));
   this.size=size;
   this.position.x=x;
