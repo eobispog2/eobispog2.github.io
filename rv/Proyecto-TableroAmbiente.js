@@ -120,8 +120,7 @@ function setup(){
   var l3 = new THREE.DirectionalLight( 0xffffff, 0.45 );
   l3.position.set( -10, 25, 90 )
   var l4 = new THREE.DirectionalLight( 0xffffff, 0.45 );
-  l4.position.set( 90, 25, 90 )
-  
+  l4.position.set( 90, 25, 90 ) 
   environment.add( luz );
   environment.add( l1 );
   environment.add( l2 );
