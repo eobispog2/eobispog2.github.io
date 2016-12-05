@@ -198,7 +198,7 @@ function checkRotation(){
   } else if (keyboard.pressed("down")){
     camera.position.y = y - 1;
   }
-  var centro = new THREE.Vector3(35, 2, 35);
+  var centro = new THREE.Vector3(0, 0, 0);
   camera.lookAt(centro);
 }
 
