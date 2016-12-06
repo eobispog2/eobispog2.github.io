@@ -176,7 +176,7 @@ function setup(){
   environment.add( light );
   
   // RENDERIZADOR
-  var lienzo = document.getElementById("ProyectoFinal-Ajedrez2");
+  var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
   environment.add(camera);
