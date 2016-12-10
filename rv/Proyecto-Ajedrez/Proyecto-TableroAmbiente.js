@@ -1,10 +1,12 @@
 var cargador = new THREE.TextureLoader();
-var tex1 = cargador.load('marmol_blanco.jpg');
-var tex2 = cargador.load('marmol_negro.jpg');
+var texture1_b = cargador.load('marmol_blanco.jpg');
+var texture2_n = cargador.load('marmol_negro.jpg');
+var texture3_g_c = cargador.load('marmol_gris_claro.jpg');
+var texture4_g_o = cargador.load('marmol_gris_oscuro.jpg');
+var madera = cargador.load('madera.jpg');
 
 // MARCO
-function Marco(size,x,y){
-  var madera = cargador.load('madera.jpg');
+function Marco(size,x,y,madera){
   THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/2,size), new THREE.MeshPhongMaterial({map: madera}));
   this.size=size;
   this.position.x=x;
@@ -20,6 +22,7 @@ function Cuadro(size,x,y,tex){
   this.position.z=y;
 }
 Cuadro.prototype= new THREE.Mesh();
+
 
 //TORRE
 TORRE = new Object();
@@ -68,9 +71,8 @@ TORRE.TorreGeometry = function(){
   this.merge(torreMalla4.geometry, torreMalla4.matrix);
   this.merge(torreMalla5.geometry, torreMalla5.matrix);
   this.merge(torreMalla6.geometry, torreMalla6.matrix);
-  }
-  
-  TORRE.TorreGeometry.prototype = new THREE.Geometry();
+}
+TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
 function Torre(x,y,tex){
   THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));	
@@ -379,40 +381,41 @@ function Caballo1(x,y,tex){
 }  
 Caballo1.prototype = new THREE.Mesh();
 
+
 Environment.prototype.setMap= function(map){
   var _offset= Math.floor(map.length/2);
   for(var j=0; j<91; j++)
   for(var i=0; i<91; i++){
     if (map[i][j]==="x")
-      this.add(new Marco(10,j-_offset,(i-_offset)));
+      this.add(new Marco(10,j-_offset,(i-_offset),madera));
     else if (map[i][j]==="n")
-      this.add(new Cuadro(10,j-_offset,(i-_offset),tex2));
+      this.add(new Cuadro(10,j-_offset,(i-_offset),texture2_n));
     else if (map[i][j]==="b")
-      this.add(new Cuadro(10,j-_offset,(i-_offset),tex1));
+      this.add(new Cuadro(10,j-_offset,(i-_offset),texture1_b));
     else if (map[i][j]==="t")
-      this.add(new Torre(j-_offset,(i-_offset-1),tex2));
+      this.add(new Torre(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="y")
-      this.add(new Torre(j-_offset,(i-_offset+1),tex1));
+      this.add(new Torre(j-_offset,(i-_offset+1),texture4_g_c));
     else if (map[i][j]==="p")
-      this.add(new Peon(j-_offset,(i-_offset-1),tex2));
+      this.add(new Peon(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="o")
-      this.add(new Peon(j-_offset,(i-_offset+1),tex1));
+      this.add(new Peon(j-_offset,(i-_offset+1),texture4_g_c));
     else if (map[i][j]==="a")
-      this.add(new Alfil(j-_offset,(i-_offset-1),tex2));
+      this.add(new Alfil(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="s")
-      this.add(new Alfil(j-_offset,(i-_offset+1),tex1));
+      this.add(new Alfil(j-_offset,(i-_offset+1),texture4_g_c));
     else if (map[i][j]==="r")
-      this.add(new Reina(j-_offset,(i-_offset-1),tex2));
+      this.add(new Reina(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="e")
-      this.add(new Reina(j-_offset,(i-_offset+1),tex1));
+      this.add(new Reina(j-_offset,(i-_offset+1),texture4_g_c));
     else if (map[i][j]==="R")
-      this.add(new Rey(j-_offset,(i-_offset-1),tex2));
+      this.add(new Rey(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="E")
-      this.add(new Rey(j-_offset,(i-_offset+1),tex1)); 
+      this.add(new Rey(j-_offset,(i-_offset+1),texture4_g_c)); 
     else if (map[i][j]==="c")
-      this.add(new Caballo(j-_offset,(i-_offset-1),tex2));
+      this.add(new Caballo(j-_offset,(i-_offset-1),texture3_g_o));
     else if (map[i][j]==="v")
-      this.add(new Caballo1(j-_offset,(i-_offset+1),tex1));
+      this.add(new Caballo1(j-_offset,(i-_offset+1),texture4_g_c));
   }
 }
 
