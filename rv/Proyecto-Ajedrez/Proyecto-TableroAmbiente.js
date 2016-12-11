@@ -201,7 +201,7 @@ function setup(){
   var info3 = document.createElement( 'div3' );
   info3.style.position = 'absolute';
   info3.style.left = '35px';
-  info3.style.bottom = '35px';
+  info3.style.bottom = '20px';
   info3.style.width = '100%';
   info3.style.textAlign = 'left';
   info3.style.color = "blue";
