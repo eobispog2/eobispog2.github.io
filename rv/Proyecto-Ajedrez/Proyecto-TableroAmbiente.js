@@ -188,7 +188,7 @@ function setup(){
   document.body.appendChild( container2 );
   var info2 = document.createElement( 'div2' );
   info2.style.position = 'absolute';
-  info2.style.left = '35px';
+  info2.style.left = '45px';
   info2.style.top = '100px';
   info2.style.width = '100%';
   info2.style.textAlign = 'left';
@@ -200,7 +200,7 @@ function setup(){
   document.body.appendChild( container3 );
   var info3 = document.createElement( 'div3' );
   info3.style.position = 'absolute';
-  info3.style.left = '35px';
+  info3.style.left = '45px';
   info3.style.bottom = '20px';
   info3.style.width = '100%';
   info3.style.textAlign = 'left';
@@ -211,7 +211,7 @@ function setup(){
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderer.setSize( window.innerWidth*.85, window.innerHeight*.95);
+  renderer.setSize( window.innerWidth*.93, window.innerHeight*.95);
   environment.add(camera);
   
   window.addEventListener('resize', onWindowResize, false);
