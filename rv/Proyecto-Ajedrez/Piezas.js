@@ -48,12 +48,12 @@ function Torre_n(x,y){
 
   //JUNTAR MALLAS:
   var torreForma = new THREE.Geometry();
-  this.merge(torreMalla1.geometry, torreMalla1.matrix);
-  this.merge(torreMalla2.geometry, torreMalla2.matrix);
-  this.merge(torreMalla3.geometry, torreMalla3.matrix);
-  this.merge(torreMalla4.geometry, torreMalla4.matrix);
-  this.merge(torreMalla5.geometry, torreMalla5.matrix);
-  this.merge(torreMalla6.geometry, torreMalla6.matrix);
+  torreForma.merge(torreMalla1.geometry, torreMalla1.matrix);
+  torreForma.merge(torreMalla2.geometry, torreMalla2.matrix);
+  torreForma.merge(torreMalla3.geometry, torreMalla3.matrix);
+  torreForma.merge(torreMalla4.geometry, torreMalla4.matrix);
+  torreForma.merge(torreMalla5.geometry, torreMalla5.matrix);
+  torreForma.merge(torreMalla6.geometry, torreMalla6.matrix);
   
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(torreForma, new THREE.MeshPhongMaterial({map: texture4_g_o}));
