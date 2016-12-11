@@ -3,17 +3,17 @@ var texture3_g_c = cargador.load('marmol_gris_claro.jpg');
 var texture4_g_o = cargador.load('marmol_gris_oscuro.jpg');
 
 function Sensor(position, direction){
-	THREE.Raycaster.call(this,position,direction);
-	this.colision=false;
+  THREE.Raycaster.call(this,position,direction);
+  this.colision=false;
 }
 Sensor.prototype=new THREE.Raycaster();
 
-//TORRE
+
+// TORRE
 TORRE = new Object();
 
 TORRE.TorreGeometry = function(){
   THREE.Geometry.call(this);
-  
   var puntos = [];
   puntos.push( new THREE.Vector2( 0, 0 ) );
   puntos.push( new THREE.Vector2( 4.5, 0 ) );
@@ -57,10 +57,18 @@ TORRE.TorreGeometry = function(){
   this.merge(torreMalla6.geometry, torreMalla6.matrix);
 }
 TORRE.TorreGeometry.prototype = new THREE.Geometry();
+  
+  this.sensor = new Sensor();
+  this.actuator.commands = [];
+  this.add(this.actuator);
+}
+
+TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
 function Torre(x,y,tex){
   THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));	
   this.position.x=x;
   this.position.z=y;
 }  
-Torre.prototype = new THREE.Mesh();
+Torre.prototype = new Agent();
+//this.actuator= new THREE.Mesh(forma,material);
