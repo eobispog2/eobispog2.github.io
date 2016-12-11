@@ -177,7 +177,7 @@ function setup(){
   var info = document.createElement( 'div' );
   info.style.position = 'absolute';
   info.style.top = '10px';
-  info.style.width = '120%';
+  info.style.width = '100%';
   info.style.textAlign = 'center';
    info.style.color = "blue";
   info.innerHTML = '<br>Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5 --> nP1D5';
@@ -187,7 +187,6 @@ function setup(){
   document.body.appendChild( container2 );
   var info2 = document.createElement( 'div2' );
   info2.style.position = 'initial';
-  info2.style.top = '10px';
   info2.style.left = '10px';
   info2.style.width = '100%';
   info2.style.textAlign = 'left';
