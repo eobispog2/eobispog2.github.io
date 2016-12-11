@@ -1,8 +1,6 @@
 var cargador = new THREE.TextureLoader();
 var texture1_b = cargador.load('marmol_blanco.jpg');
 var texture2_n = cargador.load('marmol_negro.jpg');
-var texture3_g_c = cargador.load('marmol_gris_claro.jpg');
-var texture4_g_o = cargador.load('marmol_gris_oscuro.jpg');
 var madera = cargador.load('madera.jpg');
 
 // MARCO
