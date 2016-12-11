@@ -55,14 +55,11 @@ TORRE.TorreGeometry = function(){
   this.merge(torreMalla4.geometry, torreMalla4.matrix);
   this.merge(torreMalla5.geometry, torreMalla5.matrix);
   this.merge(torreMalla6.geometry, torreMalla6.matrix);
-}
-TORRE.TorreGeometry.prototype = new THREE.Geometry();
   
   this.sensor = new Sensor();
   this.actuator.commands = [];
   this.add(this.actuator);
 }
-
 TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
 function Torre(x,y,tex){
