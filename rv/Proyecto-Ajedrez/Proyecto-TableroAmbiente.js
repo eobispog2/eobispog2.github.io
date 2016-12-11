@@ -171,6 +171,17 @@ function setup(){
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
   
+  // TEXTO
+  container = document.createElement( 'div' );
+  document.body.appendChild( container );
+  var info = document.createElement( 'div' );
+  info.style.position = 'absolute';
+  info.style.top = '10px';
+  info.style.width = '100%';
+  info.style.textAlign = 'center';
+  info.innerHTML = 'Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5: NP1D5';
+  container.appendChild( info );
+  
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
