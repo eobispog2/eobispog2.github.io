@@ -167,8 +167,6 @@ function setup(){
   camera.position.set(0, 90, 110);
   camera.lookAt(centro);
   
-  environment.add(Agent);
-  
    // LUCES  
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
