@@ -167,23 +167,9 @@ function setup(){
   camera.position.set(0, 90, 110);
   camera.lookAt(centro);
   
-   // LUCES
-  /*var luz = new THREE.PointLight( 0xffffff, 1, 150, 1.5 );
-  luz.position.set(35, 70, 35);
-  var l1 = new THREE.DirectionalLight( 0xffffff, 0.45 );
-  l1.position.set( -10, 25, -10 )
-  var l2 = new THREE.DirectionalLight( 0xffffff, 0.45 );
-  l2.position.set( 90, 25, -10 )
-  var l3 = new THREE.DirectionalLight( 0xffffff, 0.45 );
-  l3.position.set( -10, 25, 90 )
-  var l4 = new THREE.DirectionalLight( 0xffffff, 0.45 );
-  l4.position.set( 90, 25, 90 ) 
-  environment.add( luz );
-  environment.add( l1 );
-  environment.add( l2 );
-  environment.add( l3 );
-  environment.add( l4 );*/
+  environment.add(Agent);
   
+   // LUCES  
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
   
