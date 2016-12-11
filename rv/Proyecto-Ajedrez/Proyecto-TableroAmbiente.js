@@ -179,6 +179,7 @@ function setup(){
   info.style.top = '10px';
   info.style.width = '100%';
   info.style.textAlign = 'center';
+   info.style.color = "magenta";
   info.innerHTML = 'Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5: NP1D5';
   container.appendChild( info );
   
