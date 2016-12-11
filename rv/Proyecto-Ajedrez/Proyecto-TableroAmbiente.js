@@ -189,7 +189,7 @@ function setup(){
   info2.style.position = 'absolute';
   info2.style.top = '10px';
   info2.style.width = '100%';
-  info2.style.textAlign = 'center';
+  info2.style.textAlign = 'left';
    info2.style.color = "blue";
   info2.innerHTML = 'Código:<br>Pieza negra: n<br>Pieza blanca: b<br>Rey: R<br>Reina: D';
   container2.appendChild( info2 );
