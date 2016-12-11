@@ -83,7 +83,7 @@ function Torre(x,y,tex){
   this.add(this.actuator);
 }
 Torre.prototype = new Agent();
-Torre.prototype = new THREE.Mesh();
+//Torre.prototype = new THREE.Mesh();
 
 //PEON
 PEON = new Object();
