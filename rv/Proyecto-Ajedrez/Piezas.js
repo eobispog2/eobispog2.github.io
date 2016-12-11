@@ -62,7 +62,8 @@ function Torre_n(x,y){
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
-  this.position.y=y;
+  this.position.z=y;
+  this.position.y=1;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
