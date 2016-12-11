@@ -8,6 +8,7 @@ function Sensor(position, direction){
 }
 Sensor.prototype=new THREE.Raycaster();
 
+// TORRE
 TORRE = new Object();
 TORRE.TorreGeometry = function(){
   THREE.Geometry.call(this);
@@ -60,7 +61,7 @@ TORRE.TorreGeometry.prototype = new THREE.Geometry();
 function Torre_n(x,y){  
   Agent.call(this, x, y);  
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(TORRE.TorreGeometry, new THREE.MeshPhongMaterial({map: texture4_g_o}));
+  this.actuator = new THREE.Mesh(TORRE.TorreGeometry.prototype, new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
   this.position.y=1;
