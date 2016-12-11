@@ -68,4 +68,4 @@ function Torre(x,y,tex){
   this.add(this.actuator);
 }  
 Torre.prototype = new Agent();
-//this.actuator= new THREE.Mesh(forma,material);
+Torre.prototype = new THREE.Mesh();
