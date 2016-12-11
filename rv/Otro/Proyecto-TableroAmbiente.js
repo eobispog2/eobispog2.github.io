@@ -75,10 +75,14 @@ TORRE.TorreGeometry = function(){
 TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
 function Torre(x,y,tex){
+  Agent.call(this, x, y);
   THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));	
   this.position.x=x;
   this.position.z=y;
-}  
+  this.actuator.commands = [];
+  this.add(this.actuator);
+}
+Torre.prototype = new Agent();
 Torre.prototype = new THREE.Mesh();
 
 //PEON
