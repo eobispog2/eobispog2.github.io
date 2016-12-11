@@ -186,8 +186,9 @@ function setup(){
   container2 = document.createElement( 'div2' );
   document.body.appendChild( container2 );
   var info2 = document.createElement( 'div2' );
-  info2.style.position = 'fixed';
+  info2.style.position = 'initial';
   info2.style.top = '10px';
+  info2.style.left = '10px';
   info2.style.width = '100%';
   info2.style.textAlign = 'left';
    info2.style.color = "blue";
