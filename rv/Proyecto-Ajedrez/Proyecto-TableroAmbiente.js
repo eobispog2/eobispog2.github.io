@@ -178,8 +178,9 @@ function setup(){
   info.style.position = 'absolute';
   info.style.top = '10px';
   info.style.width = '100%';
+  info.style.fontSize = 'large';
   info.style.textAlign = 'center';
-   info.style.color = "blue";
+  info.style.color = "blue";
   info.innerHTML = '<br>Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5 --> nP1D5';
   container.appendChild( info );
   
