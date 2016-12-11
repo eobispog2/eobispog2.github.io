@@ -60,7 +60,8 @@ TORRE.TorreGeometry.prototype = new THREE.Geometry();
 function Torre(x,y,tex){  
   Agent.call(this, x, y);
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));
+  this.actuator = new THREE.Mesh(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));
+  //THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));
   this.position.x=x;
   this.position.z=y;
   this.actuator.commands = [];
