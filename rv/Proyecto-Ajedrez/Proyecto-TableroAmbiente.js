@@ -206,7 +206,7 @@ function setup(){
   info3.style.textAlign = 'left';
   info3.style.color = "blue";
   info3.innerHTML = 'Puede rotar y/o subir el tablero con las flechas';
-  container2.appendChild( info2 );
+  container3.appendChild( info3 );
   
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
