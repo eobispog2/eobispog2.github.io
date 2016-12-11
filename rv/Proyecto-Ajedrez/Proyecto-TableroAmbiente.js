@@ -336,9 +336,9 @@ Environment.prototype.setMap= function(map){
     else if (map[i][j]==="b")
       this.add(new Cuadro(10,j-_offset,(i-_offset),texture1_b));
     else if (map[i][j]==="t")
-      this.add(new Torre(j-_offset,(i-_offset-1),texture4_g_o));
+      this.add(new Torre_n(j-_offset,(i-_offset-1)));
     else if (map[i][j]==="y")
-      this.add(new Torre(j-_offset,(i-_offset+1),texture3_g_c));
+      this.add(new Torre_n(j-_offset,(i-_offset+1)));
     else if (map[i][j]==="p")
       this.add(new Peon(j-_offset,(i-_offset-1),texture4_g_o));
     else if (map[i][j]==="o")
