@@ -225,7 +225,7 @@ function onDocumentMouseDown( event ) {
   mouse.z = 0.5;
 	
   // update the picking ray with the camera and mouse position
-  raycaster.setFromCamera( mouse, environment.camera );	
+  raycaster.setFromCamera( mouse, camera );	
 
   // calculate objects intersecting the picking ray
   var intersects = raycaster.intersectObjects( environment.children );
