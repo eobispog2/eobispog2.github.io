@@ -10,9 +10,9 @@ Sensor.prototype=new THREE.Raycaster();
 
 
 // TORRE
-TORRE = new Object();
-TORRE.TorreGeometry = function(){
-  THREE.Geometry.call(this);
+function Torre_n(x,y){  
+  Agent.call(this, x, y);
+  
   var puntos = [];
   puntos.push( new THREE.Vector2( 0, 0 ) );
   puntos.push( new THREE.Vector2( 4.5, 0 ) );
@@ -54,13 +54,9 @@ TORRE.TorreGeometry = function(){
   this.merge(torreMalla4.geometry, torreMalla4.matrix);
   this.merge(torreMalla5.geometry, torreMalla5.matrix);
   this.merge(torreMalla6.geometry, torreMalla6.matrix);
-}
-TORRE.TorreGeometry.prototype = new THREE.Geometry();
-
-function Torre_n(x,y){  
-  //Agent.call(this, x, y);  
+  
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
+  this.actuator = new THREE.Mesh(torreForma, new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
   this.position.y=1;
