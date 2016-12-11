@@ -179,14 +179,14 @@ function setup(){
   info.style.top = '10px';
   info.style.width = '100%';
   info.style.textAlign = 'center';
-   info.style.color = "magenta";
-  info.innerHTML = 'Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5: NP1D5';
+   info.style.color = "blue";
+  info.innerHTML = '<br>Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5 --> nP1D5';
   container.appendChild( info );
   
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
+  renderer.setSize( window.innerWidth*.97, window.innerHeight*.97);
   environment.add(camera);
   
   window.addEventListener('resize', onWindowResize, false);
@@ -263,7 +263,7 @@ function onDocumentMouseDown( event ) {
 function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth*.98, window.innerHeight*.98);
+  renderer.setSize(window.innerWidth*.97, window.innerHeight*.97);
 }
 
 
