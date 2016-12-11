@@ -292,8 +292,8 @@ var rotSpeed = .02;
 // Para seleeción de pieza
 var objects = [];
 var recursiveFlag;
-var raycaster = new THREE.Raycaster(); // create once
-var mouse = new THREE.Vector2(); // create once
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
 var INTERSECTED;
 
 setup();
