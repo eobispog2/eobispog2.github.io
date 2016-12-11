@@ -114,7 +114,8 @@ PEON.PeonGeometry = function(){
 }
 PEON.PeonGeometry.prototype = new THREE.Geometry();
 
-function Peon_n(x,y){  
+function Peon_n(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
@@ -125,7 +126,8 @@ function Peon_n(x,y){
 }  
 Peon_n.prototype = new Agent();
 
-function Peon_b(x,y){  
+function Peon_b(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
@@ -175,7 +177,8 @@ ALFIL.AlfilGeometry = function(){
 }
 ALFIL.AlfilGeometry.prototype = new THREE.Geometry();
 
-function Alfil_n(x,y){  
+function Alfil_n(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new ALFIL.AlfilGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
@@ -186,7 +189,8 @@ function Alfil_n(x,y){
 }  
 Alfil_n.prototype = new Agent();
 
-function Alfil_b(x,y){  
+function Alfil_b(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new ALFIL.AlfilGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
@@ -236,7 +240,8 @@ REINA.ReinaGeometry = function(){
 }
 REINA.ReinaGeometry.prototype = new THREE.Geometry();
 
-function Reina_n(x,y){  
+function Reina_n(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new REINA.ReinaGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
@@ -247,7 +252,8 @@ function Reina_n(x,y){
 }  
 Reina_n.prototype = new Agent();
 
-function Reina_b(x,y){  
+function Reina_b(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new REINA.ReinaGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
@@ -302,7 +308,8 @@ REY.ReyGeometry = function(){
 }
 REY.ReyGeometry.prototype = new THREE.Geometry();
 
-function Rey_n(x,y){  
+function Rey_n(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new REY.ReyGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
@@ -313,7 +320,8 @@ function Rey_n(x,y){
 }  
 Rey_n.prototype = new Agent();
 
-function Rey_b(x,y){  
+function Rey_b(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new REY.ReyGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
@@ -372,7 +380,8 @@ CABALLO.CaballoGeometry = function(){
 }
 CABALLO.CaballoGeometry.prototype = new THREE.Geometry();
 
-function Caballo_n(x,y){  
+function Caballo_n(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new CABALLO.CaballoGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
@@ -383,10 +392,11 @@ function Caballo_n(x,y){
 }  
 Caballo_n.prototype = new Agent();
 
-function Caballo_b(x,y){  
+function Caballo_b(x,y){
+  Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new CABALLO.CaballoGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
-  this.rotateY(Math.PI);
+  this.rotateY(Math.PI*1/2);
   this.position.x=x;
   this.position.z=y;
   this.position.y=1;
