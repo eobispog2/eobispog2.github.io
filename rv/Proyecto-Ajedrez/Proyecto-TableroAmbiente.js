@@ -211,7 +211,7 @@ function setup(){
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
-  renderer.setSize( window.innerWidth*1.0, window.innerHeight*1.0);
+  renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
   environment.add(camera);
   
   window.addEventListener('resize', onWindowResize, false);
