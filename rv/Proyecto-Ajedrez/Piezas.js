@@ -67,5 +67,5 @@ function Torre_n(x,y){
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
-Torre_n.prototype = new Agent();
+//Torre_n.prototype = new Agent();
 Torre_n.prototype = new THREE.Mesh();
