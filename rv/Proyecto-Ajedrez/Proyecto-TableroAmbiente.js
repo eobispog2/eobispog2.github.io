@@ -177,6 +177,8 @@ function setup(){
   renderer.setSize( window.innerWidth*.98, window.innerHeight*.98);
   environment.add(camera);
   
+  window.addEventListener('resize', onWindowResize, false);
+  
   setupDone = true;
 }
 
@@ -243,6 +245,13 @@ function onDocumentMouseDown( event ) {
     //     by setting current intersection object to "nothing"
     INTERSECTED = null;
   }
+}
+
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth*.98, window.innerHeight*.98);
 }
 
 
