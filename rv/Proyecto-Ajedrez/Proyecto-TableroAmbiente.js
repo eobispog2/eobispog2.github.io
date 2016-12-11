@@ -196,6 +196,18 @@ function setup(){
   info2.innerHTML = 'Código:<br>Pieza negra: n<br>Pieza blanca: b<br>Rey: R<br>Reina: D';
   container2.appendChild( info2 );
   
+  container3 = document.createElement( 'div3' );
+  document.body.appendChild( container3 );
+  var info3 = document.createElement( 'div3' );
+  info3.style.position = 'absolute';
+  info3.style.left = '35px';
+  info3.style.bottom = '35px';
+  info3.style.width = '100%';
+  info3.style.textAlign = 'left';
+  info3.style.color = "blue";
+  info3.innerHTML = 'Puede rotar y/o subir el tablero con las flechas';
+  container2.appendChild( info2 );
+  
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
   renderer = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
