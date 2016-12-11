@@ -396,7 +396,7 @@ function Caballo_b(x,y){
   Agent.call(this, x, y); 
   this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new CABALLO.CaballoGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
-  this.rotateY(Math.PI*1/2);
+  this.rotateY(0);
   this.position.x=x;
   this.position.z=y;
   this.position.y=1;
