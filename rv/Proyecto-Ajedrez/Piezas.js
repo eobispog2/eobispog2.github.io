@@ -58,7 +58,7 @@ TORRE.TorreGeometry = function(){
 TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
 function Torre_n(x,y){  
-  //Agent.call(this, x, y);  
+  Agent.call(this, x, y);  
   //this.sensor = new Sensor();
   this.actuator = new THREE.Mesh(new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
