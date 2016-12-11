@@ -57,15 +57,13 @@ TORRE.TorreGeometry = function(){
 }
 TORRE.TorreGeometry.prototype = new THREE.Geometry();
 
-function Torre(x,y,tex){  
-  Agent.call(this, x, y);
+function Torre_n(x,y){  
+  Agent.call(this, x, y);  
   this.sensor = new Sensor();
-  this.actuator = new THREE.Mesh(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));
-  //THREE.Mesh.call(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: tex}));
+  this.actuator = new THREE.Mesh(this, new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture_g_o}));
   this.position.x=x;
   this.position.z=y;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
 Torre.prototype = new Agent();
-Torre.prototype = new THREE.Mesh();
