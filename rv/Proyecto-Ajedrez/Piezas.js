@@ -426,7 +426,7 @@ Caballo_b.prototype = new Agent();
 
 Peon_b1.prototype.sense = function(environment) {
   this.sensor_f.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
-  this.sensor_a.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
+  this.sensor_a.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
   this.sensor_i.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
   this.sensor_d.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
   
@@ -435,7 +435,7 @@ Peon_b1.prototype.sense = function(environment) {
   var obstaculo_i = this.sensor_i.intersectObjects(environment.children, true);
   var obstaculo_d = this.sensor_d.intersectObjects(environment.children, true);
   
-  if ((obstaculo_a.length > 0 && (obstaculo_a[0].distance <= .05)))
+  if ((obstaculo_f.length > 0 && (obstaculo_f[0].distance <= .5)))
     this.sensor_f.colision = true;
   else
     this.sensor_f.colision = false;
