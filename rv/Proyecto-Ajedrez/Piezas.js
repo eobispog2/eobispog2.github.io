@@ -459,6 +459,6 @@ Peon_b1.prototype.operations.goStraight = function(robot, distance) {
 
 Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
   if (angle === undefined)
-    angle = -Math.PI/2;
+    angle = Math.PI/2;
     robot.rotation.y += angle;
 }
