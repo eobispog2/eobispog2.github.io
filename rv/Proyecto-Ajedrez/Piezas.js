@@ -155,6 +155,21 @@ function Peon_b1(x,y){
 }  
 Peon_b1.prototype = new Agent();
 
+function Peon_n1(x,y){
+  Agent.call(this, x, y); 
+  this.sensor_f = new Sensor();
+  this.sensor_a = new Sensor();
+  this.sensor_i = new Sensor();
+  this.sensor_d = new Sensor();
+  this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
+  this.position.x=x;
+  this.position.z=y;
+  this.position.y=1.75;
+  this.actuator.commands = [];
+  this.add(this.actuator);
+}  
+Peon_n1.prototype = new Agent();
+
 
 // ALFIL
 ALFIL = new Object();
