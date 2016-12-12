@@ -510,8 +510,8 @@ Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
 
 
 Peon_n1.prototype.sense = function(environment) {
-  this.sensor_f.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
-  this.sensor_a.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
+  this.sensor_f.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
+  this.sensor_a.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
   this.sensor_i.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
   this.sensor_d.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
   
