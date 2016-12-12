@@ -507,3 +507,73 @@ Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
     angle = Math.PI/2;
   robot.rotation.y += angle;
 }
+
+
+Peon_n1.prototype.sense = function(environment) {
+  this.sensor_f.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
+  this.sensor_a.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
+  this.sensor_i.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
+  this.sensor_d.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
+  
+  var obstaculo_f = this.sensor_f.intersectObjects(environment.children, true);
+  var obstaculo_a = this.sensor_a.intersectObjects(environment.children, true);
+  var obstaculo_i = this.sensor_i.intersectObjects(environment.children, true);
+  var obstaculo_d = this.sensor_d.intersectObjects(environment.children, true);
+  
+  if ((obstaculo_f.length > 0 && (obstaculo_f[0].distance <= 5.5)))
+    this.sensor_f.colision = true;
+  else
+    this.sensor_f.colision = false;
+  if ((obstaculo_a.length > 0 && (obstaculo_a[0].distance <= 5.5)))
+    this.sensor_a.colision = true;
+  else
+    this.sensor_a.colision = false;
+  if ((obstaculo_i.length > 0 && (obstaculo_i[0].distance <= 5.5)))
+    this.sensor_i.colision = true;
+  else
+    this.sensor_i.colision = false;
+  if ((obstaculo_d.length > 0 && (obstaculo_d[0].distance <= 5.5)))
+    this.sensor_d.colision = true;
+  else
+    this.sensor_d.colision = false;
+}
+
+Peon_n1.prototype.plan = function(environment) {
+  this.actuator.commands = [];
+  if (this.sensor_f.colision == true)
+    this.actuator.commands.push('rotateCW');
+  else
+    this.actuator.commands.push('goStraight');
+}
+
+Peon_n1.prototype.act = function(environment) {
+  var command = this.actuator.commands.pop();
+  if (command === undefined)
+    console.log('Undefined command');
+  else if (command in this.operations)
+    this.operations[command](this);
+  else
+    console.log('Unknown command');  
+}
+
+Peon_n1.prototype.operations = {};
+
+Peon_n1.prototype.operations.goStraight = function(robot, distance) {
+  if (distance === undefined)
+    distance = .05;
+  robot.position.x += distance*Math.sin(robot.rotation.y);
+  robot.position.z -= distance*Math.cos(robot.rotation.y);
+}
+
+Peon_n1.prototype.operations.goRight = function(robot, distance) {
+  if (distance === undefined)
+    distance = .05;
+  robot.position.x += distance*Math.cos(robot.rotation.y);
+  robot.position.z -= distance*Math.sin(robot.rotation.y);
+}
+
+Peon_n1.prototype.operations.rotateCW = function(robot, angle) {
+  if (angle === undefined)
+    angle = Math.PI/2;
+  robot.rotation.y += angle;
+}
