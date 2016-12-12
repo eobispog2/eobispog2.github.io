@@ -173,7 +173,7 @@ function setup(){
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
   
-  // TEXTO
+  /*/ TEXTO
   container = document.createElement( 'div' );
   document.body.appendChild( container );
   var info = document.createElement( 'div' );
@@ -208,7 +208,7 @@ function setup(){
   info3.style.textAlign = 'left';
   info3.style.color = "blue";
   info3.innerHTML = 'Puede rotar y/o subir el tablero con las flechas';
-  container3.appendChild( info3 );
+  container3.appendChild( info3 );*/
   
   // RENDERIZADOR
   var lienzo = document.getElementById("ProyectoFinal-Ajedrez");
