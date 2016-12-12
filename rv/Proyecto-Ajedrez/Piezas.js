@@ -149,7 +149,7 @@ function Peon_b1(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=2;
+  this.position.y=1;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -435,10 +435,22 @@ Peon_b1.prototype.sense = function(environment) {
   var obstaculo_i = this.sensor_i.intersectObjects(environment.children, true);
   var obstaculo_d = this.sensor_d.intersectObjects(environment.children, true);
   
-  if ((obstaculo_f.length > 0 && (obstaculo_f[0].distance <= 4.5)))
+  if ((obstaculo_f.length > 0 && (obstaculo_f[0].distance <= 5.5)))
     this.sensor_f.colision = true;
   else
     this.sensor_f.colision = false;
+  if ((obstaculo_a.length > 0 && (obstaculo_a[0].distance <= 5.5)))
+    this.sensor_a.colision = true;
+  else
+    this.sensor_a.colision = false;
+  if ((obstaculo_i.length > 0 && (obstaculo_i[0].distance <= 5.5)))
+    this.sensor_i.colision = true;
+  else
+    this.sensor_i.colision = false;
+  if ((obstaculo_d.length > 0 && (obstaculo_d[0].distance <= 5.5)))
+    this.sensor_d.colision = true;
+  else
+    this.sensor_d.colision = false;
 }
 
 Peon_b1.prototype.plan = function(environment) {
