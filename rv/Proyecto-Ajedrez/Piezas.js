@@ -432,15 +432,10 @@ Peon_b1.prototype.sense = function(environment) {
 
 Peon_b1.prototype.plan = function(environment) {
   this.actuator.commands = [];
-  if (this.sensor.colision == true){
-    Peon_b1.currentHex = Peon_b1.material.color.getHex();
-    Peon_b1.material.color = new THREE.Color(0xff0000);
+  if (this.sensor.colision == true)
     this.actuator.commands.push('rotateCW');
-  }
-  else{
-    Peon_b1.material.color.setHex( Peon_b1.currentHex );
+  else
     this.actuator.commands.push('goStraight');
-  }
 }
 
 Peon_b1.prototype.act = function(environment) {
