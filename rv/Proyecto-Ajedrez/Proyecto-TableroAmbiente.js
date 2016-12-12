@@ -87,7 +87,7 @@ function setup(){
   mapa[18]="                                                                                           ";
   mapa[19]="                                                                                           ";
   mapa[20]="x         n         b         n         b         n         b         n         b         x";
-  mapa[21]="                    Z         p                             p         p                   ";
+  mapa[21]="                    p         p                             Z         p                   ";
   mapa[22]="                                                                                           ";
   mapa[23]="                                                                                           ";
   mapa[24]="                                                                                           ";
@@ -97,7 +97,7 @@ function setup(){
   mapa[28]="                                                                                           ";
   mapa[29]="                                                                                           ";
   mapa[30]="x         b         n         b         n         b         n         b         n         x";
-  mapa[31]="          p                             p         p                             p          ";
+  mapa[31]="          p                                                                    p          ";
   mapa[32]="                                                                                           ";
   mapa[33]="                                                                                           ";
   mapa[34]="                                                                                           ";
@@ -107,7 +107,7 @@ function setup(){
   mapa[38]="                                                                                           ";
   mapa[39]="                                                                                           ";
   mapa[40]="x         n         b         n         b         n         b         n         b         x";
-  mapa[41]="                                                                                          ";
+  mapa[41]="                                                  p                                       ";
   mapa[42]="                                                                                           ";
   mapa[43]="                                                                                           ";
   mapa[44]="                                                                                           ";
