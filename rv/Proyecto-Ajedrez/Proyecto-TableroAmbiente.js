@@ -115,7 +115,7 @@ function setup(){
   mapa[46]="                                                                                           ";
   mapa[47]="                                                                                           ";
   mapa[48]="                                                                                           ";
-  mapa[49]="          o                   o                             o         o                    ";
+  mapa[49]="                              o                                       o                    ";
   mapa[50]="x         b         n         b         n         b         n         b         n         x";
   mapa[51]="                                                                                           ";
   mapa[52]="                                                                                           ";
@@ -182,7 +182,7 @@ function setup(){
   info.style.position = 'fixed';
   info.style.top = '20px';
   info.style.width = '100%';
-  info.style.fontSize = 'medium';
+  info.style.fontSize = 'large';
   info.style.textAlign = 'center';
   info.style.color = "blue";
   info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero<br>Use el mouse para seleccionar una posición del tablero';
