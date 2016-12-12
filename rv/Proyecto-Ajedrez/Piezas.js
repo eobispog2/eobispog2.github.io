@@ -456,7 +456,7 @@ Peon_b1.prototype.sense = function(environment) {
 Peon_b1.prototype.plan = function(environment) {
   this.actuator.commands = [];
   if (this.sensor_f.colision == true)
-    this.actuator.commands.push('goRight');
+    this.actuator.commands.push('rotateCW');
   else
     this.actuator.commands.push('goStraight');
 }
@@ -476,13 +476,19 @@ Peon_b1.prototype.operations = {};
 Peon_b1.prototype.operations.goStraight = function(robot, distance) {
   if (distance === undefined)
     distance = .05;
-    robot.position.x += distance*Math.sin(robot.rotation.y);
-    robot.position.z -= distance*Math.cos(robot.rotation.y);
+  robot.position.x += distance*Math.sin(robot.rotation.y);
+  robot.position.z -= distance*Math.cos(robot.rotation.y);
 }
 
 Peon_b1.prototype.operations.goRight = function(robot, distance) {
   if (distance === undefined)
     distance = .05;
-    robot.position.x += distance*Math.cos(robot.rotation.y);
-    robot.position.z -= distance*Math.sin(robot.rotation.y);
+  robot.position.x += distance*Math.cos(robot.rotation.y);
+  robot.position.z -= distance*Math.sin(robot.rotation.y);
+}
+
+Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
+  if (angle === undefined)
+    angle = Math.PI/2;
+  robot.rotation.z += angle;
 }
