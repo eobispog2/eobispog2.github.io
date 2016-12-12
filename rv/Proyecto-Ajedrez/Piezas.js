@@ -443,7 +443,7 @@ Peon_b1.prototype.sense = function(environment) {
 
 Peon_b1.prototype.plan = function(environment) {
   this.actuator.commands = [];
-  if (this.sensor_d.colision == true)
+  if (this.sensor_f.colision == true || this.sensor_i.colision == true)
     this.actuator.commands.push('goRight');
   else
     this.actuator.commands.push('goStraight');
