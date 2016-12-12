@@ -113,7 +113,7 @@ function setup(){
   mapa[46]="                                                                                           ";
   mapa[47]="                                                                                           ";
   mapa[48]="                                                                                           ";
-  mapa[49]="                    o                             o                                        ";
+  mapa[49]="                                                  o                                        ";
   mapa[50]="x         b         n         b         n         b         n         b         n         x";
   mapa[51]="                                                                                           ";
   mapa[52]="                                                                                           ";
