@@ -65,7 +65,7 @@ function Torre_n(x,y){
   this.actuator = new THREE.Mesh(new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }
@@ -77,7 +77,7 @@ function Torre_b(x,y){
   this.actuator = new THREE.Mesh(new TORRE.TorreGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }
@@ -122,7 +122,7 @@ function Peon_n(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -134,7 +134,7 @@ function Peon_b(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -149,7 +149,7 @@ function Peon_b1(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -200,7 +200,7 @@ function Alfil_n(x,y){
   this.actuator = new THREE.Mesh(new ALFIL.AlfilGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -212,7 +212,7 @@ function Alfil_b(x,y){
   this.actuator = new THREE.Mesh(new ALFIL.AlfilGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -263,7 +263,7 @@ function Reina_n(x,y){
   this.actuator = new THREE.Mesh(new REINA.ReinaGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -275,7 +275,7 @@ function Reina_b(x,y){
   this.actuator = new THREE.Mesh(new REINA.ReinaGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -331,7 +331,7 @@ function Rey_n(x,y){
   this.actuator = new THREE.Mesh(new REY.ReyGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -343,7 +343,7 @@ function Rey_b(x,y){
   this.actuator = new THREE.Mesh(new REY.ReyGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -403,7 +403,7 @@ function Caballo_n(x,y){
   this.actuator = new THREE.Mesh(new CABALLO.CaballoGeometry(), new THREE.MeshPhongMaterial({map: texture4_g_o}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -416,7 +416,7 @@ function Caballo_b(x,y){
   this.rotateY(Math.PI);
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=1.5;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
