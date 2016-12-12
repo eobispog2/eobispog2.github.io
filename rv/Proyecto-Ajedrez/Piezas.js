@@ -435,7 +435,7 @@ Peon_b1.prototype.sense = function(environment) {
   var obstaculo_i = this.sensor_i.intersectObjects(environment.children, true);
   var obstaculo_d = this.sensor_d.intersectObjects(environment.children, true);
   
-  if ((obstaculo_i.length > 0 && (obstaculo_i[0].distance <= .5)))
+  if ((obstaculo_a.length > 0 && (obstaculo_a[0].distance <= .5)))
     this.sensor_f.colision = true;
   else
     this.sensor_f.colision = false;
