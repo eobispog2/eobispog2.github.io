@@ -142,7 +142,10 @@ Peon_b.prototype = new Agent();
 
 function Peon_b1(x,y){
   Agent.call(this, x, y); 
-  this.sensor = new Sensor();
+  this.sensor_f = new Sensor();
+  this.sensor_a = new Sensor();
+  this.sensor_i = new Sensor();
+  this.sensor_d = new Sensor();
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
@@ -422,9 +425,17 @@ Caballo_b.prototype = new Agent();
 
 
 Peon_b1.prototype.sense = function(environment) {
-  this.sensor.set( this.position, new THREE.Vector3( Math.cos(this.rotation.z), Math.sin(this.rotation.z), 0 ));
-  var obstaculo = this.sensor.intersectObjects(environment.children, true);
-  if ((obstaculo.length > 0 && (obstaculo[0].distance <= .5)))
+  this.sensor_f.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
+  this.sensor_a.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
+  this.sensor_i.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
+  this.sensor_d.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
+  
+  var obstaculo_f = this.sensor_f.intersectObjects(environment.children, true);
+  var obstaculo_a = this.sensor_a.intersectObjects(environment.children, true);
+  var obstaculo_i = this.sensor_i.intersectObjects(environment.children, true);
+  var obstaculo_d = this.sensor_d.intersectObjects(environment.children, true);
+  
+  if ((obstaculo_f.length > 0 && (obstaculo_f[0].distance <= .5)))
     this.sensor.colision = true;
   else
     this.sensor.colision = false;
@@ -457,8 +468,9 @@ Peon_b1.prototype.operations.goStraight = function(robot, distance) {
     robot.position.z -= distance*Math.cos(robot.rotation.y);
 }
 
-Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
-  if (angle === undefined)
-    angle = Math.PI/2;
-    robot.rotation.y += angle;
+Peon_b1.prototype.operations.goRight = function(robot, distance) {
+  if (distance === undefined)
+    distance = .05;
+    robot.position.x += distance*Math.sin(robot.rotation.y);
+    robot.position.z += distance*Math.cos(robot.rotation.y);
 }
