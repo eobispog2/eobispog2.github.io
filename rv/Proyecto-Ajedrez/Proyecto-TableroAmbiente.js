@@ -179,7 +179,7 @@ function setup(){
   container = document.createElement( 'div' );
   document.body.appendChild( container );
   var info = document.createElement( 'div' );
-  //info.style.position = 'absolute';
+  info.style.position = 'fixed';
   info.style.top = '20px';
   info.style.width = '100%';
   info.style.fontSize = 'medium';
