@@ -85,7 +85,7 @@ function setup(){
   mapa[18]="                                                                                           ";
   mapa[19]="                                                                                           ";
   mapa[20]="x         n         b         n         b         n         b         n         b         x";
-  mapa[21]="                              p                             p         p                   ";
+  mapa[21]="                    p         p                             p         p                   ";
   mapa[22]="                                                                                           ";
   mapa[23]="                                                                                           ";
   mapa[24]="                                                                                           ";
@@ -105,7 +105,7 @@ function setup(){
   mapa[38]="                                                                                           ";
   mapa[39]="                                                                                           ";
   mapa[40]="x         n         b         n         b         n         b         n         b         x";
-  mapa[41]="                    p                                                                      ";
+  mapa[41]="                                                                                          ";
   mapa[42]="                                                                                           ";
   mapa[43]="                                                                                           ";
   mapa[44]="                                                                                           ";
