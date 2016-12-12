@@ -2,6 +2,8 @@ var cargador = new THREE.TextureLoader();
 var texture3_g_c = cargador.load('marmol_gris_claro.jpg');
 var texture4_g_o = cargador.load('marmol_gris_oscuro.jpg');
 
+var keyboard = new THREEx.KeyboardState();
+
 function Sensor(position, direction){
   THREE.Raycaster.call(this,position,direction);
   this.colision=false;
@@ -137,6 +139,18 @@ function Peon_b(x,y){
   this.add(this.actuator);
 }  
 Peon_b.prototype = new Agent();
+
+function Peon_b1(x,y){
+  Agent.call(this, x, y); 
+  this.sensor = new Sensor();
+  this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
+  this.position.x=x;
+  this.position.z=y;
+  this.position.y=1;
+  this.actuator.commands = [];
+  this.add(this.actuator);
+}  
+Peon_b1.prototype = new Agent();
 
 
 // ALFIL
