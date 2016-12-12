@@ -21,25 +21,24 @@ function Pieza(){
 
 function setup(){
   pieza = new Pieza();
-
   camara.position.z = 50;
   escena.add( pieza );
   renderizador.setSize( window.innerWidth, window.innerHeight);
   document.body.appendChild( renderizador.domElement );
-    
-  }
- function loop(){
-   requestAnimationFrame( loop );
-   pieza.rotateY(0.01);
-   if (mov>=1.5){
-     cont=-cont;
-     mov=0;}
-   else{
-     mov+=.01;}
-   pieza.piernaIzq.rotateX(cont);
-   pieza.piernaDer.rotateX(-cont);
-   renderizador.render( escena, camara );
- }
+}
+
+function loop(){
+  requestAnimationFrame( loop );
+  pieza.rotateY(0.01);
+  if (mov>=1.5){
+    cont=-cont;
+    mov=0;}
+  else{
+    mov+=.01;}
+  pieza.piernaIzq.rotateX(cont);
+  pieza.piernaDer.rotateX(-cont);
+  renderizador.render( escena, camara );
+}
  
  setup();
  loop();
