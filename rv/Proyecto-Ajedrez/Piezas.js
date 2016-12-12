@@ -149,7 +149,7 @@ function Peon_b1(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1.5;
+  this.position.y=1.75;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
