@@ -173,19 +173,19 @@ function setup(){
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
   
-  /*/ TEXTO
+  // TEXTO
   container = document.createElement( 'div' );
   document.body.appendChild( container );
   var info = document.createElement( 'div' );
   info.style.position = 'absolute';
-  info.style.top = '10px';
+  info.style.top = '20px';
   info.style.width = '100%';
-  info.style.fontSize = 'large';
+  info.style.fontSize = 'medium';
   info.style.textAlign = 'center';
   info.style.color = "blue";
-  info.innerHTML = '<br>Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5 --> nP1D5';
+  info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero';
   container.appendChild( info );
-  
+  /*
   container2 = document.createElement( 'div2' );
   document.body.appendChild( container2 );
   var info2 = document.createElement( 'div2' );
