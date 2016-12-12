@@ -472,5 +472,5 @@ Peon_b1.prototype.operations.goRight = function(robot, distance) {
   if (distance === undefined)
     distance = .05;
     robot.position.x += distance*Math.cos(robot.rotation.y);
-    robot.position.z -= distance*Math.sin(robot.rotation.y);
+    robot.position.z += distance*Math.sin(robot.rotation.y);
 }
