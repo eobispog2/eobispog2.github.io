@@ -418,3 +418,52 @@ function Caballo_b(x,y){
   this.add(this.actuator);
 }  
 Caballo_b.prototype = new Agent();
+
+
+
+Peon_b1.prototype.sense = function(environment) {
+  this.sensor.set( this.position, new THREE.Vector3( Math.cos(this.rotation.z), Math.sin(this.rotation.z), 0 ));
+  var obstaculo = this.sensor.intersectObjects(environment.children, true);
+  if ((obstaculo.length > 0 && (obstaculo[0].distance <= .5)))
+    this.sensor.colision = true;
+  else
+    this.sensor.colision = false;
+}
+
+Peon_b1.prototype.plan = function(environment) {
+  this.actuator.commands = [];
+  if (this.sensor.colision == true){
+    Peon_b1.currentHex = Peon_b1.material.color.getHex();
+    Peon_b1.material.color = new THREE.Color(0xff0000);
+    this.actuator.commands.push('rotateCW');
+  }
+  else{
+    Peon_b1.material.color.setHex( Peon_b1.currentHex );
+    this.actuator.commands.push('goStraight');
+  }
+}
+
+Peon_b1.prototype.act = function(environment) {
+  var command = this.actuator.commands.pop();
+  if (command === undefined)
+    console.log('Undefined command');
+  else if (command in this.operations)
+    this.operations[command](this);
+  else
+    console.log('Unknown command');  
+}
+
+Peon_b1.prototype.operations = {};
+
+Peon_b1.prototype.operations.goStraight = function(robot, distance) {
+  if (distance === undefined)
+    distance = .05;
+    robot.position.x += distance*Math.cos(robot.rotation.z);
+    robot.position.y += distance*Math.sin(robot.rotation.z);
+}
+
+Peon_b1.prototype.operations.rotateCW = function(robot, angle) {
+  if (angle === undefined)
+    angle = -Math.PI/2;
+    robot.rotation.z += angle;
+}
