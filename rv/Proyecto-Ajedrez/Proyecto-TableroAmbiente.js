@@ -173,7 +173,7 @@ function setup(){
   var light = new THREE.AmbientLight( 0xffffff ); // soft white light
   environment.add( light );
   
-  /*/ TEXTO
+  // TEXTO
   container = document.createElement( 'div' );
   document.body.appendChild( container );
   var info = document.createElement( 'div' );
@@ -185,7 +185,7 @@ function setup(){
   info.style.color = "blue";
   info.innerHTML = '<br>Introduzca el código del movimiento<br>Por ejemplo: Peón negro 1 a D5 --> nP1D5';
   container.appendChild( info );
-  
+  /*
   container2 = document.createElement( 'div2' );
   document.body.appendChild( container2 );
   var info2 = document.createElement( 'div2' );
