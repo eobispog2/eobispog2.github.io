@@ -64,7 +64,7 @@ Environment.prototype.setMap= function(map){
 function setup(){
   THREE.ImageUtils.crossOrigin='';
   var mapa=new Array();
-  mapa[0] ="x         x         x         x         x         x         x         x         x         x";
+  mapa[0] ="x         x                   x         x         x         x         x         x         x";
   mapa[1] ="                                                                                           ";
   mapa[2] ="                                                                                           ";
   mapa[3] ="                                                                                           ";
@@ -103,7 +103,7 @@ function setup(){
   mapa[36]="                                                                                           ";
   mapa[37]="                                                                                           ";
   mapa[38]="                                                                                           ";
-  mapa[39]="          o         x                                                                      ";
+  mapa[39]="          o                                                                                ";
   mapa[40]="x         n         b         n         b         n         b         n         b         x";
   mapa[41]="                                                                                           ";
   mapa[42]="                                                                                           ";
