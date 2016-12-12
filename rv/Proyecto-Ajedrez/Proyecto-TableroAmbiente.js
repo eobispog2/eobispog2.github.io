@@ -42,6 +42,8 @@ Environment.prototype.setMap= function(map){
       this.add(new Peon_b(j-_offset,(i-_offset+1)));
     else if (map[i][j]==="z")
       this.add(new Peon_b1(j-_offset,(i-_offset+1)));
+    else if (map[i][j]==="Z")
+      this.add(new Peon_n1(j-_offset,(i-_offset+1)));
     else if (map[i][j]==="a")
       this.add(new Alfil_n(j-_offset,(i-_offset-1)));
     else if (map[i][j]==="s")
@@ -85,7 +87,7 @@ function setup(){
   mapa[18]="                                                                                           ";
   mapa[19]="                                                                                           ";
   mapa[20]="x         n         b         n         b         n         b         n         b         x";
-  mapa[21]="                    p         p                             p         p                   ";
+  mapa[21]="                    Z         p                             p         p                   ";
   mapa[22]="                                                                                           ";
   mapa[23]="                                                                                           ";
   mapa[24]="                                                                                           ";
