@@ -427,8 +427,8 @@ Caballo_b.prototype = new Agent();
 Peon_b1.prototype.sense = function(environment) {
   this.sensor_f.set(this.position, new THREE.Vector3(Math.sin(this.rotation.y), 0, -Math.cos(this.rotation.y)));
   this.sensor_a.set(this.position, new THREE.Vector3(-Math.sin(this.rotation.y), 0, Math.cos(this.rotation.y)));
-  this.sensor_i.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
-  this.sensor_d.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
+  this.sensor_i.set(this.position, new THREE.Vector3(-Math.cos(this.rotation.y), 0, Math.sin(this.rotation.y)));
+  this.sensor_d.set(this.position, new THREE.Vector3(Math.cos(this.rotation.y), 0, -Math.sin(this.rotation.y)));
   
   var obstaculo_f = this.sensor_f.intersectObjects(environment.children, true);
   var obstaculo_a = this.sensor_a.intersectObjects(environment.children, true);
@@ -443,7 +443,7 @@ Peon_b1.prototype.sense = function(environment) {
 
 Peon_b1.prototype.plan = function(environment) {
   this.actuator.commands = [];
-  if (this.sensor_f.colision == true)
+  if (this.sensor_d.colision == true)
     this.actuator.commands.push('goRight');
   else
     this.actuator.commands.push('goStraight');
@@ -473,11 +473,4 @@ Peon_b1.prototype.operations.goRight = function(robot, distance) {
     distance = .05;
     robot.position.x += distance*Math.cos(robot.rotation.y);
     robot.position.z -= distance*Math.sin(robot.rotation.y);
-}
-
-Peon_b1.prototype.operations.goLeft = function(robot, distance) {
-  if (distance === undefined)
-    distance = .05;
-    robot.position.x -= distance*Math.cos(robot.rotation.y);
-    robot.position.z += distance*Math.sin(robot.rotation.y);
 }
