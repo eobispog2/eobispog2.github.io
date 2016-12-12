@@ -134,7 +134,7 @@ function Peon_b(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=0;
+  this.position.y=1;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
@@ -149,7 +149,7 @@ function Peon_b1(x,y){
   this.actuator = new THREE.Mesh(new PEON.PeonGeometry(), new THREE.MeshPhongMaterial({map: texture3_g_c}));
   this.position.x=x;
   this.position.z=y;
-  this.position.y=1;
+  this.position.y=2;
   this.actuator.commands = [];
   this.add(this.actuator);
 }  
