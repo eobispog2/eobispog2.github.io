@@ -14,7 +14,7 @@ Marco.prototype= new THREE.Mesh();
 
 // TABLERO
 function Cuadro(size,x,y,tex){
-  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/5,size), new THREE.MeshPhongMaterial({map: tex}));
+  THREE.Mesh.call(this, new THREE.BoxGeometry(size,size/4.5,size), new THREE.MeshPhongMaterial({map: tex}));
   this.size=size;
   this.position.x=x;
   this.position.z=y;
