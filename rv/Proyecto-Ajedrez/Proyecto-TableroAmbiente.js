@@ -125,7 +125,7 @@ function setup(){
   mapa[56]="                                                                                           ";
   mapa[57]="                                                                                           ";
   mapa[58]="                                                                                           ";
-  mapa[59]="                                                                                           ";
+  mapa[59]="                                                  o                                        ";
   mapa[60]="x         n         b         n         b         n         b         n         b         x";
   mapa[61]="                                                                                           ";
   mapa[62]="                                                                                           ";
@@ -135,7 +135,7 @@ function setup(){
   mapa[66]="                                                                                           ";
   mapa[67]="                                                                                           ";
   mapa[68]="                                                                                           ";
-  mapa[69]="                    z                   o         o                             o          ";
+  mapa[69]="                    z                   o                                       o          ";
   mapa[70]="x         b         n         b         n         b         n         b         n         x";
   mapa[71]="                                                                                           ";
   mapa[72]="                                                                                           ";
@@ -179,13 +179,13 @@ function setup(){
   container = document.createElement( 'div' );
   document.body.appendChild( container );
   var info = document.createElement( 'div' );
-  info.style.position = 'absolute';
+  //info.style.position = 'absolute';
   info.style.top = '20px';
   info.style.width = '100%';
   info.style.fontSize = 'medium';
   info.style.textAlign = 'center';
   info.style.color = "blue";
-  info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero';
+  info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero<br>Use el mouse para seleccionar una posición del tablero';
   container.appendChild( info );
   /*
   container2 = document.createElement( 'div2' );
