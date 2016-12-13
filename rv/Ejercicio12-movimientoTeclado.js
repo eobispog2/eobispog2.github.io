@@ -545,7 +545,7 @@ function setup(){
   escena.add(caballo3);
   escena.add(caballo4);
 
-  var lienzo = document.getElementById("Ejercicio13-movimientoTeclado");
+  var lienzo = document.getElementById("Ejercicio12-movimientoTeclado");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
   renderizador.render( escena, camara );
