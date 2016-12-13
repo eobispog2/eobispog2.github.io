@@ -548,7 +548,6 @@ function setup(){
   var lienzo = document.getElementById("Ejercicio12-movimientoTeclado");
   renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true})
   renderizador.setSize( window.innerWidth*.95, window.innerHeight*.95);
-  renderizador.render( escena, camara );
 
   setupDone = true;
 }
@@ -564,6 +563,7 @@ loop = function(){
     CABALLO.setup();
     setup();
   }
+  
   window.onload=function(){document.onkeydown=desplazar};
   function desplazar(pieza)
   {
@@ -585,7 +585,9 @@ loop = function(){
       default :alert("Pulsar las flechas del teclado");
     }
   }
+  renderizador.render( escena, camara );
 }
+
 
 var setupDone = false;
 var escena, camara, renderizador, gris, blanco;
