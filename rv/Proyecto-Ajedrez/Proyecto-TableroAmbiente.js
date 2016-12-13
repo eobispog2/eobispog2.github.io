@@ -255,7 +255,7 @@ function onDocumentMouseDown( event ) {
   raycaster.setFromCamera( mouse, camera );	
 
   // calculate objects intersecting the picking ray
-  var intersects = raycaster.intersectObjects( environment.children );
+  var intersects = raycaster.intersectObjects( environment.children, true );
   
   // INTERSECTED = the object in the scene currently closest to the camera 
   //      and intersected by the Ray projected from the mouse position    
