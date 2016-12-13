@@ -185,7 +185,7 @@ function setup(){
   info.style.fontSize = 'large';
   info.style.textAlign = 'center';
   info.style.color = "blue";
-  info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero<br>Use el mouse para seleccionar una posición del tablero';
+  info.innerHTML = '<br>Utilice las flechas del teclado para girar el tablero<br>Use el mouse para seleccionar una pieza o casilla del tablero';
   container.appendChild( info );
   /*
   container2 = document.createElement( 'div2' );
