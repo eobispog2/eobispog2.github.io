@@ -563,27 +563,26 @@ loop = function(){
     REY.setup();
     CABALLO.setup();
     setup();
-    
-    window.onload=function(){document.onkeydown=desplazar};
-    function desplazar(pieza)
+  }
+  window.onload=function(){document.onkeydown=desplazar};
+  function desplazar(pieza)
+  {
+    var tecla = pieza.which;
+    switch (tecla)
     {
-      var tecla = pieza.which;
-      switch (tecla)
-      {
-        case 37 : //Izquierda
-            peon4.translateX(-10);
-            break;
-        case 38 :  //Arriba
-            peon4.translateZ(-10);
-            break;
-        case 39 :  //Derecha 
-            peon4.translateX(10);
-            break;
-        case 40 :  //Abajo
-            peon4.translateZ(10);
-            break;
-        default :alert("Pulsar las flechas del teclado");
-      }
+      case 37 : //Izquierda
+          peon4.translateX(-10);
+          break;
+      case 38 :  //Arriba
+          peon4.translateZ(-10);
+          break;
+      case 39 :  //Derecha 
+          peon4.translateX(10);
+          break;
+      case 40 :  //Abajo
+          peon4.translateZ(10);
+          break;
+      default :alert("Pulsar las flechas del teclado");
     }
   }
 }
