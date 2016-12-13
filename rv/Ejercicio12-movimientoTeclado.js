@@ -582,7 +582,7 @@ loop = function(){
       case 40 :  //Abajo
           peon4.translateZ(10);
           break;
-      default :alert("Pulsar las flechas del teclado");
+      default : break;
     }
   }
   renderizador.render( escena, camara );
